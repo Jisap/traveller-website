@@ -1,8 +1,14 @@
 import { Icon } from '@iconify/react'
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Logo from '../Logo/Logo'
 
-const Navmenu = () => {
+const Navmenu = ({ menuOpen, toggleMenu }) => {
+
+  const [pagesOpen, setPagesOpen] = useState(false)
+  const [testimonialOpen, setTestimonialOpen] = useState(false)
+  const [tourGuideOpen, setTourGuideOpen] = useState(false)
+
   return (
     <>
       <ul className='lg:flex hidden items-start gap-10 text-white'>
@@ -136,8 +142,40 @@ const Navmenu = () => {
         </li>
       </ul>
 
-      <div>
+      <div
+        onClick={toggleMenu}
+        className={`
+          fixed inset-0 bg-black/40 z-30 transition-opacity duration-500
+          ${menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}
+        `}
+      />
 
+      <div
+        className={`
+          fixed top-0 left-0 h-screen w-full lg:-[45%] xl:w-[35%] bg-black text-white z-40 px-8 py-30 transform transition-trnasform duration-700 ease-in-out
+          ${menuOpen ? 'translate-x-0' : '-translate-x-full'}
+        `}
+      >
+        <div
+          onClick={toggleMenu}
+          className={`close-btn cursor-pointer absolute bg-yellow top-8 right-8 rounded-sm text-black`}
+        >
+          <Icon
+            icon="material-symbols-light:close"
+            width="24"
+            height="24"
+          />
+        </div>
+
+        <div className='lg:block hidden'>
+          <Logo />
+          <h3 className='pt-12 text-3xl pb-8'>
+            It's time to be a traveler
+          </h3>
+        </div>
       </div>
     </>
- 
+  )
+}
+
+export default Navmenu
