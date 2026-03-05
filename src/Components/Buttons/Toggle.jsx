@@ -11,7 +11,6 @@ const Toggle = ({ onFAncyClick, toggleMenu }) => {
         className="text-white cursor-pointer"
         onClick={toggleMenu}
       />
-
     </>
   )
 }

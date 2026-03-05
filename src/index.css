@@ -40,3 +40,22 @@ p {
 a:not(.logo) {
   font-family: var(--font-figtree);
 }
+
+.social-icon:hover svg {
+  animation: rotae-scale-up-ver 0.65s linear both;
+}
+
+@keyframes rotae-scale-up-ver {
+  0% {
+    transform: scale(1) rotateY(0deg);
+  }
+
+  50% {
+    transform: scale(2) rotateY(180deg);
+  }
+
+  100% {
+    transform: scale(1) rotateY(360deg);
+  }
+
+}
