@@ -33,7 +33,7 @@ const Navmenu = ({ menuOpen, toggleMenu }) => {
             />
           </div>
 
-          <ul className='absolute left-0 top-full mt-2 w-56 bg-white shadow-lg rounded-xl invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:transalate-y-0 transition-all duration-300 z-50 text-black'>
+          <ul className='absolute left-0 top-full mt-2 w-56 bg-white shadow-lg rounded-xl invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-50 text-black'>
             <li className='border-b border-gray-200 text-secondary font-medium'>
               <Link to="/services" className='block px-4 py-2 hover:translate-x-1 transition'>
                 Services
@@ -158,7 +158,7 @@ const Navmenu = ({ menuOpen, toggleMenu }) => {
 
       <div
         className={`
-          fixed top-0 left-0 h-screen w-full lg:-[45%] xl:w-[35%] bg-black text-white z-40 px-8 py-30 transform transition-trnasform duration-700 ease-in-out
+          fixed top-0 left-0 h-screen w-full lg:w-1/2 xl:w-[35%] bg-black text-white z-40 px-10 md:px-16 py-30 transform transition-transform duration-700 ease-in-out
           ${menuOpen ? 'translate-x-0' : '-translate-x-full'}
         `}
       >
@@ -260,11 +260,13 @@ const Navmenu = ({ menuOpen, toggleMenu }) => {
               Home
             </Link>
           </li>
+
           <li>
             <Link to="/about" className='font-medium text-lg hover:text-prim transition-colors duration-300'>
               About
             </Link>
           </li>
+
           <li>
             <div className='relative'>
               <span
@@ -285,8 +287,8 @@ const Navmenu = ({ menuOpen, toggleMenu }) => {
 
               <ul
                 className={`
-                  mt-2 text-white border border-gray-50/10 shadow-lg rounded-xl transition-all duration-300 z-50 w-fit lg:min-w-full min-w-50
-                  ${pagesOpen ? 'opacity-100 visible translate-y-0 h-auto' : 'opacity-0 invisible'}
+                  text-white border border-gray-50/10 shadow-lg rounded-xl transition-all duration-300 z-50 w-fit lg:min-w-full min-w-50 overflow-hidden
+                  ${pagesOpen ? 'opacity-100 visible translate-y-0 max-h-[500px] mt-2' : 'opacity-0 invisible translate-y-2 max-h-0 mt-0 pointer-events-none'}
                 `}
               >
                 <li>
@@ -343,10 +345,42 @@ const Navmenu = ({ menuOpen, toggleMenu }) => {
                 </li>
 
                 <li>
+                  <Link to="/Faqs" className='block px-4 py-2 hover:translate-x-1 transition'>
+                    Faqs
+                  </Link>
+                </li>
 
+                <li>
+                  <Link to="/Pricing" className='block px-4 py-2 hover:translate-x-1 transition'>
+                    Pricing
+                  </Link>
                 </li>
               </ul>
             </div>
+          </li>
+
+          <li>
+            <Link to="/Destination" className='font-medium text-lg hover:text-prim transition-colors duration-300'>
+              Destination
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/Tours" className='font-medium text-lg hover:text-prim transition-colors duration-300'>
+              Tours
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/Blogs" className='font-medium text-lg hover:text-prim transition-colors duration-300'>
+              Blogs
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/Contact" className='font-medium text-lg hover:text-prim transition-colors duration-300'>
+              Contact
+            </Link>
           </li>
         </ul>
       </div>
