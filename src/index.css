@@ -59,3 +59,16 @@ a:not(.logo) {
   }
 
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-prim);
+  border-radius: 10px;
+}

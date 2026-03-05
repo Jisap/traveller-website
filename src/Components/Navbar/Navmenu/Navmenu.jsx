@@ -158,18 +158,22 @@ const Navmenu = ({ menuOpen, toggleMenu }) => {
 
       <div
         className={`
-          fixed top-0 left-0 h-screen w-full lg:w-1/2 xl:w-[35%] bg-black text-white z-40 px-10 md:px-16 py-30 transform transition-transform duration-700 ease-in-out
+          fixed top-0 left-0 h-screen w-full lg:w-1/2 xl:w-[35%] bg-black/95 backdrop-blur-xl text-white z-40 px-8 md:px-16 py-12 transform transition-transform duration-700 ease-in-out overflow-y-auto custom-scrollbar
           ${menuOpen ? 'translate-x-0' : '-translate-x-full'}
         `}
       >
+        {/* Decorative elements */}
+        <div className="absolute -top-20 -left-20 w-64 h-64 bg-prim/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+
         <div
           onClick={toggleMenu}
-          className={`close-btn cursor-pointer absolute bg-yellow top-8 right-8 rounded-sm text-black`}
+          className={`close-btn cursor-pointer absolute bg-white/10 hover:bg-prim hover:text-black transition-all duration-300 top-8 right-8 p-2 rounded-full text-white z-50`}
         >
           <Icon
             icon="material-symbols-light:close"
-            width="24"
-            height="24"
+            width="28"
+            height="28"
           />
         </div>
 
@@ -254,135 +258,136 @@ const Navmenu = ({ menuOpen, toggleMenu }) => {
           </ul>
         </div>
 
-        <ul className='space-y-5 lg:hidden block'>
-          <li>
-            <Link to="/" className='font-medium text-lg hover:text-prim transition-colors duration-300'>
-              Home
-            </Link>
-          </li>
+        <div className='lg:hidden block pt-4'>
+          <div className='mb-12'>
+            <Logo />
+            <p className='text-gray-400 text-sm mt-4 font-figtree'>
+              Explore the world with style and comfort.
+            </p>
+          </div>
 
-          <li>
-            <Link to="/about" className='font-medium text-lg hover:text-prim transition-colors duration-300'>
-              About
-            </Link>
-          </li>
+          <div className='mb-6'>
+            <span className='text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold'>Main Menu</span>
+          </div>
 
-          <li>
-            <div className='relative'>
-              <span
-                onClick={() => {
-                  setPagesOpen(!pagesOpen)
-                  setTourGuideOpen(false)
-                }}
-                className='cursor-pointer flex items-center text-lg font-medium hover:text-prim transition-colors duration-300'
-              >
-                Pages
-                <Icon
-                  icon="ep:arrow-down-bold"
-                  width="16"
-                  height="16"
-                  className={`ms-2 transition-transform duration-300 ${pagesOpen ? 'rotate-180' : ''}`}
-                />
-              </span>
+          <ul className='space-y-1'>
+            <li>
+              <Link to="/" className='flex items-center gap-4 py-3 group'>
+                <div className='w-10 h-10 rounded-xl bg-white/5 flex justify-center items-center group-hover:bg-prim group-hover:text-black transition-all duration-300'>
+                  <Icon icon="solar:home-2-linear" width="20" />
+                </div>
+                <span className='font-medium text-lg group-hover:text-prim transition-colors duration-300'>Home</span>
+              </Link>
+            </li>
 
-              <ul
-                className={`
-                  text-white border border-gray-50/10 shadow-lg rounded-xl transition-all duration-300 z-50 w-fit lg:min-w-full min-w-50 overflow-hidden
-                  ${pagesOpen ? 'opacity-100 visible translate-y-0 max-h-[500px] mt-2' : 'opacity-0 invisible translate-y-2 max-h-0 mt-0 pointer-events-none'}
-                `}
-              >
-                <li>
-                  <Link to="/services" className='block px-4 py-2 hover:translate-x-1 transition'>
-                    Services
-                  </Link>
-                </li>
+            <li>
+              <Link to="/about" className='flex items-center gap-4 py-3 group'>
+                <div className='w-10 h-10 rounded-xl bg-white/5 flex justify-center items-center group-hover:bg-prim group-hover:text-black transition-all duration-300'>
+                  <Icon icon="solar:user-speak-linear" width="20" />
+                </div>
+                <span className='font-medium text-lg group-hover:text-prim transition-colors duration-300'>About</span>
+              </Link>
+            </li>
 
-                <li>
-                  <Link to="/services/1" className='block px-4 py-2 hover:translate-x-1 transition'>
-                    Services Details
-                  </Link>
-                </li>
+            <li>
+              <Link to="/Destination" className='flex items-center gap-4 py-3 group'>
+                <div className='w-10 h-10 rounded-xl bg-white/5 flex justify-center items-center group-hover:bg-prim group-hover:text-black transition-all duration-300'>
+                  <Icon icon="solar:map-point-linear" width="20" />
+                </div>
+                <span className='font-medium text-lg group-hover:text-prim transition-colors duration-300'>Destination</span>
+              </Link>
+            </li>
 
-                <li>
-                  <Link to="/testimonials" className='block px-4 py-2 hover:translate-x-1 transition'>
-                    Testimonials
-                  </Link>
-                </li>
-
-                <li className='relative'>
-                  <div
-                    onClick={() => {
-                      setTourGuideOpen(!tourGuideOpen)
-                    }}
-                    className='flex justify-between items-center px-4 py-2 cursor-pointer'
-                  >
-                    <span className=''>Tour Guide</span>
+            <li>
+              <div className=''>
+                <div
+                  onClick={() => {
+                    setPagesOpen(!pagesOpen)
+                    setTourGuideOpen(false)
+                  }}
+                  className='flex items-center gap-4 py-3 cursor-pointer group'
+                >
+                  <div className={`w-10 h-10 rounded-xl bg-white/5 flex justify-center items-center transition-all duration-300 ${pagesOpen ? 'bg-prim text-black' : 'group-hover:bg-prim group-hover:text-black'}`}>
+                    <Icon icon="solar:layers-linear" width="20" />
+                  </div>
+                  <div className='flex flex-1 justify-between items-center'>
+                    <span className={`font-medium text-lg transition-colors duration-300 ${pagesOpen ? 'text-prim' : 'group-hover:text-prim'}`}>Pages</span>
                     <Icon
-                      icon="ri:arrow-right-s-line"
-                      width="20"
-                      height="20"
-                      className={`transition-transform ${tourGuideOpen ? 'rotate-90' : ''}`}
+                      icon="ep:arrow-down-bold"
+                      width="14"
+                      className={`transition-transform duration-300 ${pagesOpen ? 'rotate-180 text-prim' : ''}`}
                     />
                   </div>
+                </div>
 
-                  <ul className={`
-                    min-w-52 bg-white/20 text-white overflow-hidden transition-all duration-300 ease-in-out rounded-b-2xl
-                    ${tourGuideOpen ? 'max-h-40 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-1'}
-                    `}
-                  >
-                    <li className='border-b border-gray-50/20'>
-                      <Link to="/tour-guide" className='block px-4 py-2 hover:translate-x-1 transition'>
-                        Tour Guide
-                      </Link>
-                    </li>
+                <ul
+                  className={`
+                    ml-14 border-l border-white/10 transition-all duration-500 ease-in-out overflow-hidden
+                    ${pagesOpen ? 'max-h-[600px] opacity-100 mt-2 pb-4' : 'max-h-0 opacity-0'}
+                  `}
+                >
+                  <li className='py-2 pl-4'>
+                    <Link to="/services" className='text-gray-400 hover:text-prim transition-colors'>Services</Link>
+                  </li>
+                  <li className='py-2 pl-4'>
+                    <Link to="/testimonials" className='text-gray-400 hover:text-prim transition-colors'>Testimonials</Link>
+                  </li>
+                  <li className='py-2 pl-4'>
+                    <Link to="/Faqs" className='text-gray-400 hover:text-prim transition-colors'>FAQs</Link>
+                  </li>
+                  <li className='py-2 pl-4'>
+                    <Link to="/Pricing" className='text-gray-400 hover:text-prim transition-colors'>Pricing</Link>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-                    <li>
-                      <Link to="/tour-guide/1" className='block px-4 py-2 hover:translate-x-1 transition'>
-                        Tour Guide Details
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
+            <li>
+              <Link to="/Tours" className='flex items-center gap-4 py-3 group'>
+                <div className='w-10 h-10 rounded-xl bg-white/5 flex justify-center items-center group-hover:bg-prim group-hover:text-black transition-all duration-300'>
+                  <Icon icon="solar:re-routing-linear" width="20" />
+                </div>
+                <span className='font-medium text-lg group-hover:text-prim transition-colors duration-300'>Tours</span>
+              </Link>
+            </li>
 
-                <li>
-                  <Link to="/Faqs" className='block px-4 py-2 hover:translate-x-1 transition'>
-                    Faqs
-                  </Link>
-                </li>
+            <li>
+              <Link to="/Blogs" className='flex items-center gap-4 py-3 group'>
+                <div className='w-10 h-10 rounded-xl bg-white/5 flex justify-center items-center group-hover:bg-prim group-hover:text-black transition-all duration-300'>
+                  <Icon icon="solar:unread-linear" width="20" />
+                </div>
+                <span className='font-medium text-lg group-hover:text-prim transition-colors duration-300'>Blogs</span>
+              </Link>
+            </li>
 
-                <li>
-                  <Link to="/Pricing" className='block px-4 py-2 hover:translate-x-1 transition'>
-                    Pricing
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </li>
+            <li>
+              <Link to="/Contact" className='flex items-center gap-4 py-3 group'>
+                <div className='w-10 h-10 rounded-xl bg-white/5 flex justify-center items-center group-hover:bg-prim group-hover:text-black transition-all duration-300'>
+                  <Icon icon="solar:letter-linear" width="20" />
+                </div>
+                <span className='font-medium text-lg group-hover:text-prim transition-colors duration-300'>Contact</span>
+              </Link>
+            </li>
+          </ul>
 
-          <li>
-            <Link to="/Destination" className='font-medium text-lg hover:text-prim transition-colors duration-300'>
-              Destination
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/Tours" className='font-medium text-lg hover:text-prim transition-colors duration-300'>
-              Tours
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/Blogs" className='font-medium text-lg hover:text-prim transition-colors duration-300'>
-              Blogs
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/Contact" className='font-medium text-lg hover:text-prim transition-colors duration-300'>
-              Contact
-            </Link>
-          </li>
-        </ul>
+          <div className='mt-12 pt-10 border-t border-white/5'>
+            <h4 className='text-sm text-gray-400 mb-6'>Join our community</h4>
+            <ul className='flex items-center gap-4'>
+              <li className='w-10 h-10 rounded-full bg-white/5 flex justify-center items-center hover:bg-prim hover:text-black transition-all duration-300 cursor-pointer'>
+                <Icon icon="ri:facebook-fill" width="18" />
+              </li>
+              <li className='w-10 h-10 rounded-full bg-white/5 flex justify-center items-center hover:bg-prim hover:text-black transition-all duration-300 cursor-pointer'>
+                <Icon icon="ri:twitter-x-fill" width="18" />
+              </li>
+              <li className='w-10 h-10 rounded-full bg-white/5 flex justify-center items-center hover:bg-prim hover:text-black transition-all duration-300 cursor-pointer'>
+                <Icon icon="ri:instagram-line" width="18" />
+              </li>
+              <li className='w-10 h-10 rounded-full bg-white/5 flex justify-center items-center hover:bg-prim hover:text-black transition-all duration-300 cursor-pointer'>
+                <Icon icon="ri:youtube-fill" width="18" />
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </>
   )
