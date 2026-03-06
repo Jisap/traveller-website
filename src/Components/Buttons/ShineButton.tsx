@@ -21,7 +21,7 @@ export const ShineButton = ({ text, onClick, className }: ShineButtonProps) => {
       transition-all
       duration-300
       hover:-translate-y-1
-      hover:shadow-2xl
+      hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)]
       hover:text-white
       group
       ${className}
