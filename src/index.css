@@ -72,3 +72,35 @@ a:not(.logo) {
   background: var(--color-prim);
   border-radius: 10px;
 }
+
+.bg-overlay {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.2)
+}
+
+.hero-title {
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  animation: slide-left 5s linear infinite alternate-reverse both;
+  text-shadow: 6px 18px 2px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-30px);
+  }
+}
+
+.pera-text {
+  font-style: italic;
+  line-height: 30px;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
