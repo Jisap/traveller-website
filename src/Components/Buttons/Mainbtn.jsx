@@ -1,8 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const Mainbtn = () => {
+const Mainbtn = ({ className = "", text }) => {
   return (
-    <div>Mainbtn</div>
+    <>
+      <Link
+        className={`main-btn ${className}`}
+      >
+        {text}
+      </Link>
+    </>
   )
 }
 

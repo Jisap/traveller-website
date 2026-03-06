@@ -7,12 +7,14 @@ import cloud1 from "../../../assets/Index/Hero/Cloud1.png"
 import cloud2 from "../../../assets/Index/Hero/Cloud2.png"
 import { Icon } from "@iconify/react"
 import { Link } from "react-router-dom"
+import Mainbtn from "../../Buttons/Mainbtn"
+import { ShineButton } from "../../Buttons/ShineButton"
 
 
 const Hero = () => {
   return (
     <div
-      className='hero relative bg-cover bg-center min-h-screen xl:min-h-0 overflow-hidden'
+      className='hero relative bg-cover bg-center min-h-screen xl:min-h-0 overflow-x-hidden'
       style={{ backgroundImage: `url(${headerbg})` }}
     >
       <div className="bg-overlay mx-auto px-5 sm:px-8 md:px-12 py-16 md:py-25 xl:h-screen flex items-center xl:flex-row flex-col xl:gap-0 gap-20">
@@ -29,6 +31,9 @@ const Hero = () => {
             <p className="text-white pera-text">
               The Safety of our customers at all stages
             </p>
+
+            <Mainbtn className="mb-8" text="Get in Touch" />
+            <ShineButton className="mb-8" text="Get in Touch" />
           </div>
         </div>
       </div>

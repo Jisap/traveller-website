@@ -104,3 +104,44 @@ a:not(.logo) {
   margin-bottom: 30px;
   font-size: 28px;
 }
+
+.main-btn {
+  outline: none;
+  color: #000;
+  font-weight: 500;
+  padding: 15px 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: inline-flex;
+  background-color: var(--color-prim);
+  border: none;
+  font-size: 18px;
+  transition: 0.5s all ease;
+  white-space: nowrap;
+  border-radius: 50px;
+}
+
+.main-btn:hover {
+  transform: translateY(-3px);
+  color: #fff;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.main-btn::after {
+  background: #fff;
+  content: "";
+  height: 160px;
+  opacity: 0;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 40px;
+  left: -30px;
+}
+
+.main-btn:hover::after {
+  opacity: 0.6;
+  left: 200%;
+}
