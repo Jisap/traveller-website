@@ -106,8 +106,17 @@ const Hero = () => {
               <span></span>
             </div>
           </div>
+        </div>
+      </div>
 
-
+      <div className="cloud1">
+        <div className="cloud-image1 relative overflow-hidden z-0">
+          <img src={cloud1} alt="cloud1" className="w-auto" />
+        </div>
+      </div>
+      <div className="cloud2">
+        <div className="cloud-image2 relative overflow-hidden z-0">
+          <img src={cloud2} alt="cloud2" className="w-auto" />
         </div>
       </div>
     </div>

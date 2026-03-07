@@ -336,3 +336,35 @@ img {
   border-radius: 50%;
   z-index: 9;
 }
+
+.cloud1 {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  z-index: 10;
+}
+
+.cloud2 {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 10;
+}
+
+.cloud-image1 img {
+  animation: cloud-animation 30s linear infinite;
+}
+
+.cloud-image2 img {
+  animation: cloud-animation 40s linear infinite;
+}
+
+@keyframes cloud-animation {
+  0% {
+    transform: translateX(-200px);
+  }
+
+  100% {
+    transform: translateX(100vw);
+  }
+}
