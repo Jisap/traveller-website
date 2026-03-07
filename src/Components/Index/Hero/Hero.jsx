@@ -32,8 +32,8 @@ const Hero = () => {
               The Safety of our customers at all stages
             </p>
 
-            <Mainbtn className="mb-8" text="Get in Touch" />
-            {/* <ShineButton className="mb-8" text="Get in Touch" /> */}
+            <Mainbtn className="mb-8" text="Get in Touch" to="/contact" />
+            {/* <ShineButton className="mb-8" text="Get in Touch"  to="/contact"/> */}
 
             <div className="flex items-start md:items-center flex-col md:gap-0 gap-4 md:flex-row text-gray-50">
               <span className="follow-icons">
