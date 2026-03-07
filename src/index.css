@@ -265,3 +265,74 @@ img {
     transform: rotate(360deg);
   }
 }
+
+/* posicionamiento del contenedor del círculo */
+.circle2-wrap {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 574px;
+  height: 574px;
+  left: 50%;
+  margin-left: 200px;
+}
+
+/* animación del div */
+.circle-bg {
+  position: absolute;
+  left: 0px;
+  animation: rotate-center 10s linear infinite reverse both;
+  z-index: 2;
+}
+
+/* posicionamiento del círculo dentro del contenedor */
+.circle2-bg {
+  width: 574px;
+  height: 574px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: block;
+}
+
+/* bolita que rota */
+.circle2-bg::after {
+  content: "";
+  position: absolute;
+  right: 75px;
+  bottom: 14%;
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-prim);
+  border-radius: 50%;
+  z-index: 9;
+}
+
+.circle3-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 774px;
+  height: 774px;
+  margin-left: 200px;
+}
+
+.circle3-bg span {
+  width: 774px;
+  height: 774px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: block;
+}
+
+.circle3-bg span::after {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  left: 3px;
+  top: 38%;
+  background-color: var(--color-yellow);
+  border-radius: 50%;
+  z-index: 9;
+}

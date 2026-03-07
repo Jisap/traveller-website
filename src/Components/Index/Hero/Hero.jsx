@@ -103,6 +103,7 @@ const Hero = () => {
 
           <div className="circle3-wrap">
             <div className="rotate-center circle-bg circle3-bg">
+              <span></span>
             </div>
           </div>
 
