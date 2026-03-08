@@ -526,3 +526,21 @@ img {
   width: 100%;
   border-radius: 100px 30px 100px 30px;
 }
+
+.steps-icon img {
+  max-width: 48px;
+  width: 100%;
+  /* Cambia el color del icono */
+  filter: brightness(0) saturate(100%) invert(25%) sepia(21%) saturate(4469%) hue-rotate(154deg) brightness(93%) contrast(95%)
+}
+
+.SpecialOfferBanner .text-title {
+  font-family: var(--font-kaushan);
+}
+
+.SpecialOfferBanner {
+  background-image: url(../src/assets/Index//BookingSteps/Banner-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
