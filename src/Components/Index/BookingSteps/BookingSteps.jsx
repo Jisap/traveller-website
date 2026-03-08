@@ -1,9 +1,10 @@
-
 import titleShape from "../../../assets/Index/BookingSteps/Title-Shape.png"
 import StepsIcon1 from "../../../assets/Index/BookingSteps/Steps-Icon1.png"
 import StepsIcon2 from "../../../assets/Index/BookingSteps/Steps-Icon2.png"
 import StepsIcon3 from "../../../assets/Index/BookingSteps/Steps-Icon3.png"
 import Mainbtn from "../../Buttons/Mainbtn"
+import { motion } from "framer-motion"
+import { containerVariants, fadeInUp, scaleIn } from "../../../Animations/variants"
 
 
 const stepsData = [
@@ -37,24 +38,54 @@ const stepsData = [
 const BookingSteps = () => {
   return (
     <>
-      <div className="px-[2%] ms:px-[8%] lg:px-[12%] py-[6%] md:py-[10%]">
-        <div className="title flex flex-col justify-center items-center text-center relative pb-10">
-          <h1 className="text-secondary text-4xl md:text-6xl font-bold">
+      <div className="px-[2%] ms:px-[8%] lg:px-[12%] py-[6%] md:py-[10%] overflow-hidden bg-white">
+        <motion.div
+          className="title flex flex-col justify-center items-center text-center relative pb-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants(0.18, 0.4)}
+        >
+          <motion.h1
+            className="text-secondary text-4xl md:text-6xl font-bold"
+            variants={fadeInUp}
+          >
             Easy Steps <span className="text-yellow">For Bookings</span>
-          </h1>
+          </motion.h1>
 
-          <p className="text-secondary my-2 text-lg">
+          <motion.p
+            className="text-secondary my-2 text-lg"
+            variants={fadeInUp}
+          >
             Destinations worth exploring! Here are a few popular spots
-          </p>
+          </motion.p>
 
-          <img src={titleShape} alt="titleShape" className="w-[35%] object-contain absolute -bottom-12" />
-        </div>
+          <motion.img
+            src={titleShape}
+            alt="titleShape"
+            className="w-[35%] object-contain absolute -bottom-12"
+            variants={scaleIn}
+          />
+        </motion.div>
 
         <div className="pb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={containerVariants(0.2, 0.6)}
+          >
             {stepsData.map((step) => (
-              // steps cards
-              <div key={step.id} className="steps-card p-10 pb-7 hover:shadow-xl border border-secondary/10 rounded-lg hover:translate-y-2 transition-all duration-300">
+              <motion.div
+                key={step.id}
+                className="steps-card p-10 pb-7 border border-secondary/10 rounded-lg bg-white shadow-sm hover:shadow-xl transform-gpu"
+                variants={fadeInUp}
+                whileHover={{
+                  y: 8,
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
+              >
                 <div className="flex justify-between items-center gap-3">
                   <span className="text-5xl font-bold bg-secondary w-20 h-20 rounded-lg flex items-center justify-center text-white">
                     {step.number}
@@ -74,13 +105,25 @@ const BookingSteps = () => {
                     {step.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
-        <div className="SpecialOfferBanner bg-yellow flex flex-wrap items-center justify-center lg:justify-between text-center lg:text-start px-5 py-7 rounded-2xl">
-          <div className="flex items-end">
+        <motion.div
+          className="SpecialOfferBanner bg-yellow flex flex-wrap items-center justify-center lg:justify-between text-center lg:text-start px-5 py-7 rounded-2xl relative overflow-hidden"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <motion.div
+            className="flex items-end relative z-1"
+            initial={{ x: -30, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h1 className="text-9xl font-bold text-white ">
               48
             </h1>
@@ -89,9 +132,15 @@ const BookingSteps = () => {
               <h5>%</h5>
               <h5>OFF</h5>
             </div>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+            className="relative z-1"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h5 className="text-white font-semibold text-2xl">
               Get Special Offer
             </h5>
@@ -99,18 +148,24 @@ const BookingSteps = () => {
             <h1 className="text-5xl md:text-6xl text-title mt-5 text-secondary">
               Tours and Trip Packages, Globally
             </h1>
-          </div>
+          </motion.div>
 
-          <div className="mt-5">
+          <motion.div
+            className="mt-5 relative z-1"
+            initial={{ x: 30, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <Mainbtn
               text="Discover More"
               className="discover-btn"
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </>
   )
 }
 
-export default BookingSteps
+export default BookingSteps;
