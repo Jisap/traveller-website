@@ -501,3 +501,28 @@ img {
   transform: translate(-50%, -50%);
   z-index: 1;
 }
+
+.about-image2 {
+  max-width: 278px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.about-image2 img {
+  width: 100%;
+  border-radius: 100px 30px 100px 30px;
+}
+
+.about-image3 {
+  max-width: 278px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+.about-image3 img {
+  width: 100%;
+  border-radius: 100px 30px 100px 30px;
+}
