@@ -3,6 +3,8 @@ import Hero from './Hero/Hero'
 import PageTransition from '../Transition/PageTransition'
 import About from './About/About'
 import BookingSteps from './BookingSteps/BookingSteps'
+import TopDestination from './TopDestination/TopDestination'
+
 
 const Index = () => {
   return (
@@ -10,6 +12,7 @@ const Index = () => {
       <Hero />
       <About />
       <BookingSteps />
+      <TopDestination />
     </PageTransition>
   )
 }

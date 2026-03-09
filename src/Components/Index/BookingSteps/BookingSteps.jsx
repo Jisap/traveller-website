@@ -38,7 +38,7 @@ const stepsData = [
 const BookingSteps = () => {
   return (
     <>
-      <div className="px-[2%] ms:px-[8%] lg:px-[12%] py-[6%] md:py-[10%] overflow-hidden bg-white">
+      <div className="px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[10%] overflow-hidden bg-white">
         <motion.div
           className="title flex flex-col justify-center items-center text-center relative pb-10"
           initial="hidden"
