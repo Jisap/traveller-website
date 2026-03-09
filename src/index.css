@@ -544,3 +544,13 @@ img {
   background-size: contain;
   background-position: bottom;
 }
+
+.rotate {
+  animation: rotate 200s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

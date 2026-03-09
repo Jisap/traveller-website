@@ -103,6 +103,14 @@ const TourGuide = () => {
                         </Link>
                       </li>
                     </ul>
+
+                    <h3 className="text-secondary text-3xl pt-2 pb-1 font-medium hover:text-yellow transition-colors duration-300">
+                      {member.name}
+                    </h3>
+
+                    <span className="text-yellow">
+                      Tourist Guide
+                    </span>
                   </div>
                 </div>
               ))}
