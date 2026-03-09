@@ -7,10 +7,12 @@ import Customer2 from "../../../assets/Index/TopDestination/Customer-2.jpg";
 import Customer3 from "../../../assets/Index/TopDestination/Customer-3.jpg"
 import Mainbtn from "../../Buttons/Mainbtn";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Icon } from "@iconify/react"
+import Destinations from "../../../Data/TopDestination.json"
+import DestinationCard from "../../DestinationCard";
 
 
 const TopDestination = () => {
@@ -76,6 +78,37 @@ const TopDestination = () => {
             <button className="swiper-next absolute right-4 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-yellow text-white cursor-pointer flex items-center justify-center shadow-lg">
               <Icon icon="ep:arrow-right-bold" width="24" height="24" />
             </button>
+
+            <Swiper
+              modules={[Navigation, Autoplay]}
+              spaceBetween={40}
+              slidesPerView={1}
+              breakpoints={{
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+              }}
+              navigation={{
+                prevEl: ".swiper-prev",
+                nextEl: ".swiper-next",
+              }}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              className="destination-swiper"
+            >
+              {Destinations.map((item) => (
+                <SwiperSlide key={item.id} className="65! hover:w-125! transition-all! duration-500!">
+                  <DestinationCard
+                    title={item.title}
+                    listing={item.listing}
+                    image={item.image}
+                  />
+                </SwiperSlide>
+              ))}
+
+            </Swiper>
           </div>
         </div>
       </div>
