@@ -4,6 +4,8 @@ import PageTransition from '../Transition/PageTransition'
 import About from './About/About'
 import BookingSteps from './BookingSteps/BookingSteps'
 import TopDestination from './TopDestination/TopDestination'
+import TourGuide from './TourGuide/TourGuide'
+
 
 
 const Index = () => {
@@ -13,6 +15,7 @@ const Index = () => {
       <About />
       <BookingSteps />
       <TopDestination />
+      <TourGuide />
     </PageTransition>
   )
 }
