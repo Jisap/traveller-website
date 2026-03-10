@@ -1,4 +1,6 @@
 import CountUp from "react-countup"
+import { motion } from "framer-motion"
+import { containerVariants, fadeInUp } from "../../../Animations/variants"
 import counter1 from "../../../assets/Index/Counter/count-icon1.png"
 import counter2 from "../../../assets/Index/Counter/count-icon2.png"
 import counter3 from "../../../assets/Index/Counter/count-icon3.png"
@@ -14,9 +16,19 @@ const counters = [
 const Counter = () => {
   return (
     <>
-      <div className='counter-wrap bg-secondary px-[2%] sm:px-[8%] lg:px-[12%] py-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-10'>
+      <motion.div 
+        className='counter-wrap bg-secondary px-[2%] sm:px-[8%] lg:px-[12%] py-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-10'
+        variants={containerVariants(0.15, 0.1)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         {counters.map((item) => (
-          <div key={item.id} className="counter-item flex items-center border border-dashed border-gray-50/20 rounded-lg px-5 py-8 gap-8">
+          <motion.div 
+            key={item.id} 
+            className="counter-item flex items-center border border-dashed border-gray-50/20 rounded-lg px-5 py-8 gap-8"
+            variants={fadeInUp}
+          >
             <img src={item.image} alt="counter" className="w-14 h-14" />
 
             <div className="counter-content">
@@ -33,9 +45,9 @@ const Counter = () => {
                 {item.suffix}
               </span>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </>
   )
 }
