@@ -564,3 +564,55 @@ img {
   position: absolute;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.56) 0%, rgba(255, 255, 255, 0) 90%);
 }
+
+.ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  animation: ripple-video 2.5s linear infinite;
+  z-index: 0;
+}
+
+.ripple::after,
+.ripple::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  animation: ripple-video 2.5s linear infinite;
+}
+
+.ripple::before {
+  animation-delay: 0.6s;
+}
+
+.riple::after {
+  animation-delay: 1.2s;
+}
+
+@keyframes ripple-video {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+
+  70% {
+    transform: translate(-50%, -50%) scale(1.8);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(2.2);
+    opacity: 0;
+  }
+}
