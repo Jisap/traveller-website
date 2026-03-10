@@ -6,6 +6,7 @@ import BookingSteps from './BookingSteps/BookingSteps'
 import TopDestination from './TopDestination/TopDestination'
 import TourGuide from './TourGuide/TourGuide'
 import TourCategories from './TourCategories/TourCategories'
+import Testimonials from './Testimonials/Testimonials'
 
 
 
@@ -18,6 +19,7 @@ const Index = () => {
       <TopDestination />
       <TourGuide />
       <TourCategories />
+      <Testimonials />
     </PageTransition>
   )
 }
