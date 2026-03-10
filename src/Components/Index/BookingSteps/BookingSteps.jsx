@@ -82,7 +82,7 @@ const BookingSteps = () => {
                 className="steps-card p-10 pb-7 border border-secondary/10 rounded-lg bg-white shadow-sm hover:shadow-xl transform-gpu"
                 variants={fadeInUp}
                 whileHover={{
-                  y: 8,
+                  y: -10,
                   transition: { duration: 0.3, ease: "easeOut" }
                 }}
               >

@@ -10,7 +10,7 @@ import { Link } from "react-router-dom"
 import Mainbtn from "../../Buttons/Mainbtn"
 import { ShineButton } from "../../Buttons/ShineButton"
 import { motion } from "framer-motion"
-import { containerVariants, fadeInUp, fadeInRight, scaleIn, bounceIn, rotateIn } from "../../../Animations/variants"
+import { containerVariants, fadeInUp, fadeInRight, scaleIn, bounceInCentered, rotateIn } from "../../../Animations/variants"
 
 
 const Hero = () => {
@@ -24,8 +24,7 @@ const Hero = () => {
           className="hero-content w-full xl:ps-12.5 z-1"
           variants={containerVariants(0.18, 0.6)}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          animate="visible"
         >
           <motion.h3
             className="text-5xl text-white font-kaushan!"
@@ -34,12 +33,13 @@ const Hero = () => {
             Discover
           </motion.h3>
 
-          <motion.h1
-            className="font-kaushan! font-semibold text-[160px] text-white hero-title"
-            variants={fadeInUp}
-          >
-            The World
-          </motion.h1>
+          <motion.div variants={fadeInUp}>
+            <h1
+              className="font-kaushan! font-semibold text-[160px] text-white hero-title"
+            >
+              The World
+            </h1>
+          </motion.div>
 
           <motion.div className="mt-5 md:mt-10" variants={fadeInUp}>
             <p className="text-white pera-text">
@@ -126,7 +126,7 @@ const Hero = () => {
 
           <motion.div
             className="offer flex flex-col"
-            variants={bounceIn}
+            variants={bounceInCentered}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}

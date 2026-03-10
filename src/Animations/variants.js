@@ -26,6 +26,20 @@ export const fadeInUp = {
   },
 };
 
+// Specialized variant for elements centered with translate(-50%, -50%)
+export const fadeInUpCentered = {
+  hidden: { opacity: 0, y: "-40%", x: "-50%" },
+  visible: {
+    opacity: 1,
+    y: "-50%",
+    x: "-50%",
+    transition: {
+      duration: 0.8,
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
+};
+
 export const fadeInRight = {
   hidden: { opacity: 0, x: -50 },
   visible: {
@@ -67,6 +81,21 @@ export const bounceIn = {
   visible: {
     opacity: 1,
     scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 260,
+      damping: 20,
+    },
+  },
+};
+
+// Specialized bounceIn for elements that need to stay at y: -50% (vertical centering)
+export const bounceInCentered = {
+  hidden: { opacity: 0, scale: 0.3, y: "-50%" },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: "-50%",
     transition: {
       type: "spring",
       stiffness: 260,

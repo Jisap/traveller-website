@@ -9,6 +9,8 @@ import team3 from "../../../assets/Index/TourGuide/pic3.jpg"
 import team4 from "../../../assets/Index/TourGuide/pic4.jpg"
 import { Icon } from "@iconify/react"
 import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
+import { containerVariants, fadeInUp, scaleIn } from "../../../Animations/variants"
 
 
 const teamMembers = [
@@ -23,36 +25,67 @@ const teamMembers = [
 const TourGuide = () => {
   return (
     <>
-      <div className='flex flex-col bg-[#daeeef] sm:p-10 rounded-lg'>
-        <div className='bg-white px-[2%] sm:px-[8%] py-[6%] md:py-[8%] rounded-2xl'>
+      <div className='flex flex-col bg-[#daeeef] sm:p-10 rounded-lg overflow-hidden'>
+        <motion.div
+          className='bg-white px-[2%] sm:px-[8%] py-[6%] md:py-[8%] rounded-2xl'
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants(0.15, 0.2)}
+        >
           <div className='title flex flex-col justify-center items-center text-center relative mb-10'>
-            <h1 className='text-secondary text-4xl md:text-6xl font-bold'>
+            <motion.h1 className='text-secondary text-4xl md:text-6xl font-bold' variants={fadeInUp}>
               <span className='text-yellow'> Meet With </span> Tour Guide
-            </h1>
+            </motion.h1>
 
-            <p className='text-secondary my-2 text-lg'>
+            <motion.p className='text-secondary my-2 text-lg' variants={fadeInUp}>
               Destinations worth exploring! Here are a few popular spots
-            </p>
+            </motion.p>
 
-            <img src={titleShape} alt="titleShape" className="w-[35%] object-contain absolute -bottom-12" />
+            <motion.img
+              src={titleShape}
+              alt="titleShape"
+              className="w-[35%] object-contain absolute -bottom-12"
+              variants={scaleIn}
+            />
           </div>
 
           <div className="tour-guide-container bg-no-repeat bg-cover bg-center flex justify-between items-start flex-col xl:flex-row pt-10 gap-10">
             <div className="guid-image w-full xl:w-[50%] relative">
-              <img src={circleshape} alt="circleShape" className="absolute top-0 left-0 w-full h-full rotate" />
+              <motion.div
+                className="absolute top-0 left-0 w-full h-full"
+                variants={scaleIn}
+              >
+                <img src={circleshape} alt="circleShape" className="w-full h-full rotate" />
+              </motion.div>
 
-              <div className="title relative text-center text-secondary text-3xl sm:text-4xl md:text-6xl font-kaushan font-medium py-8">
+              <motion.div
+                className="title relative text-center text-secondary text-3xl sm:text-4xl md:text-6xl font-kaushan font-medium py-8"
+                variants={fadeInUp}
+              >
                 Meet with <span className="text-white block text-4xl sm:text-5xl md:text-8xl font-medium [text-shadow:2px_5px_0px_rgba(14,137,145,0.2)]">
                   Expert Guide
                 </span>
-              </div>
+              </motion.div>
 
-              <img src={teamimg} alt="teamImg" className="w-full h-full z-1 relative" />
+              <motion.img
+                src={teamimg}
+                alt="teamImg"
+                className="w-full h-full z-1 relative"
+                variants={fadeInUp}
+              />
             </div>
 
-            <div className="team-wrap grid grid-cols-1 md:grid-cols-2 gap-10 w-full xl:w-[50%]">
+            <motion.div
+              className="team-wrap grid grid-cols-1 md:grid-cols-2 gap-10 w-full xl:w-[50%]"
+              variants={containerVariants(0.2, 0.4)}
+            >
               {teamMembers.map((member) => (
-                <div key={member.id} className="team-item bg-wite [box-shadow:0px_18px_18px_rgba(0,106,114,0.1)] p-3.5 rounded-2xl">
+                <motion.div
+                  key={member.id}
+                  className="team-item bg-wite [box-shadow:0px_18px_18px_rgba(0,106,114,0.1)] p-3.5 rounded-2xl"
+                  variants={fadeInUp}
+                >
                   <div className="team-img rounded-2xl overflow-hidden group">
                     <img
                       src={member.image}
@@ -112,14 +145,15 @@ const TourGuide = () => {
                       Tourist Guide
                     </span>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   )
 }
+
 
 export default TourGuide
