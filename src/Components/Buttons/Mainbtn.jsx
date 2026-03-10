@@ -5,9 +5,10 @@ import { motion } from 'framer-motion'
 const Mainbtn = ({ className = "", text, to = "#" }) => {
   return (
     <motion.div
-      whileHover={{ scale: 1.05 }}
+      whileHover={{ scale: 1.05, y: -3 }}
       whileTap={{ scale: 0.95 }}
       className="inline-block"
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
       <Link
         to={to}

@@ -554,3 +554,13 @@ img {
     transform: rotate(360deg);
   }
 }
+
+.tour-ctg-container::after {
+  content: "";
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 255px;
+  position: absolute;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.56) 0%, rgba(255, 255, 255, 0) 90%);
+}
