@@ -8,6 +8,7 @@ import TourGuide from './TourGuide/TourGuide'
 import TourCategories from './TourCategories/TourCategories'
 import Testimonials from './Testimonials/Testimonials'
 import Banner from './Banner/Banner'
+import Counter from './Counter/Counter'
 
 
 
@@ -22,6 +23,7 @@ const Index = () => {
       <TourCategories />
       <Testimonials />
       <Banner />
+      <Counter />
     </PageTransition>
   )
 }
