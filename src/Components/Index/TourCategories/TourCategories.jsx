@@ -9,11 +9,14 @@ import ctg6 from "../../../assets/Index/TourCategories/Tour-Categories-06.jpg";
 
 import Mainbtn from "../../Buttons/Mainbtn";
 import { Icon } from "@iconify/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+
+import { fadeInUp, fadeInLeft, containerVariants } from "../../../Animations/variants";
 
 
 const categories = [
@@ -63,7 +66,6 @@ const TourCategories = () => {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
-
   return (
     <>
       <div
@@ -71,22 +73,38 @@ const TourCategories = () => {
         style={{ backgroundImage: `url(${tourbg})` }}
       >
         <div className="ctg-content w-full xl:w-[40%] flex flex-col justify-center relative z-10">
-          <h3 className="text-secondary font-afacad text-4xl font-medium pb-2">
-            {categories[activeIndex].title}
-          </h3>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeIndex}
+              variants={fadeInUp}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+            >
+              <h3 className="text-secondary font-afacad text-4xl font-medium pb-2">
+                {categories[activeIndex].title}
+              </h3>
 
-          <p className="text-lg lg:max-w-sm text-secondary/70 mb-5">
-            {categories[activeIndex].pera}
-          </p>
+              <p className="text-lg lg:max-w-sm text-secondary/70 mb-5">
+                {categories[activeIndex].pera}
+              </p>
 
-          <Mainbtn
-            text="View All"
-            className="w-fit"
-            to="/tours"
-          />
+              <Mainbtn
+                text="View All"
+                className="w-fit"
+                to="/tours"
+              />
+            </motion.div>
+          </AnimatePresence>
         </div>
 
-        <div className="ctg-wrap w-full xl:w-[60%] relative mb-14">
+        <motion.div
+          className="ctg-wrap w-full xl:w-[60%] relative mb-14"
+          variants={fadeInLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <button className="ctg-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-yellow text-white cursor-pointer flex items-center justify-center shadow">
             <Icon icon="ep:arrow-left-bold" width="24" height="24" />
           </button>
@@ -109,21 +127,31 @@ const TourCategories = () => {
             {categories.map((cat, index) => (
               <SwiperSlide key={index}>
                 {cat.isButton ? (
-                  <div className="flex justify-center items-center h-full">
+                  <motion.div
+                    variants={containerVariants(0.1, index * 0.1)}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className="flex justify-center items-center h-full"
+                  >
                     <Mainbtn
                       text="View All"
                       className="text-sm!"
                     />
-
-
-                  </div>
+                  </motion.div>
                 ) : (
-                  <div className={
-                    `ctg-item bg-white p-5 rounded-2xl w-full transition-transform duration-500 
+                  <motion.div
+                    variants={containerVariants(0.1, index * 0.1)}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className={
+                      `ctg-item bg-white p-5 rounded-2xl w-full transition-transform duration-500 
                      ${activeIndex === index   // comparar por index directo
-                      ? "scale-100 rotate-0" // activo: recto // inactivo : inclinado
-                      : "scale-75 rotate-6"}  
-                  `}>
+                        ? "scale-100 rotate-0" // activo: recto // inactivo : inclinado
+                        : "scale-75 rotate-6"}  
+                    `}
+                  >
                     <div className="ctg-image rounded-2xl overflow-hidden">
                       <img
                         src={cat.image}
@@ -135,20 +163,26 @@ const TourCategories = () => {
                     <span className="text-center pt-2 block text-2xl lg:text-3xl font-medium text-secondary font-afacad">
                       {cat.title}
                     </span>
-                  </div>
+                  </motion.div>
                 )}
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </motion.div>
 
-        <div className="relative lg:absolute xl:right-40 bottom-8 flex flex-col text-white font-kaushan! text-xl sm:text-2xl xl:text-start text-end xl:text-5xl z-1">
+        <motion.div
+          className="relative lg:absolute xl:right-40 bottom-8 flex flex-col text-white font-kaushan! text-xl sm:text-2xl xl:text-start text-end xl:text-5xl z-1"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           Wonderful Place For you
 
           <h2 className="uppercase font-afacad! font-extrabold text-4xl lg:text-6xl xl:text-8xl text-yellow">
             Tour Categories
           </h2>
-        </div>
+        </motion.div>
       </div>
     </>
   )
