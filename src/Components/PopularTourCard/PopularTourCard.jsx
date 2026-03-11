@@ -1,10 +1,15 @@
 import { Icon } from "@iconify/react"
+import { motion } from "framer-motion"
+import { fadeInUp } from "../../Animations/variants"
 import Mainbtn from "../Buttons/MainBtn"
 
 const PopularTourCard = ({ tour }) => {
   return (
     <>
-      <div className="tour-card transition-all duration-300 cursor-pointer">
+      <motion.div
+        variants={fadeInUp}
+        className="tour-card transition-all duration-300 cursor-pointer"
+      >
         <div className="popular-tour-image flex-shrink-0">
           <img src={tour.image} alt="popular-tour-image" className="w-full h-full object-cover block" />
         </div>
@@ -58,7 +63,7 @@ const PopularTourCard = ({ tour }) => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   )
 }
