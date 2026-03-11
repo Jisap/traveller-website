@@ -616,3 +616,31 @@ img {
     opacity: 0;
   }
 }
+
+.tour-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 18px 18px rgb(0 106 114 / 0.15);
+  overflow: hidden;
+}
+
+.popular-tour-image {
+  position: relative;
+  height: 260px;
+  background: #666;
+  flex-shrink: 0;
+  display: flex;
+}
+
+.popular-tour-content {
+  transition: 0.5s all ease;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  /* Sigue expandiéndose para igualar alturas */
+}
