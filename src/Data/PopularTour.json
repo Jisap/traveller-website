@@ -1,0 +1,355 @@
+[
+  {
+    "id": 1,
+    "title": "Bangkok Cultural Heritage Tour",
+    "review": "5 review",
+    "days": "4 days",
+    "price": "$90",
+    "Duration": "4 Days &5 Nights",
+    "Places": "1N Bangkok Old City | 2N Downtown Bangkok | 1N Riverside Bangkok",
+    "image": "/src/assets/PopularToursPage/tour-01.jpg",
+    "DaysDescription": {
+      "day1": {
+        "title": "Arrival & City Orientation",
+        "list": [
+          "Check out of your hotel and proceed to visit the renowned Madame Tussauds wax museum.",
+          "Travel by high-speed Eurostar train (02nd Class) from London to Paris.",
+          "Arrive in Paris and check-in at your hotel.",
+          "Leisure day - take the opportunity to explore McArthurGlen, just a short distance from your hotel.",
+          "Overnight in Paris (Breakfast, Lunch, Dinner included)."
+        ]
+      },
+      "day2": {
+        "title": "Grand Palace & Temple Tour",
+        "list": [
+          "Visit iconic landmarks: Big Ben, Houses of Parliament, Westminster Abbey, Trafalgar Square, Piccadilly Circus, Tower Bridge, River Thames, Hyde Park.",
+          "Witness the Changing of the Guards at Buckingham Palace (subject to operation).",
+          "Visit the legendary Lord’s Cricket Ground; ride the London Eye.",
+          "Overnight in London (Breakfast, Lunch, Dinner included).",
+          "Guided city tour with an expert local guide."
+        ]
+      },
+      "day3": {
+        "title": "Floating Market & Shopping",
+        "list": [
+          "Visit iconic landmarks: Big Ben, Houses of Parliament, Westminster Abbey, Trafalgar Square, Piccadilly Circus, Tower Bridge, River Thames, Hyde Park.",
+          "Witness the Changing of the Guards at Buckingham Palace (subject to operation).",
+          "Visit the legendary Lord’s Cricket Ground; ride the London Eye.",
+          "Overnight in London (Breakfast, Lunch, Dinner included).",
+          "Guided city tour with an expert local guide."
+        ],
+        "rewareds": "Rising to 1,717 meters above sea level, it offers adventurous travelers a moderately challenging hike that rewards."
+      },
+      "day4": {
+        "title": "Departure",
+        "list": [
+          "Guided city tour of Paris with an expert local guide.",
+          "Discover iconic attractions: Place Vendôme, Place de l’Opéra Garnier, Musée d’Orsay, Place de la Concorde, Champs Elysées, Arc de Triomphe, Alexander Bridge, Les Invalides, and more.",
+          "Overnight in Paris (Breakfast, Lunch, Dinner included).",
+          "Visit the magnificent Palace of Versailles, a world-renowned UNESCO site.",
+          "(Please note that access to the Eiffel Tower's 3rd level is contingent on its operational status. If it happens to be closed during our visit, we will explore the 2nd level instead, which offers fantastic views and insights into the Eiffel Tower's history.)"
+        ]
+      }
+    }
+  },
+  {
+    "id": 2,
+    "title": "Thailand Beaches & Island Hopping",
+    "review": "4.1 review",
+    "days": "6 days",
+    "price": "$60",
+    "Duration": " 6 Days &5 Nights",
+    "Places": "2N Phuket | 2N Krabi | 2N Phi Phi | Island Hopping | Water Sports",
+    "image": "/src/assets/PopularToursPage/tour-02.jpg",
+    "DaysDescription": {
+      "day1": {
+        "title": "Arrival in Phuket",
+        "list": [
+          "Arrive at Phuket International Airport; meet & greet by local representative.",
+          "Transfer to hotel & check-in.",
+          "Relax at Patong Beach.",
+          "Explore night markets or enjoy the vibrant nightlife."
+        ]
+      },
+      "day2": {
+        "title": "Phuket City Highlights + Big Buddha",
+        "list": [
+          "Phuket City Tour covering Karon Viewpoint & Old Phuket Town.",
+          "Visit the iconic Big Buddha on Nakkerd Hill.",
+          "Explore Wat Chalong Temple.",
+          "Evening leisure near beachside cafés."
+        ]
+      },
+      "day3": {
+        "title": "Phi Phi Island Tour",
+        "list": [
+          "Speedboat ride to Phi Phi Don & Phi Phi Leh.",
+          "Snorkeling in crystal clear waters.",
+          "Visit Viking Cave & Pileh Lagoon.",
+          "Lunch included on the island."
+        ]
+      },
+      "day4": {
+        "title": "Transfer to Krabi + Ao Nang Beach",
+        "list": [
+          "Scenic transfer from Phuket to Krabi.",
+          "Check-in at hotel near Ao Nang Beach.",
+          "Sunset walk along the beachfront.",
+          "Optional: Thai massage or café hopping."
+        ]
+      },
+      "day5": {
+        "title": "Krabi 4-Island Hopping",
+        "list": [
+          "Explore Chicken Island, Poda Island, Tup Island & Phra Nang Cave Beach.",
+          "Snorkeling & swimming in turquoise waters.",
+          "Enjoy white-sand beaches with limestone cliffs.",
+          "Return to Krabi hotel."
+        ]
+      },
+      "day6": {
+        "title": "Departure",
+        "list": [
+          "Breakfast at hotel.",
+          "Airport transfer for your return flight.",
+          "End of your Thailand Beaches & Island Hopping tour."
+        ]
+      }
+    }
+  },
+  {
+    "id": 3,
+    "title": "California Dreams Road Trip",
+    "review": "4 review",
+    "days": "7 days",
+    "price": "$52",
+    "Duration": "7 Days &6 Nights",
+    "Places": "2N SF | 3N LA | 1N San Diego | Highways | Beaches | City Highlights",
+    "image": "/src/assets/PopularToursPage/tour-03.jpg",
+    "DaysDescription": {
+      "day1": {
+        "title": "Arrival in Los Angeles",
+        "list": [
+          "Arrive at Los Angeles International Airport (LAX).",
+          "Pick up your rental car and check-in at the hotel.",
+          "Visit Santa Monica Pier & enjoy the beach sunset.",
+          "Explore the Los Angeles nightlife or relax at the hotel."
+        ]
+      },
+      "day2": {
+        "title": "Los Angeles City Highlights",
+        "list": [
+          "Explore Hollywood Walk of Fame.",
+          "Visit Dolby Theatre & TCL Chinese Theatre.",
+          "Drive up to Griffith Observatory for city & Hollywood Sign views.",
+          "Optional: Visit Universal Studios Hollywood."
+        ]
+      },
+      "day3": {
+        "title": "Los Angeles to San Diego",
+        "list": [
+          "Drive along Pacific Coast Highway towards San Diego.",
+          "Visit La Jolla Cove for beautiful ocean cliffs.",
+          "Explore Old Town San Diego or Gaslamp Quarter.",
+          "Overnight stay in San Diego."
+        ]
+      },
+      "day4": {
+        "title": "San Diego to Palm Springs",
+        "list": [
+          "Morning visit to Balboa Park or San Diego Zoo.",
+          "Drive to Palm Springs through scenic desert landscapes.",
+          "Check-in & relax at your Palm Springs resort.",
+          "Evening stroll at Palm Springs Downtown Village."
+        ]
+      },
+      "day5": {
+        "title": "Palm Springs to Yosemite National Park",
+        "list": [
+          "Drive towards Yosemite via Fresno or Bakersfield route.",
+          "Enter Yosemite National Park and explore its scenic viewpoints.",
+          "See Tunnel View, El Capitan & Bridalveil Fall.",
+          "Overnight stay near Yosemite."
+        ]
+      },
+      "day6": {
+        "title": "Yosemite to San Francisco",
+        "list": [
+          "Morning nature walk or short hike in Yosemite Valley.",
+          "Drive to San Francisco through Central California.",
+          "Visit Pier 39 & Fisherman's Wharf.",
+          "Evening view of the Golden Gate Bridge."
+        ]
+      },
+      "day7": {
+        "title": "San Francisco Departure",
+        "list": [
+          "Explore Lombard Street (world’s most crooked street).",
+          "Visit Union Square for last-minute shopping.",
+          "Drop off rental car at the airport.",
+          "Depart from San Francisco Airport with unforgettable memories."
+        ]
+      }
+    }
+  },
+  {
+    "id": 4,
+    "title": "Disneyland & Universal Family Adventure",
+    "review": "3 review",
+    "days": "5 days",
+    "price": "$59",
+    "Duration": "5 Days &4 Nights",
+    "Places": "2 Parks | Universal Studios | Disneyland | Family Fun",
+    "image": "/src/assets/PopularToursPage/tour-04.jpg",
+    "DaysDescription": {
+      "day1": {
+        "title": "Arrival in Los Angeles",
+        "list": [
+          "Arrive at Los Angeles International Airport (LAX).",
+          "Meet & greet and transfer to your hotel.",
+          "Evening visit to Santa Monica Pier or stroll at Venice Beach.",
+          "Overnight stay in Los Angeles."
+        ]
+      },
+      "day2": {
+        "title": "Disneyland – Full Day",
+        "list": [
+          "Full-day excitement at Disneyland Park in Anaheim.",
+          "Enjoy classic attractions: Pirates of the Caribbean, Haunted Mansion, Space Mountain.",
+          "Meet Disney characters and enjoy live shows.",
+          "Evening parade & spectacular fireworks show."
+        ]
+      },
+      "day3": {
+        "title": "Disney California Adventure Park",
+        "list": [
+          "Spend the day at Disney California Adventure.",
+          "Experience Cars Land, Pixar Pier, and Avengers Campus.",
+          "Enjoy 3D & 4D rides like Soarin' Around the World.",
+          "Return to hotel for overnight stay."
+        ]
+      },
+      "day4": {
+        "title": "Universal Studios Hollywood",
+        "list": [
+          "Visit Universal Studios for thrilling movie-themed adventures.",
+          "Explore Wizarding World of Harry Potter.",
+          "Ride Transformers 3D, Jurassic World & Studio Tour.",
+          "Evening leisure at Universal CityWalk."
+        ]
+      },
+      "day5": {
+        "title": " Los Angeles Departure",
+        "list": [
+          "Breakfast at hotel.",
+          "Quick stop at Hollywood Walk of Fame (if time permits).",
+          "Transfer to airport for your onward flight.",
+          "Trip ends with magical family memories."
+        ]
+      }
+    }
+  },
+  {
+    "id": 5,
+    "title": "Maldives Luxury Water Villa",
+    "review": "3.5 review",
+    "days": "5 days",
+    "price": "$52",
+    "Duration": "5 Days &4 Nights",
+    "Places": "3N Overwater Villa | Speedboat Transfer | Water Sports | Private Island Luxury",
+    "image": "/src/assets/PopularToursPage/tour-05.jpg",
+    "DaysDescription": {
+      "day1": {
+        "title": "Arrival in Maldives",
+        "list": [
+          "Arrive at Velana International Airport, Maldives.",
+          "Experience snorkeling, kayaking or paddle boarding.",
+          "Enjoy resort activities like beach volleyball & lagoon swimming.",
+          "mantic candlelight dinner by the beach."
+        ]
+      },
+      "day2": {
+        "title": "Water Sports & Island Activities",
+        "list": [
+          "Relax with a floating breakfast in your water villa.",
+          "Enjoy classic attractions: Pirates of the Caribbean, Haunted Mansion, Space Mountain.",
+          "Meet Disney characters and enjoy live shows.",
+          "Evening parade & spectacular fireworks show."
+        ]
+      },
+      "day3": {
+        "title": "Leisure Day & Spa Experience",
+        "list": [
+          "Leisure time to explore your private water villa.",
+          "Indulge in a relaxing couple's spa treatment.",
+          "Sunset cruise or dolphin watching (optional).",
+          "Enjoy a fine dining experience at resort restaurant."
+        ]
+      },
+      "day4": {
+        "title": "Departure from Maldives",
+        "list": [
+          "Breakfast at the resort.",
+          "Check out and transfer back to the airport.",
+          "Board your flight with unforgettable tropical memories."
+        ]
+      }
+    }
+  },
+  {
+    "id": 6,
+    "title": "Maldives Honeymoon Special",
+    "review": "3.5 review",
+    "days": "5 days",
+    "price": "$89",
+    "Duration": "5 Days &4 Nights",
+    "Places": "2N Beach Villa | 2N Water Villa | Candlelight Dinner | Sunset Cruise",
+    "image": "/src/assets/PopularToursPage/tour-06.jpg",
+    "DaysDescription": {
+      "day1": {
+        "title": "Arrival in Maldives",
+        "list": [
+          "Arrive at Velana International Airport.",
+          "Transfer to your resort by speedboat or seaplane.",
+          "Check-in to your romantic Water Villa / Beach Villa.",
+          "Enjoy a honeymoon welcome with sparkling juice & flower decoration."
+        ]
+      },
+      "day2": {
+        "title": "Island Activities & Water Adventures",
+        "list": [
+          "Start your day with a floating breakfast (optional).",
+          "Enjoy snorkeling, kayaking & paddle boarding.",
+          "Relax by the lagoon or infinity pool.",
+          "Romantic private beach dinner at night."
+        ]
+      },
+      "day3": {
+        "title": "Spa Therapy & Sunset Cruise",
+        "list": [
+          "Couple's spa session for relaxation & rejuvenation.",
+          "Leisure time at your villa or resort beach.",
+          "Evening sunset cruise or dolphin watching.",
+          "Candlelight dinner with romantic ambience."
+        ]
+      },
+      "day4": {
+        "title": "Leisure Day for Honeymoon Moments",
+        "list": [
+          "Enjoy private time in your Water Villa.",
+          "Optional: Scuba diving, jet ski, parasailing.",
+          "Explore resort photography spots for honeymoon memories.",
+          "Enjoy fine dining or in-villa dining experience."
+        ]
+      },
+      "day5": {
+        "title": "Departure from Maldives",
+        "list": [
+          "Breakfast at the resort.",
+          "Check out and transfer to the airport.",
+          "Fly back home with unforgettable honeymoon memories."
+        ]
+      }
+    }
+  }
+]

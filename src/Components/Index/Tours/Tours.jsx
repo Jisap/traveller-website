@@ -1,6 +1,8 @@
 import { motion } from "framer-motion"
 import { containerVariants, fadeInUp, scaleIn } from "../../../Animations/variants"
 import titleShape from "../../../assets/Index/BookingSteps/Title-Shape.png"
+import tourData from "../../../Data/PopularTour.json"
+import PopularTourCard from "../../PopularTourCard/PopularTourCard"
 
 const Tours = () => {
   return (
@@ -30,11 +32,18 @@ const Tours = () => {
           <motion.img
             src={titleShape}
             alt="titleShape"
-            className="w-[35%] object-contain absolute -bottom-12"
+            className="w-[45%] object-contain absolute -bottom-12"
             variants={scaleIn}
           />
         </div>
       </motion.div>
+
+      <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8">
+        {tourData.slice(0, 4).map((tour) => (
+          <PopularTourCard key={tour.id} tour={tour} />
+
+        ))}
+      </div>
     </>
   )
 }
