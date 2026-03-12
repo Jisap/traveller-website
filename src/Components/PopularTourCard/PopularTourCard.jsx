@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react"
 import { motion } from "framer-motion"
 import { fadeInUp } from "../../Animations/variants"
-import Mainbtn from "../Buttons/MainBtn"
+import Mainbtn from "../Buttons/Mainbtn"
 
 const PopularTourCard = ({ tour }) => {
   return (

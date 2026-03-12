@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "Cómo elegir el tour guiado perfecto para tu primer viaje",
+    "author": "Laura Martínez",
+    "image": "/src/assets/Index/Blogs/blog-img01.jpg",
+    "date": "1"
+  },
+  {
+    "id": 2,
+    "title": "5 ventajas de explorar una ciudad con un guía local",
+    "author": "Carlos Rivera",
+    "image": "/src/assets/Index/Blogs/blog-img02.jpg",
+    "date": "2"
+  },
+  {
+    "id": 3,
+    "title": "Los tours históricos más interesantes de Europa",
+    "author": "Ana López",
+    "image": "/src/assets/Index/Blogs/blog-img03.jpg",
+    "date": "3"
+  },
+  {
+    "id": 4,
+    "title": "Qué esperar de un tour gastronómico en una nueva ciudad",
+    "author": "Miguel Torres",
+    "image": "/src/assets/Index/Blogs/blog-img04.jpg",
+    "date": "4"
+  },
+  {
+    "id": 5,
+    "title": "Consejos para aprovechar al máximo un walking tour",
+    "author": "Sofía Delgado",
+    "image": "/src/assets/Index/Blogs/blog-img05.jpg",
+    "date": "5"
+  },
+  {
+    "id": 6,
+    "title": "Cómo los guías locales transforman la experiencia de viajar",
+    "author": "Daniel Ortega",
+    "image": "/src/assets/Index/Blogs/blog-img06.jpg",
+    "date": "6"
+  },
+  {
+    "id": 7,
+    "title": "Tours culturales imprescindibles en las grandes capitales",
+    "author": "Marina Castillo",
+    "image": "/src/assets/Index/Blogs/blog-img07.jpg",
+    "date": "7"
+  },
+  {
+    "id": 8,
+    "title": "Rutas guiadas por la naturaleza para viajeros aventureros",
+    "author": "Javier Navarro",
+    "image": "/src/assets/Index/Blogs/blog-img08.jpg",
+    "date": "8"
+  },
+  {
+    "id": 9,
+    "title": "Cómo encontrar los mejores guías turísticos cuando viajas",
+    "author": "Elena Ramos",
+    "image": "/src/assets/Index/Blogs/blog-img09.jpg",
+    "date": "9"
+  }
+]
