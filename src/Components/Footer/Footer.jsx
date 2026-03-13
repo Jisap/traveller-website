@@ -13,200 +13,63 @@ import car from '../../assets/Footer/Left-Car.png'
 import tyre from '../../assets/Footer/Left-Car-tyre.png'
 import tree from "../../assets/Footer/Righttreepic.png"
 import Logo from '../Navbar/Logo/Logo'
+import { motion } from 'framer-motion'
+import { containerVariants, fadeInUp, scaleIn } from '../../Animations/variants'
 
 
 
+
+const galleryImages = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9];
+
+const GalleryItem = ({ src }) => (
+  <motion.div className='w-full h-full gallery-item' variants={scaleIn}>
+    <Link to="https://www.instagram.com" className='relative block w-full overflow-hidden rounded-xl group'>
+      <img
+        src={src}
+        alt="gallery"
+        className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
+      />
+      <div className='absolute inset-0 bg-secondary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+        <span className='w-22.5 h-22.5 rounded-full bg-white flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300'>
+          <Icon
+            icon="lets-icons:insta"
+            width="28"
+            height="28"
+          />
+        </span>
+      </div>
+    </Link>
+  </motion.div>
+);
 
 const Footer = () => {
   return (
-    <>
-      <div className='bg-yellow-light w-full py-[6%] md:py-[10%] relative text-center overflow-hidden'>
+    <motion.footer
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+      variants={containerVariants(0.3, 0)}
+    >
+      <motion.div
+        variants={fadeInUp}
+        className='bg-yellow-light w-full py-[6%] md:py-[10%] relative text-center overflow-hidden'
+      >
         <div className='px-[2%] sm:px-[8%] lg:px-[10%] mb-10%'>
-          <h4 className='pb-8 text-2xl md:text-4xl text-secondary font-medium'>
+          <motion.h4
+            variants={fadeInUp}
+            className='pb-8 text-2xl md:text-4xl text-secondary font-medium'
+          >
             Follow Instagram
-          </h4>
+          </motion.h4>
 
-          <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-9 gap-4 sm:gap-5 max-w-full mx-auto'>
-            <div className='w-full h-full gallery-item'>
-              <Link to="https://www.instagram.com" className='relative block w-full overflow-hidden rounded-xl group'>
-                <img
-                  src={pic1}
-                  alt="gallery"
-                  className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
-                />
-
-                <div className='absolute inset-0 bg-secondary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                  <span className='w-22.5 h-22.5 rounded-full bg-white flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300'>
-                    <Icon
-                      icon="lets-icons:insta"
-                      width="28"
-                      height="28"
-                    />
-                  </span>
-                </div>
-              </Link>
-            </div>
-
-            <div className='w-full h-full gallery-item'>
-              <Link to="https://www.instagram.com" className='relative block w-full overflow-hidden rounded-xl group'>
-                <img
-                  src={pic2}
-                  alt="gallery"
-                  className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
-                />
-
-                <div className='absolute inset-0 bg-secondary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                  <span className='w-22.5 h-22.5 rounded-full bg-white flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300'>
-                    <Icon
-                      icon="lets-icons:insta"
-                      width="28"
-                      height="28"
-                    />
-                  </span>
-                </div>
-              </Link>
-            </div>
-
-            <div className='w-full h-full gallery-item'>
-              <Link to="https://www.instagram.com" className='relative block w-full overflow-hidden rounded-xl group'>
-                <img
-                  src={pic3}
-                  alt="gallery"
-                  className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
-                />
-
-                <div className='absolute inset-0 bg-secondary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                  <span className='w-22.5 h-22.5 rounded-full bg-white flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300'>
-                    <Icon
-                      icon="lets-icons:insta"
-                      width="28"
-                      height="28"
-                    />
-                  </span>
-                </div>
-              </Link>
-            </div>
-
-            <div className='w-full h-full gallery-item'>
-              <Link to="https://www.instagram.com" className='relative block w-full overflow-hidden rounded-xl group'>
-                <img
-                  src={pic4}
-                  alt="gallery"
-                  className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
-                />
-
-                <div className='absolute inset-0 bg-secondary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                  <span className='w-22.5 h-22.5 rounded-full bg-white flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300'>
-                    <Icon
-                      icon="lets-icons:insta"
-                      width="28"
-                      height="28"
-                    />
-                  </span>
-                </div>
-              </Link>
-            </div>
-
-            <div className='w-full h-full gallery-item'>
-              <Link to="https://www.instagram.com" className='relative block w-full overflow-hidden rounded-xl group'>
-                <img
-                  src={pic5}
-                  alt="gallery"
-                  className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
-                />
-
-                <div className='absolute inset-0 bg-secondary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                  <span className='w-22.5 h-22.5 rounded-full bg-white flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300'>
-                    <Icon
-                      icon="lets-icons:insta"
-                      width="28"
-                      height="28"
-                    />
-                  </span>
-                </div>
-              </Link>
-            </div>
-
-            <div className='w-full h-full gallery-item'>
-              <Link to="https://www.instagram.com" className='relative block w-full overflow-hidden rounded-xl group'>
-                <img
-                  src={pic6}
-                  alt="gallery"
-                  className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
-                />
-
-                <div className='absolute inset-0 bg-secondary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                  <span className='w-22.5 h-22.5 rounded-full bg-white flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300'>
-                    <Icon
-                      icon="lets-icons:insta"
-                      width="28"
-                      height="28"
-                    />
-                  </span>
-                </div>
-              </Link>
-            </div>
-
-            <div className='w-full h-full gallery-item'>
-              <Link to="https://www.instagram.com" className='relative block w-full overflow-hidden rounded-xl group'>
-                <img
-                  src={pic7}
-                  alt="gallery"
-                  className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
-                />
-
-                <div className='absolute inset-0 bg-secondary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                  <span className='w-22.5 h-22.5 rounded-full bg-white flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300'>
-                    <Icon
-                      icon="lets-icons:insta"
-                      width="28"
-                      height="28"
-                    />
-                  </span>
-                </div>
-              </Link>
-            </div>
-
-            <div className='w-full h-full gallery-item'>
-              <Link to="https://www.instagram.com" className='relative block w-full overflow-hidden rounded-xl group'>
-                <img
-                  src={pic8}
-                  alt="gallery"
-                  className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
-                />
-
-                <div className='absolute inset-0 bg-secondary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                  <span className='w-22.5 h-22.5 rounded-full bg-white flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300'>
-                    <Icon
-                      icon="lets-icons:insta"
-                      width="28"
-                      height="28"
-                    />
-                  </span>
-                </div>
-              </Link>
-            </div>
-
-            <div className='w-full h-full gallery-item'>
-              <Link to="https://www.instagram.com" className='relative block w-full overflow-hidden rounded-xl group'>
-                <img
-                  src={pic9}
-                  alt="gallery"
-                  className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
-                />
-
-                <div className='absolute inset-0 bg-secondary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                  <span className='w-22.5 h-22.5 rounded-full bg-white flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300'>
-                    <Icon
-                      icon="lets-icons:insta"
-                      width="28"
-                      height="28"
-                    />
-                  </span>
-                </div>
-              </Link>
-            </div>
-          </div>
+          <motion.div
+            className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-9 gap-4 sm:gap-5 max-w-full mx-auto'
+            variants={containerVariants(0.1, 0.6)}
+          >
+            {galleryImages.map((pic, index) => (
+              <GalleryItem key={index} src={pic} />
+            ))}
+          </motion.div>
         </div>
 
         <div className='md:absolute left-0 bottom-0 z-1 w-full border-b-4 border-secondary'>
@@ -226,9 +89,12 @@ const Footer = () => {
             <img src={tree} alt="tree-img" />
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className='footer-menu flex flex-col justify-between xl:flex-row gap-10 xl:gap-16 px-5 sm:px-[8%] lg:px-[10%] bg-yellow-light py-[6%]'>
+      <motion.div
+        variants={fadeInUp}
+        className='footer-menu flex flex-col justify-between xl:flex-row gap-10 xl:gap-16 px-5 sm:px-[8%] lg:px-[10%] bg-yellow-light py-[6%]'
+      >
         <div className='footer-item text-start xl:max-w-70'>
           <Logo className='text-black!' />
           <p className='pt-5 text-gray-500/60'>
@@ -422,10 +288,13 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
 
-      <div className='subscribe-banner px-[2%] sm:px-[8%] lg:px-[10%] bg-yellow-light'>
-        <div className='bg-secondary px-5 lg:px-10 py-8 flex justify-between items-center xl:flex-row flex-col rounded-xl xl:gap-0 gap-10'>
+      <motion.div
+        variants={fadeInUp}
+        className='subscribe-banner px-[2%] sm:px-[8%] lg:px-[10%] bg-yellow-light'
+      >
+        <div className='bg-secondary px-5 lg:px-10 py-8 flex justify-between items-center xl:flex-row flex-col rounded-xl xl:gap-0 gap-10' >
           <div className='subscribe-content text-white xl:text-start text-center'>
             <h4 className='text-3xl sm:text-4xl lg:text-6xl font-medium'>
               Subscribe <span className='text-yellow'>Now!</span>
@@ -459,12 +328,15 @@ const Footer = () => {
             </div>
           </form>
         </div>
-      </div>
+      </motion.div>
 
-      <p className='bg-yellow-light pt-5 pb-4 text-center font-medium'>
+      <motion.p
+        variants={fadeInUp}
+        className='bg-yellow-light pt-5 pb-4 text-center font-medium'
+      >
         Copyright © 2026 <span className='text-secondary'>Traveller</span> All Rights Reserved.
-      </p>
-    </>
+      </motion.p>
+    </motion.footer>
   )
 }
 
