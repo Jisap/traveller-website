@@ -423,6 +423,47 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+
+      <div className='subscribe-banner px-[2%] sm:px-[8%] lg:px-[10%] bg-yellow-light'>
+        <div className='bg-secondary px-5 lg:px-10 py-8 flex justify-between items-center xl:flex-row flex-col rounded-xl xl:gap-0 gap-10'>
+          <div className='subscribe-content text-white xl:text-start text-center'>
+            <h4 className='text-3xl sm:text-4xl lg:text-6xl font-medium'>
+              Subscribe <span className='text-yellow'>Now!</span>
+            </h4>
+
+            <p className='sm:text-lg xl:text-xl'>
+              Sign up to searing weekly newsletter to get the latest updates.
+            </p>
+          </div>
+
+          <form className='w-full xl:w-auto xl:min-w-lg'>
+            <div className='flex relative border bg-[#DBEEEE] rounded-full p-1.5 xl:max-w-120 w-full h-20'>
+              <input
+                type="email"
+                placeholder='Email address'
+                aria-label='Email address'
+                className='flex-2 h-17 border-0 pt-2.5 sm:pe-20 pb-2.5 ps-3 sm:ps-5 rounded-full bg-white outline-none!'
+              />
+
+              <button
+                type="submit"
+                aria-label='Search'
+                className='bg-secondary text-white border-0 rounded-full w-15 h-15 absolute top-2.5 right-3 flex justify-center items-center transition-all duration-300 hover:bg-opacity-90 active:scale-95'
+              >
+                <Icon
+                  icon="iconoir:search"
+                  width="35"
+                  height="35"
+                />
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <p className='bg-yellow-light pt-5 pb-4 text-center font-medium'>
+        Copyright © 2026 <span className='text-secondary'>Traveller</span> All Rights Reserved.
+      </p>
     </>
   )
 }
