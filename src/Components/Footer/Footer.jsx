@@ -234,6 +234,156 @@ const Footer = () => {
           <p className='pt-5 text-gray-500/60'>
             Traveller is a mult-award-winning strategy and content creation agency that specializes in travel marketing.
           </p>
+
+          <ul className="pt-6 flex justify-start items-center flex-wrap">
+            <li className="social-icon inline-flex h-11.5 w-11.5 bg-yellow me-2.5 rounded-[50%] overflow-hidden justify-center items-center transition-all duration-500 ease-in-out group hover:rounded-[10px] hover:shadow-lg">
+              <Link to="https://x.com/" className="h-9 w-9 flex justify-center items-center bg-secondary text-white text-[18px] rounded-[50%] transition-all duration-500 ease-in-out group-hover:text-yellow group-hover:rounded-[10px]">
+                <Icon
+                  icon="codicon:twitter"
+                  width="16"
+                  height="16"
+                />
+              </Link>
+            </li>
+
+            <li className="social-icon inline-flex h-11.5 w-11.5 bg-yellow me-2.5 rounded-[50%] overflow-hidden justify-center items-center transition-all duration-500 ease-in-out group hover:rounded-[10px] hover:shadow-lg">
+              <Link to="https://facebook.com/" className="h-9 w-9 flex justify-center items-center bg-secondary text-white text-[18px] rounded-[50%] transition-all duration-500 ease-in-out group-hover:text-yellow group-hover:rounded-[10px]">
+                <Icon
+                  icon="ic:outline-facebook"
+                  width="16"
+                  height="16"
+                />
+              </Link>
+            </li>
+
+            <li className="social-icon inline-flex h-11.5 w-11.5 bg-yellow me-2.5 rounded-[50%] overflow-hidden justify-center items-center transition-all duration-500 ease-in-out group hover:rounded-[10px] hover:shadow-lg">
+              <Link to="https://instagram.com/" className="h-9 w-9 flex justify-center items-center bg-secondary text-white text-[18px] rounded-[50%] transition-all duration-500 ease-in-out group-hover:text-yellow group-hover:rounded-[10px]">
+                <Icon
+                  icon="mingcute-instagram-line"
+                  width="16"
+                  height="16"
+                />
+              </Link>
+            </li>
+
+            <li className="social-icon inline-flex h-11.5 w-11.5 bg-yellow me-2.5 rounded-[50%] overflow-hidden justify-center items-center transition-all duration-500 ease-in-out group hover:rounded-[10px] hover:shadow-lg">
+              <Link to="https://youtube.com/" className="h-9 w-9 flex justify-center items-center bg-secondary text-white text-[18px] rounded-[50%] transition-all duration-500 ease-in-out group-hover:text-yellow group-hover:rounded-[10px]">
+                <Icon
+                  icon="line-md:youtube"
+                  width="16"
+                  height="16"
+                />
+              </Link>
+            </li>
+          </ul>
+
+        </div>
+
+        <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10 xl:gap-24 w-full xl:w-auto'>
+          {/* first column */}
+          <div className='footer-item'>
+            <h4 className='text-2xl sm:text-3xl text-secondary mb-5'>
+              Explore
+            </h4>
+
+            <ul className='space-y-3'>
+              <li>
+                <Link to="/about" className='hover:text-yellow transition-colos duration-300 text-secondary font-medium'>
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/faqs" className='hover:text-yellow transition-colos duration-300 text-secondary font-medium'>
+                  Faqs
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className='hover:text-yellow transition-colos duration-300 text-secondary font-medium'>
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/team" className='hover:text-yellow transition-colos duration-300 text-secondary font-medium'>
+                  Team
+                </Link>
+              </li>
+              <li>
+                <Link to="/news" className='hover:text-yellow transition-colos duration-300 text-secondary font-medium'>
+                  News & Articles
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* second column */}
+          <div className='footer-item'>
+            <h4 className='text-2xl sm:text-3xl text-secondary mb-5'>
+              Destinations
+            </h4>
+
+            <ul className='space-y-3'>
+              <li>
+                <Link to="/" className='hover:text-yellow transition-colos duration-300 text-secondary font-medium'>
+                  Tokio
+                </Link>
+              </li>
+              <li>
+                <Link to="/" className='hover:text-yellow transition-colos duration-300 text-secondary font-medium'>
+                  France
+                </Link>
+              </li>
+              <li>
+                <Link to="/" className='hover:text-yellow transition-colos duration-300 text-secondary font-medium'>
+                  Dubay
+                </Link>
+              </li>
+              <li>
+                <Link to="/" className='hover:text-yellow transition-colos duration-300 text-secondary font-medium'>
+                  Kenya
+                </Link>
+              </li>
+              <li>
+                <Link to="/news" className='hover:text-yellow transition-colos duration-300 text-secondary font-medium'>
+                  Vietnam
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* third column */}
+          <div className='footer-item'>
+            <h4 className='text-2xl sm:text-3xl text-secondary mb-5'>
+              Legal
+            </h4>
+
+            <ul className='space-y-3'>
+              <li>
+                <Link to="/" className='hover:text-yellow transition-colos duration-300 text-secondary font-medium'>
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link to="/" className='hover:text-yellow transition-colos duration-300 text-secondary font-medium'>
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/" className='hover:text-yellow transition-colos duration-300 text-secondary font-medium'>
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/" className='hover:text-yellow transition-colos duration-300 text-secondary font-medium'>
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link to="/news" className='hover:text-yellow transition-colos duration-300 text-secondary font-medium'>
+                  Help
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </>
