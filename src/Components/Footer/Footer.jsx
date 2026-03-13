@@ -385,6 +385,43 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+
+        <div className='footer-item'>
+          <ul className='space-y-5'>
+            <li className='flex items-center'>
+              <Icon
+                icon="famicons:call-outline"
+                className='bg-secondary/20 text-secondary w-12 h-12 p-2 rounded-full me-2'
+              />
+
+              <Link to="/contact" className='hover:text-yellow transition-colors duration-300 text-secondary font-medium font-kaushan! text-xl'>
+                +91 234 567 890
+              </Link>
+            </li>
+
+            <li className='flex items-center'>
+              <Icon
+                icon="clarity:email-line"
+                className='bg-secondary/20 text-secondary w-12 h-12 p-2 rounded-full me-2'
+              />
+
+              <Link to="/contact" className='hover:text-yellow transition-colors duration-300 text-secondary font-medium font-kaushan! text-xl'>
+                traveller@email.com
+              </Link>
+            </li>
+
+            <li className='flex items-center'>
+              <Icon
+                icon="material-symbols-light:home-outline"
+                className='bg-secondary/20 text-secondary w-12 h-12 p-2 rounded-full me-2'
+              />
+
+              <Link to="/contact" className='hover:text-yellow transition-colors duration-300 text-secondary font-medium font-kaushan! text-xl'>
+                123 Main St, Anytown, USA
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   )
