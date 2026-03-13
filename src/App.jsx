@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar/Navbar'
 import Index from './Components/Index/Index'
 import Contact from './Components/Contact/Contact'
 import ScrollToTop from './Components/ScrollToTop'
+import Footer from './Components/Footer/Footer'
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -27,6 +28,7 @@ const App = () => {
         <ScrollToTop />
         <Navbar />
         <AnimatedRoutes />
+        <Footer />
       </BrowserRouter>
     </>
   )

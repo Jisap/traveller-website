@@ -42,10 +42,10 @@ a:not(.logo) {
 }
 
 .social-icon:hover svg {
-  animation: rotae-scale-up-ver 0.65s linear both;
+  animation: rotate-scale-up-ver 0.65s linear both;
 }
 
-@keyframes rotae-scale-up-ver {
+@keyframes rotate-scale-up-ver {
   0% {
     transform: scale(1) rotateY(0deg);
   }
@@ -654,4 +654,60 @@ img {
   border-radius: 15px;
   z-index: 1;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.76) 73%);
+}
+
+.marq-car {
+  position: relative;
+  width: 248px;
+  height: 135px;
+  animation: marquee-car 40s linear infinite;
+}
+
+@keyframes marquee-car {
+  0% {
+    transform: translateX(-400px);
+  }
+
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+.marq-car .tyre-1 {
+  position: absolute;
+  left: 12.9%;
+  bottom: 0%;
+  width: 15%;
+}
+
+.spin-tyres {
+  animation-name: spin;
+  animation-duration: 2400ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tyre-2 {
+  position: absolute;
+  right: 10.8%;
+  bottom: 0%;
+  width: 15%;
+}
+
+.right-tree {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  z-index: 0;
+  width: 220px;
 }
