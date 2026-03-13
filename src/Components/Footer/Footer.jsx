@@ -12,6 +12,7 @@ import { Icon } from '@iconify/react'
 import car from '../../assets/Footer/Left-Car.png'
 import tyre from '../../assets/Footer/Left-Car-tyre.png'
 import tree from "../../assets/Footer/Righttreepic.png"
+import Logo from '../Navbar/Logo/Logo'
 
 
 
@@ -227,7 +228,14 @@ const Footer = () => {
         </div>
       </div>
 
-
+      <div className='footer-menu flex flex-col justify-between xl:flex-row gap-10 xl:gap-16 px-5 sm:px-[8%] lg:px-[10%] bg-yellow-light py-[6%]'>
+        <div className='footer-item text-start xl:max-w-70'>
+          <Logo className='text-black!' />
+          <p className='pt-5 text-gray-500/60'>
+            Traveller is a mult-award-winning strategy and content creation agency that specializes in travel marketing.
+          </p>
+        </div>
+      </div>
     </>
   )
 }
