@@ -29,6 +29,7 @@ import { Icon } from "@iconify/react"
 import { useRef, useState } from "react"
 import destinations from "../../Data/Destination.json"
 import DestinationCtgCard from "../../Components/DestinationCtgCard/DestinationCtgCard"
+import Testimonials from "../../Components/Index/Testimonials/Testimonials"
 
 
 /**
@@ -55,7 +56,7 @@ const About = () => {
 
       {/* Main About Section */}
       <div className="px-[2%] ms:px-[8%] lg:px-[12%] py-[8%] flex justify-between items-start xl:flex-row flex-col gap-12 h-auto xl:h-[800px] bg-yellow-light overflow-hidden">
-        
+
         {/* Left Side: Content (Title and List) */}
         <motion.div
           className="w-full xl:w-[50%] title relative h-full flex flex-col justify-center"
@@ -120,7 +121,7 @@ const About = () => {
         </motion.div>
 
         {/* Right Side: Illustration with animation from the left */}
-        <motion.div 
+        <motion.div
           className="about-image w-full xl:w-[45%] relative flex justify-center items-center h-full min-h-[400px]"
           variants={fadeInLeft}
           initial="hidden"
@@ -244,6 +245,8 @@ const About = () => {
           />
         </motion.div>
       </div>
+
+      <Testimonials />
     </PageTransition>
   )
 }
