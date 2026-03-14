@@ -6,6 +6,7 @@ import Index from './Components/Index/Index'
 import Contact from './Components/Contact/Contact'
 import ScrollToTop from './Components/ScrollToTop'
 import Footer from './Components/Footer/Footer'
+import About from './Pages/About/About'
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -14,7 +15,7 @@ const AnimatedRoutes = () => {
     <AnimatePresence mode='wait'>
       <Routes location={location} key={location.pathname}>
         <Route path='/' element={<Index />} />
-        {/* Agrega aquí más rutas conforme las crees, por ejemplo: */}
+        <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
     </AnimatePresence>
