@@ -711,3 +711,46 @@ img {
   z-index: 0;
   width: 220px;
 }
+
+.left-hot-ballon {
+  position: absolute;
+  left: -115px;
+  top: 40%;
+  width: 230px;
+  animation: slide-top2 20s linear infinite alternate-reverse;
+}
+
+@keyframes slide-top2 {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-300px);
+  }
+}
+
+.right-hot-ballon {
+  position: absolute;
+  right: -55px;
+  top: 40%;
+  width: 110px;
+  animation: slide-top 8s linear infinite alternate-reverse;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+@media screen and (max-width:760px) {
+  .left-hot-ballon {
+    width: 100px;
+    left: -50px;
+  }
+}

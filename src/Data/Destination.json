@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Paris",
+    "slug": "paris",
+    "image": "src/assets/Destination/destination-01.jpg",
+    "country": "France"
+  },
+  {
+    "id": 2,
+    "name": "Maldives",
+    "slug": "maldives",
+    "image": "/src/assets/Destination/destination-02.jpg",
+    "country": "Maldives"
+  },
+  {
+    "id": 3,
+    "name": "Hong Kong",
+    "slug": "hong-kong",
+    "image": "/src/assets/Destination/destination-03.jpg",
+    "country": "China"
+  },
+  {
+    "id": 4,
+    "name": "Thailand",
+    "slug": "thailand",
+    "image": "/src/assets/Destination/destination-04.jpg",
+    "country": "Thailand"
+  },
+  {
+    "id": 5,
+    "name": "Bangkok",
+    "slug": "bangkok",
+    "image": "/src/assets/Destination/destination-05.jpg",
+    "country": "Thailand"
+  },
+  {
+    "id": 6,
+    "name": "Tokyo",
+    "slug": "tokyo",
+    "image": "/src/assets/Destination/destination-06.jpg",
+    "country": "Japan"
+  },
+  {
+    "id": 7,
+    "name": "Spain",
+    "slug": "spain",
+    "image": "/src/assets/Destination/destination-07.jpg",
+    "country": "Spain"
+  },
+  {
+    "id": 8,
+    "name": "California",
+    "slug": "california",
+    "image": "/src/assets/Destination/destination-08.jpg",
+    "country": "USA"
+  }
+]
