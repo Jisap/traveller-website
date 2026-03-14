@@ -9,14 +9,10 @@ import author2 from "../../assets/Index/About/pic2.jpg"
 import author3 from "../../assets/Index/About/pic3.jpg"
 import airplane from "../../assets/Index/About/airplane.png"
 import aboutimg from "../../assets/AboutPage/abt-pic1.png"
-import aboutimg1 from "../../assets/Index/About/about-image01.jpg"
-import aboutimg2 from "../../assets/Index/About/about-image02.jpg"
-import aboutimg3 from "../../assets/Index/About/about-image03.jpg"
 import cloud from "../../assets/AboutPage/Cloud-bg.png"
+
 import titleShape from "../../assets/Index/BookingSteps/Title-Shape.png"
-import StepsIcon1 from "../../assets/Index/BookingSteps/Steps-Icon1.png"
-import StepsIcon2 from "../../assets/Index/BookingSteps/Steps-Icon2.png"
-import StepsIcon3 from "../../assets/Index/BookingSteps/Steps-Icon3.png"
+
 import { motion } from "framer-motion"
 import { containerVariants, fadeInUp, scaleIn, fadeInRight, fadeInLeft, floatingAnimation } from "../../Animations/variants"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -246,7 +242,14 @@ const About = () => {
         </motion.div>
       </div>
 
-      <Testimonials />
+      <div className="relative">
+        {/* Puente: tapa el corte con el color del tope del gradiente de Testimonials */}
+        <div
+          className="absolute -top-16 left-0 w-full h-20 pointer-events-none z-10"
+          style={{ background: 'linear-gradient(to bottom, transparent, #e8fafa)' }}
+        />
+        <Testimonials />
+      </div>
     </PageTransition>
   )
 }
