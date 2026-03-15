@@ -29,7 +29,7 @@ const Services = () => {
   const iconMapping = {
     "Tour Guide": "solar:flag-2-bold",
     "Entertainment": "solar:clapperboard-play-bold",
-    "Safe Flight": "solar:airplane-bold",
+    "Safe Flight": "solar:plain-bold",
     "Texi & Metro": "solar:bus-bold",
     "Delicious Food": "solar:tea-cup-bold",
     "Spa & Massages": "solar:leaf-bold",
