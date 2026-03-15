@@ -7,6 +7,7 @@ import Contact from './Components/Contact/Contact'
 import ScrollToTop from './Components/ScrollToTop'
 import Footer from './Components/Footer/Footer'
 import About from './Pages/About/About'
+import Services from './Pages/Services/Services'
 
 const AnimatedRoutes = () => {
   const location = useLocation();

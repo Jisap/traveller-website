@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Tour Guide",
+    "image": "/src/assets/AboutPage/service-01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Entertainment",
+    "image": "/src/assets/AboutPage/service-02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Safe Flight",
+    "image": "/src/assets/AboutPage/service-03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Texi & Metro",
+    "image": "/src/assets/AboutPage/service-04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Delicious Food",
+    "image": "/src/assets/AboutPage/service-05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Spa & Massages",
+    "image": "/src/assets/AboutPage/service-06.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Interesting Rest",
+    "image": "/src/assets/AboutPage/service-07.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Pickup & Drop",
+    "image": "/src/assets/AboutPage/service-08.jpg"
+  }
+]
