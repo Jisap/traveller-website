@@ -754,3 +754,31 @@ img {
     left: -50px;
   }
 }
+
+.service-table,
+.service-table2 {
+  border: 6px solid rgba(41, 135, 145, .2);
+  border-radius: 30px;
+  background-color: #fff;
+}
+
+.service-table ul li {
+  border-bottom: 1px solid rgba(6, 97, 104, .2);
+}
+
+.service-table ul li .content {
+  border-left: 1px solid rgba(6, 97, 104, .2)
+}
+
+.widget-title {
+  position: relative;
+  padding-left: 16px;
+  display: table;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: var(--font-afacad);
+  padding: 5px 20px;
+  background: linear-gradient(90deg, rgba(255, 170, 13, 0.1) 0%, rgba(6, 97, 104, 0.2) 100%);
+  border-left: 4px solid #ffaa0d;
+  margin-bottom: 0;
+}

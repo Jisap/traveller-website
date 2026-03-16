@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import titleShape from '../../assets/Index/BookingSteps/Title-Shape.png'
 import sectionBanner from '../../assets/section-banner.jpg'
 import { Link, useParams } from 'react-router-dom'
@@ -24,6 +24,36 @@ const ServicesDetails = () => {
     return <h2 className='text-center mt-20'>Service not found</h2>
   }
 
+  const gallery = [
+    gallery1,
+    gallery2,
+    gallery3,
+    gallery4,
+    gallery5,
+    gallery6
+  ];
+
+  const faqs = [
+    [
+      { "id": 1, "question": "¿Qué incluye un tour guiado?", "answer": "Nuestros tours guiados incluyen la planificación completa del recorrido, un guía profesional, información histórica y cultural del destino, y recomendaciones locales para aprovechar al máximo la experiencia." },
+      { "id": 2, "question": "¿Cómo puedo reservar un tour?", "answer": "Puedes reservar tu tour directamente desde nuestra web seleccionando el destino, la fecha y el número de participantes. Una vez completado el formulario, recibirás una confirmación por correo electrónico." },
+      { "id": 3, "question": "¿Puedo cancelar o modificar mi reserva?", "answer": "Sí, puedes cancelar o modificar tu reserva desde tu cuenta o contactando con nuestro equipo de soporte. Las condiciones de cancelación pueden variar dependiendo del tour reservado." },
+      { "id": 4, "question": "¿Los tours se realizan en varios idiomas?", "answer": "Sí, muchos de nuestros tours están disponibles en varios idiomas. Puedes consultar los idiomas disponibles en la página de cada tour antes de realizar la reserva." },
+      { "id": 5, "question": "¿Cuánto duran normalmente los tours?", "answer": "La duración de los tours depende del recorrido elegido. La mayoría tienen una duración entre 2 y 6 horas, aunque también ofrecemos tours de día completo." },
+      { "id": 6, "question": "¿Los tours son adecuados para niños?", "answer": "Sí, muchos de nuestros tours están diseñados para ser aptos para familias. En la descripción del tour indicamos si es especialmente recomendable para niños." },
+      { "id": 7, "question": "¿Qué pasa si llego tarde al punto de encuentro?", "answer": "Te recomendamos llegar al menos 10 minutos antes de la hora programada. Si llegas tarde, el tour puede haber comenzado y no siempre será posible reincorporarse al grupo." },
+      { "id": 8, "question": "¿Qué debo llevar a un tour guiado?", "answer": "Recomendamos llevar ropa y calzado cómodos, agua, protección solar y una cámara para capturar los mejores momentos del recorrido." },
+      { "id": 9, "question": "¿Se pueden reservar tours privados?", "answer": "Sí, ofrecemos tours privados para grupos que prefieren una experiencia más personalizada. Puedes solicitarlo desde la página del tour o contactando con nuestro equipo." },
+      { "id": 10, "question": "¿Los tours se cancelan por mal tiempo?", "answer": "En caso de condiciones meteorológicas extremas, el tour puede ser reprogramado o cancelado. En ese caso, te ofreceremos una nueva fecha o el reembolso correspondiente." }
+    ]
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
 
   const breadcrumbs = [
     { label: 'Home', url: '/' },
@@ -39,7 +69,271 @@ const ServicesDetails = () => {
         breadcrumbs={breadcrumbs}
       />
 
+      <div className='service-container px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[10%] bg-[#effefe] gap-10 flex justify-between items-start flex-col xl:flex-row'>
+        <div className='service-left w-full xl:w-[70%] flex flex-col gap-10'>
+          <div className='gallery-images h-50 sm:h-100 lg:h-150 bg-center bg-cover bg-no-repeat'>
+            <Swiper
+              modules={[Autoplay, Pagination]}
+              spaceBetween={20}
+              slidesPerView={1}
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              loop={true}
+              className='rounded-3xl w-full h-full'
+            >
+              {[service.image, gallery1, gallery2, gallery3, gallery4, gallery5].map((item, index) => (
+                <SwiperSlide key={index}>
+                  <img src={item} alt={service.name} className='rounded-3xl w-full h-full object-cover object-top' />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
 
+          <div className='service-content bg-white p-5 md:p-8 rounded-3xl shadow-lg'>
+            <h3 className='text-xl sm:text-2xl md:text-4xl font-medium text-secondary pb-5'>
+              Tour guide who give you proper information about every destination
+            </h3>
+
+            <p className='text-sm md:text-lg text-gray-500 pb-8'>
+              A tour guide service provides travelers with knowledgeable professionals who lead and enhance travel experiences. Tour guides offer insights into the history, culture, and significance of the places they visit, enriching the tourist's understanding They manage itineraries, transportation, and access to attractions, ensuring a smooth and organized tour
+            </p>
+
+            <h3 className='text-xl sm:text-2xl md:text-4xl font-medium text-secondary pb-5'>
+              What Is a Tour Guide Service ?
+            </h3>
+
+            <ul className='space-y-5 pb-8'>
+              <li className='flex items-center flex-wrap gap-2'>
+                <Icon
+                  icon="ic:baseline-check"
+                  width="24"
+                  height="24"
+                  className='bg-prim text-white p-1 rounded-full'
+                />
+
+                <span className='text-secondary font-light tracking-wide'>
+                  Explaining historical, cultural, and natural significance of place
+                </span>
+              </li>
+
+              <li className='flex items-center flex-wrap gap-2'>
+                <Icon
+                  icon="ic:baseline-check"
+                  width="24"
+                  height="24"
+                  className='bg-prim text-white p-1 rounded-full'
+                />
+
+                <span className='text-secondary font-light tracking-wide'>
+                  Assisting with logistics like hotel check-ins, local transport, and dining
+                </span>
+              </li>
+
+              <li className='flex items-center flex-wrap gap-2'>
+                <Icon
+                  icon="ic:baseline-check"
+                  width="24"
+                  height="24"
+                  className='bg-prim text-white p-1 rounded-full'
+                />
+
+                <span className='text-secondary font-light tracking-wide'>
+                  Offering safety tips and local etiquette guidance
+                </span>
+              </li>
+
+              <li className='flex items-center flex-wrap gap-2'>
+                <Icon
+                  icon="ic:baseline-check"
+                  width="24"
+                  height="24"
+                  className='bg-prim text-white p-1 rounded-full'
+                />
+
+                <span className='text-secondary font-light tracking-wide'>
+                  Customizing itineraries based on traveler interests
+                </span>
+              </li>
+            </ul>
+
+            <h3 className='text-xl sm:text-2xl md:text-4xl font-medium text-secondary pb-5'>
+              Types of Tour Guide Services
+            </h3>
+
+            <div className='service-table mb-8'>
+              <ul>
+                <li className='flex flex-wrap'>
+                  <div className='title min-w-48.75 w-48.75 py-3.75 px-7.5'>
+                    <span className='block text-xl font-afacad! text-secondary font-medium'>
+                      Private Guide
+                    </span>
+                  </div>
+
+                  <div className='content flex-1 py-3.75 px-7.5'>
+                    <p className='text-md text-secondary font-light tracking-wide'>
+                      One-on-one personalized tours, often tailored to specific interests
+                    </p>
+                  </div>
+                </li>
+
+                <li className='flex flex-wrap'>
+                  <div className='title min-w-48.75 w-48.75 py-3.75 px-7.5'>
+                    <span className='block text-xl font-afacad! text-secondary font-medium'>
+                      Group Tours
+                    </span>
+                  </div>
+
+                  <div className='content flex-1 py-3.75 px-7.5'>
+                    <p className='text-md text-secondary font-light tracking-wide'>
+                      Shared tours with multiple travelers, often more budget-friendly
+                    </p>
+                  </div>
+                </li>
+
+                <li className='flex flex-wrap'>
+                  <div className='title min-w-48.75 w-48.75 py-3.75 px-7.5'>
+                    <span className='block text-xl font-afacad! text-secondary font-medium'>
+                      City Guide
+                    </span>
+                  </div>
+
+                  <div className='content flex-1 py-3.75 px-7.5'>
+                    <p className='text-md text-secondary font-light tracking-wide'>
+                      Local experts for urban exploration—museums, markets, monuments
+                    </p>
+                  </div>
+                </li>
+
+                <li className='flex flex-wrap'>
+                  <div className='title min-w-48.75 w-48.75 py-3.75 px-7.5'>
+                    <span className='block text-xl font-afacad! text-secondary font-medium'>
+                      Cultural Guide
+                    </span>
+                  </div>
+
+                  <div className='content flex-1 py-3.75 px-7.5'>
+                    <p className='text-md text-secondary font-light tracking-wide'>
+                      Focus on traditions, festivals, cuisine, and heritage sites
+                    </p>
+                  </div>
+                </li>
+
+                <li className='flex flex-wrap'>
+                  <div className='title min-w-48.75 w-48.75 py-3.75 px-7.5'>
+                    <span className='block text-xl font-afacad! text-secondary font-medium'>
+                      Tour Managers
+                    </span>
+                  </div>
+
+                  <div className='content flex-1 py-3.75 px-7.5'>
+                    <p className='text-md text-secondary font-light tracking-wide'>
+                      Oversee multi-day trips, handling logistics and group coordination
+                    </p>
+                  </div>
+                </li>
+
+                <li className='flex flex-wrap border-0!'>
+                  <div className='title min-w-48.75 w-48.75 py-3.75 px-7.5'>
+                    <span className='block text-xl font-afacad! text-secondary font-medium'>
+                      Nature & Wildlife Guides
+                    </span>
+                  </div>
+
+                  <div className='content flex-1 py-3.75 px-7.5'>
+                    <p className='text-md text-secondary font-light tracking-wide'>
+                      Specialists in safaris, trekking, and eco-tourism areas like sanctuaries
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <h3 className='text-xl sm:text-2xl md:text-4xl font-medium text-secondary pb-5'>
+              Key Features of Professional Tour Guides
+            </h3>
+
+            <ul className='space-y-5 pb-8'>
+              <li className='flex items-center flex-wrap gap-2'>
+                <Icon
+                  icon="ic:baseline-check"
+                  width="24"
+                  height="24"
+                  className='bg-prim text-white p-1 rounded-full'
+                />
+
+                <span className='text-secondary font-light tracking-wide'>
+                  <strong>Certified by the Government of USA: </strong>
+                  Licensed guides undergo rigorous training and exams
+                </span>
+              </li>
+
+              <li className='flex items-center flex-wrap gap-2'>
+                <Icon
+                  icon="ic:baseline-check"
+                  width="24"
+                  height="24"
+                  className='bg-prim text-white p-1 rounded-full'
+                />
+
+                <span className='text-secondary font-light tracking-wide'>
+                  <strong>Multilingual: </strong>
+                  Many guides speak English, Hindi, and regional languages
+                </span>
+              </li>
+
+              <li className='flex items-center flex-wrap gap-2'>
+                <Icon
+                  icon="ic:baseline-check"
+                  width="24"
+                  height="24"
+                  className='bg-prim text-white p-1 rounded-full'
+                />
+
+                <span className='text-secondary font-light tracking-wide'>
+                  <strong> Local Expertise: </strong>
+                  Deep knowledge of history, culture, and hidden gems
+                </span>
+              </li>
+
+              <li className='flex items-center flex-wrap gap-2'>
+                <Icon
+                  icon="ic:baseline-check"
+                  width="24"
+                  height="24"
+                  className='bg-prim text-white p-1 rounded-full'
+                />
+
+                <span className='text-secondary font-light tracking-wide'>
+                  <strong>Flexible Engagement: </strong>
+                  You can choose full-time guidance or occasional support
+                </span>
+              </li>
+
+              <li className='flex items-center flex-wrap gap-2'>
+                <Icon
+                  icon="ic:baseline-check"
+                  width="24"
+                  height="24"
+                  className='bg-prim text-white p-1 rounded-full'
+                />
+
+                <span className='text-secondary font-light tracking-wide'>
+                  <strong>Safety & Support: </strong>
+                  Guides help navigate unfamiliar areas and handle emergencies
+                </span>
+              </li>
+            </ul>
+
+            <h3 className='text-xl sm:text-2xl md:text-4xl font-medium text-secondary pb-5'>
+              Frequently Ask Questions
+            </h3>
+
+            <div>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
