@@ -355,6 +355,34 @@ const ServicesDetails = () => {
                 </li>
               ))}
             </div>
+
+            <h3 className='text-xl sm:text-2xl md:text-4xl font-medium text-secondary pb-5'>
+              Our Scheduled Amenities
+            </h3>
+
+            <div className='bg-[#fff8eb]! service-table overflow-hidden border-0! mb-8'>
+              <ul className='service-table3'>
+                <li>
+                  <div className='text-2xl font-medium font-afacad! pt-10 pe-7.5 pb-2.5 ps-7.5 w-full'>
+                    For Travel
+                  </div>
+                </li>
+
+                <li className='flex flex-wrap'>
+                  <div className='title min-w-48.75 w-48.75 py-3.75 px-7.5'>
+                    <span className='block text-xl font-afacad! text-secondary font-medium'>
+                      Hotel
+                    </span>
+
+                    <div className='content flex-1 py-3.75 px-7.5'>
+                      <p className='text-md text-secondary font-light tracking-wide'>
+                        Free Wi-Fi, toiletries, heated floors, in-room slippers, cable TV, room service
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
