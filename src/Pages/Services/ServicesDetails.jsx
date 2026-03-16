@@ -34,18 +34,16 @@ const ServicesDetails = () => {
   ];
 
   const faqs = [
-    [
-      { "id": 1, "question": "¿Qué incluye un tour guiado?", "answer": "Nuestros tours guiados incluyen la planificación completa del recorrido, un guía profesional, información histórica y cultural del destino, y recomendaciones locales para aprovechar al máximo la experiencia." },
-      { "id": 2, "question": "¿Cómo puedo reservar un tour?", "answer": "Puedes reservar tu tour directamente desde nuestra web seleccionando el destino, la fecha y el número de participantes. Una vez completado el formulario, recibirás una confirmación por correo electrónico." },
-      { "id": 3, "question": "¿Puedo cancelar o modificar mi reserva?", "answer": "Sí, puedes cancelar o modificar tu reserva desde tu cuenta o contactando con nuestro equipo de soporte. Las condiciones de cancelación pueden variar dependiendo del tour reservado." },
-      { "id": 4, "question": "¿Los tours se realizan en varios idiomas?", "answer": "Sí, muchos de nuestros tours están disponibles en varios idiomas. Puedes consultar los idiomas disponibles en la página de cada tour antes de realizar la reserva." },
-      { "id": 5, "question": "¿Cuánto duran normalmente los tours?", "answer": "La duración de los tours depende del recorrido elegido. La mayoría tienen una duración entre 2 y 6 horas, aunque también ofrecemos tours de día completo." },
-      { "id": 6, "question": "¿Los tours son adecuados para niños?", "answer": "Sí, muchos de nuestros tours están diseñados para ser aptos para familias. En la descripción del tour indicamos si es especialmente recomendable para niños." },
-      { "id": 7, "question": "¿Qué pasa si llego tarde al punto de encuentro?", "answer": "Te recomendamos llegar al menos 10 minutos antes de la hora programada. Si llegas tarde, el tour puede haber comenzado y no siempre será posible reincorporarse al grupo." },
-      { "id": 8, "question": "¿Qué debo llevar a un tour guiado?", "answer": "Recomendamos llevar ropa y calzado cómodos, agua, protección solar y una cámara para capturar los mejores momentos del recorrido." },
-      { "id": 9, "question": "¿Se pueden reservar tours privados?", "answer": "Sí, ofrecemos tours privados para grupos que prefieren una experiencia más personalizada. Puedes solicitarlo desde la página del tour o contactando con nuestro equipo." },
-      { "id": 10, "question": "¿Los tours se cancelan por mal tiempo?", "answer": "En caso de condiciones meteorológicas extremas, el tour puede ser reprogramado o cancelado. En ese caso, te ofreceremos una nueva fecha o el reembolso correspondiente." }
-    ]
+    { "id": 1, "question": "¿Qué incluye un tour guiado?", "answer": "Nuestros tours guiados incluyen la planificación completa del recorrido, un guía profesional, información histórica y cultural del destino, y recomendaciones locales para aprovechar al máximo la experiencia." },
+    { "id": 2, "question": "¿Cómo puedo reservar un tour?", "answer": "Puedes reservar tu tour directamente desde nuestra web seleccionando el destino, la fecha y el número de participantes. Una vez completado el formulario, recibirás una confirmación por correo electrónico." },
+    { "id": 3, "question": "¿Puedo cancelar o modificar mi reserva?", "answer": "Sí, puedes cancelar o modificar tu reserva desde tu cuenta o contactando con nuestro equipo de soporte. Las condiciones de cancelación pueden variar dependiendo del tour reservado." },
+    { "id": 4, "question": "¿Los tours se realizan en varios idiomas?", "answer": "Sí, muchos de nuestros tours están disponibles en varios idiomas. Puedes consultar los idiomas disponibles en la página de cada tour antes de realizar la reserva." },
+    { "id": 5, "question": "¿Cuánto duran normalmente los tours?", "answer": "La duración de los tours depende del recorrido elegido. La mayoría tienen una duración entre 2 y 6 horas, aunque también ofrecemos tours de día completo." },
+    { "id": 6, "question": "¿Los tours son adecuados para niños?", "answer": "Sí, muchos de nuestros tours están diseñados para ser aptos para familias. En la descripción del tour indicamos si es especialmente recomendable para niños." },
+    { "id": 7, "question": "¿Qué pasa si llego tarde al punto de encuentro?", "answer": "Te recomendamos llegar al menos 10 minutos antes de la hora programada. Si llegas tarde, el tour puede haber comenzado y no siempre será posible reincorporarse al grupo." },
+    { "id": 8, "question": "¿Qué debo llevar a un tour guiado?", "answer": "Recomendamos llevar ropa y calzado cómodos, agua, protección solar y una cámara para capturar los mejores momentos del recorrido." },
+    { "id": 9, "question": "¿Se pueden reservar tours privados?", "answer": "Sí, ofrecemos tours privados para grupos que prefieren una experiencia más personalizada. Puedes solicitarlo desde la página del tour o contactando con nuestro equipo." },
+    { "id": 10, "question": "¿Los tours se cancelan por mal tiempo?", "answer": "En caso de condiciones meteorológicas extremas, el tour puede ser reprogramado o cancelado. En ese caso, te ofreceremos una nueva fecha o el reembolso correspondiente." }
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);
@@ -328,8 +326,34 @@ const ServicesDetails = () => {
               Frequently Ask Questions
             </h3>
 
-            <div>
+            <div className='service-table2 mb-8'>
+              {faqs.map((faq, index) => (
+                <li key={faq.id} className='p-5 border-b border-gray-200 list-none!'>
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    className='w-full flex justify-between items-center cursor-pointer'
+                  >
+                    <span className='text-lg font-medium text-secondary text-start'>
+                      {faq.question}
+                    </span>
 
+                    <Icon
+                      icon="lsicon:right-outline"
+                      width="35"
+                      height="35"
+                      className={`text-secondary transition-all duration-300 ${activeIndex === index ? 'rotate-90 text-yellow' : ''}`}
+                    />
+                  </button>
+
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${activeIndex === index ? 'max-h-40 pt-3' : 'max-h-0'}`}
+                  >
+                    <p className='text-sm md:text-lg font-light text-secondary'>
+                      {faq.answer}
+                    </p>
+                  </div>
+                </li>
+              ))}
             </div>
           </div>
         </div>
