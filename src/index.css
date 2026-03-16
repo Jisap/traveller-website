@@ -214,18 +214,28 @@ img {
   font-family: var(--font-figtree);
 }
 
-/* posicionamiento del contenedor del círculo */
-.circle1-wrap {
+/* Circle Common Styles */
+.circle-wrap {
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
-  width: 374px;
-  height: 374px;
   left: 50%;
+  transform: translate(-50%, -50%);
   margin-left: 200px;
 }
 
-/* posicionamiento del círculo dentro del contenedor + animación*/
+.circle-wrap.size-1 { width: 374px; height: 374px; }
+.circle-wrap.size-2 { width: 574px; height: 574px; }
+.circle-wrap.size-3 { width: 774px; height: 774px; }
+
+.circle-bg-inner {
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .circle1-bg {
   position: absolute;
   left: 0%;
@@ -233,17 +243,6 @@ img {
   animation: rotate-center 10s linear infinite both;
 }
 
-/* estilo del borde del círculo */
-.circle1-bg span {
-  width: 374px;
-  height: 374px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  display: block;
-  position: relative;
-}
-
-/* estilo del span contenido en el círculo */
 .circle1-bg span::after {
   content: "";
   position: absolute;
@@ -257,27 +256,10 @@ img {
 }
 
 @keyframes rotate-center {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-/* posicionamiento del contenedor del círculo */
-.circle2-wrap {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 574px;
-  height: 574px;
-  left: 50%;
-  margin-left: 200px;
-}
-
-/* animación del div */
 .circle-bg {
   position: absolute;
   left: 0px;
@@ -285,16 +267,6 @@ img {
   z-index: 2;
 }
 
-/* posicionamiento del círculo dentro del contenedor */
-.circle2-bg {
-  width: 574px;
-  height: 574px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  display: block;
-}
-
-/* bolita que rota */
 .circle2-bg::after {
   content: "";
   position: absolute;
@@ -305,24 +277,6 @@ img {
   background-color: var(--color-prim);
   border-radius: 50%;
   z-index: 9;
-}
-
-.circle3-wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 774px;
-  height: 774px;
-  margin-left: 200px;
-}
-
-.circle3-bg span {
-  width: 774px;
-  height: 774px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  display: block;
 }
 
 .circle3-bg span::after {
