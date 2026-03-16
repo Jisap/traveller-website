@@ -608,6 +608,80 @@ const ServicesDetails = () => {
               Top Destinations
             </h4>
           </div>
+
+          <div className='bg-white border border-secondary/20 rounded-3xl p-3 lg:p-5 xl:p-10 mb-10'>
+            <ul className='space-y-3'>
+              <li className='flex w-full justify-between items-center'>
+                <span className='text-md font-medium text-secondary hover:text-yellow transition-colors duration-300 cursor-pointer'>
+                  Thailand
+                </span>
+
+                <span className='text-sm text-gray-400'>
+                  ( 05 Listing )
+                </span>
+              </li>
+
+              <li className='flex w-full justify-between items-center'>
+                <span className='text-md font-medium text-secondary hover:text-yellow transition-colors duration-300 cursor-pointer'>
+                  Maldives
+                </span>
+
+                <span className='text-sm text-gray-400'>
+                  ( 07 Listing )
+                </span>
+              </li>
+
+              <li className='flex w-full justify-between items-center'>
+                <span className='text-md font-medium text-secondary hover:text-yellow transition-colors duration-300 cursor-pointer'>
+                  Bangkok
+                </span>
+
+                <span className='text-sm text-gray-400'>
+                  ( 08 Listing )
+                </span>
+              </li>
+
+              <li className='flex w-full justify-between items-center'>
+                <span className='text-md font-medium text-secondary hover:text-yellow transition-colors duration-300 cursor-pointer'>
+                  Paris
+                </span>
+
+                <span className='text-sm text-gray-400'>
+                  ( 09 Listing )
+                </span>
+              </li>
+
+              <li className='flex w-full justify-between items-center'>
+                <span className='text-md font-medium text-secondary hover:text-yellow transition-colors duration-300 cursor-pointer'>
+                  Spain
+                </span>
+
+                <span className='text-sm text-gray-400'>
+                  ( 02 Listing )
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div className='mb-8'>
+            <h4 className='widget-title'>
+              Popular Tags
+            </h4>
+          </div>
+
+          <div className='tag-cloud mb-10'>
+            <span>Food</span>
+            <span>Tour</span>
+            <span>Pool</span>
+            <span>Safari</span>
+            <span>Sky</span>
+            <span>Hotel</span>
+            <span>Adventure</span>
+            <span>Travel</span>
+            <span>Desert</span>
+            <span>Luxury</span>
+            <span>WildLife</span>
+          </div>
         </div>
       </div>
     </>

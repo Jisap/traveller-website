@@ -782,3 +782,25 @@ img {
   border-left: 4px solid #ffaa0d;
   margin-bottom: 0;
 }
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border: 1px solid rgba(6, 97, 104, .2);
+  border-radius: 30px;
+  padding: 40px;
+  grid-gap: 5px 5px;
+}
+
+.tag-cloud span {
+  display: block;
+  color: var(--color-secondary);
+  background-color: #dbeeee;
+  font-size: 16px;
+  font-family: var(--font-afacad);
+  font-weight: 500;
+  transition: .5s all ease;
+  padding: 7px 20px;
+  border-radius: 30px;
+}
