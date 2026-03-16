@@ -804,3 +804,29 @@ img {
   padding: 7px 20px;
   border-radius: 30px;
 }
+
+.tag-cloud span:hover {
+  background-color: var(--color-yellow);
+}
+
+@media screen and (max-width: 768px) {
+  .service-table ul li {
+    flex-wrap: wrap !important;
+  }
+
+  .service-table ul li .title {
+    padding: 5px 10px;
+  }
+
+  .service-table ul li .content {
+    padding: 5px 10px;
+  }
+
+  .service-table3 ul li {
+    flex-wrap: wrap !important;
+  }
+
+  .tag-cloud {
+    padding: 20px;
+  }
+}
