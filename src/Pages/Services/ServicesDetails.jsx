@@ -373,17 +373,157 @@ const ServicesDetails = () => {
                     <span className='block text-xl font-afacad! text-secondary font-medium'>
                       Hotel
                     </span>
+                  </div>
 
-                    <div className='content flex-1 py-3.75 px-7.5'>
-                      <p className='text-md text-secondary font-light tracking-wide'>
-                        Free Wi-Fi, toiletries, heated floors, in-room slippers, cable TV, room service
-                      </p>
-                    </div>
+                  <div className='content flex-1 py-3.75 px-7.5'>
+                    <p className='text-md text-secondary font-light tracking-wide'>
+                      Free Wi-Fi, toiletries, heated floors, in-room slippers, cable TV, room service
+                    </p>
+                  </div>
+                </li>
+
+                <li className='flex flex-wrap'>
+                  <div className='title min-w-48.75 w-48.75 py-3.75 px-7.5'>
+                    <span className='block text-xl font-afacad! text-secondary font-medium'>
+                      Restaurants
+                    </span>
+                  </div>
+
+                  <div className='content flex-1 py-3.75 px-7.5'>
+                    <p className='text-md text-secondary font-light tracking-wide'>
+                      Free water & side dishes, call buttons, Wi-Fi, mobile ordering
+                    </p>
+                  </div>
+                </li>
+
+                <li className='flex flex-wrap'>
+                  <div className='title min-w-48.75 w-48.75 py-3.75 px-7.5'>
+                    <span className='block text-xl font-afacad! text-secondary font-medium'>
+                      Public Facilities
+                    </span>
+                  </div>
+
+                  <div className='content flex-1 py-3.75 px-7.5'>
+                    <p className='text-md text-secondary font-light tracking-wide'>
+                      Clean restrooms, free Wi-Fi (Seoul), tourist information centers, lockers
+                    </p>
+                  </div>
+                </li>
+
+                <li className='flex flex-wrap'>
+                  <div className='title min-w-48.75 w-48.75 py-3.75 px-7.5'>
+                    <span className='block text-xl font-afacad! text-secondary font-medium'>
+                      Transportations
+                    </span>
+                  </div>
+
+                  <div className='content flex-1 py-3.75 px-7.5'>
+                    <p className='text-md text-secondary font-light tracking-wide'>
+                      High-speed KTX trains, T-money transportation cards, mobile apps
+                    </p>
+                  </div>
+                </li>
+
+                <li className='flex flex-wrap border-b-0!'>
+                  <div className='title min-w-48.75 w-48.75 py-3.75 px-7.5'>
+                    <span className='block text-xl font-afacad! text-secondary font-medium'>
+                      Shopping Area
+                    </span>
+                  </div>
+
+                  <div className='content flex-1 py-3.75 px-7.5'>
+                    <p className='text-md text-secondary font-light tracking-wide'>
+                      Tax refund counters, delivery services, foreign language staff (in major stores)
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div className='bg-[#fff8eb]! service-table overflow-hidden border-0! mb-8'>
+              <ul className='service-table3'>
+                <li>
+                  <div className='text-2xl font-medium font-afacad! pt-10 pe-7.5 pb-2.5 ps-7.5 w-full'>
+                    For Food
+                  </div>
+                </li>
+
+                <li className='flex flex-wrap'>
+                  <div className='title min-w-48.75 w-48.75 py-3.75 px-7.5'>
+                    <span className='block text-xl font-afacad! text-secondary font-medium'>
+                      Breakfast
+                    </span>
+                  </div>
+
+                  <div className='content flex-1 py-3.75 px-7.5'>
+                    <p className='text-md text-secondary font-light tracking-wide'>
+                      Korean breakfasts often include soup, rice, and side dishes; Western options
+                    </p>
+                  </div>
+                </li>
+
+                <li className='flex flex-wrap'>
+                  <div className='title min-w-48.75 w-48.75 py-3.75 px-7.5'>
+                    <span className='block text-xl font-afacad! text-secondary font-medium'>
+                      Friendly Cafés
+                    </span>
+                  </div>
+
+                  <div className='content flex-1 py-3.75 px-7.5'>
+                    <p className='text-md text-secondary font-light tracking-wide'>
+                      Many offer English menus, desserts, Korean snacks, and unique drinks
+                    </p>
+                  </div>
+                </li>
+
+                <li className='flex flex-wrap'>
+                  <div className='title min-w-48.75 w-48.75 py-3.75 px-7.5'>
+                    <span className='block text-xl font-afacad! text-secondary font-medium'>
+                      Delivery Apps
+                    </span>
+                  </div>
+
+                  <div className='content flex-1 py-3.75 px-7.5'>
+                    <p className='text-md text-secondary font-light tracking-wide'>
+                      Apps like Baemin, Yogiyo offer English support and deliver almost anywhere
+                    </p>
+                  </div>
+                </li>
+
+                <li className='flex flex-wrap'>
+                  <div className='title min-w-48.75 w-48.75 py-3.75 px-7.5'>
+                    <span className='block text-xl font-afacad! text-secondary font-medium'>
+                      Veg/ Nonveg
+                    </span>
+                  </div>
+
+                  <div className='content flex-1 py-3.75 px-7.5'>
+                    <p className='text-md text-secondary font-light tracking-wide'>
+                      Growing availability, especially in Seoul; some apps help locate vegan food
+                    </p>
+                  </div>
+                </li>
+
+                <li className='flex flex-wrap border-b-0!'>
+                  <div className='title min-w-48.75 w-48.75 py-3.75 px-7.5'>
+                    <span className='block text-xl font-afacad! text-secondary font-medium'>
+                      Free Side Dishes
+                    </span>
+                  </div>
+
+                  <div className='content flex-1 py-3.75 px-7.5'>
+                    <p className='text-md text-secondary font-light tracking-wide'>
+                      Most Korean restaurants offer unlimited free side dishes with meals
+                    </p>
                   </div>
                 </li>
               </ul>
             </div>
           </div>
+        </div>
+
+        <div className=''>
+
         </div>
       </div>
     </>
