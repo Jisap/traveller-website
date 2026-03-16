@@ -47,7 +47,7 @@ const TableRow = ({ title, content, isLast }) => (
 const SidebarWidget = ({ title, children, className = "" }) => (
   <div className={className}>
     <div className='mb-8'>
-      <h4 className='widget-title'>{title}</h4>
+      <h4 className='widget-title text-secondary'>{title}</h4>
     </div>
     {children}
   </div>
@@ -129,6 +129,8 @@ const ServicesDetails = () => {
     { name: "Spain", listings: 2 }
   ];
 
+  const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5];
+
   const tags = ["Food", "Tour", "Pool", "Safari", "Sky", "Hotel", "Adventure", "Travel", "Desert", "Luxury", "WildLife"];
 
   return (
@@ -155,7 +157,7 @@ const ServicesDetails = () => {
               loop={true}
               className='rounded-3xl w-full h-full'
             >
-              {[service.image, gallery1, gallery2, gallery3, gallery4, gallery5].map((item, index) => (
+              {[service.image, ...galleryImages].map((item, index) => (
                 <SwiperSlide key={index}>
                   <img src={item} alt={service.name} className='rounded-3xl w-full h-full object-cover object-top' />
                 </SwiperSlide>
@@ -273,9 +275,22 @@ const ServicesDetails = () => {
             </ul>
           </SidebarWidget>
 
-          <SidebarWidget title="Popular Tags">
-            <div className='tag-cloud mb-10'>
+          <SidebarWidget title="Popular Tags" className="bg-white border border-secondary/20 rounded-3xl p-3 lg:p-5 xl:p-10 mb-10">
+            <div className='tag-cloud'>
               {tags.map((tag, i) => <span key={tag}>{tag}</span>)}
+            </div>
+          </SidebarWidget>
+
+          <SidebarWidget title="Gallery" className="bg-white border border-secondary/20 rounded-3xl p-3 lg:p-5 xl:p-10 mb-10">
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-2'>
+              {galleryImages.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt="gallery"
+                  className='w-full h-25! object-cover rounded-xl transition-transform duration-300 hover:scale-105 cursor-pointer'
+                />
+              ))}
             </div>
           </SidebarWidget>
         </div>

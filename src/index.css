@@ -740,11 +740,7 @@ img {
 .tag-cloud {
   display: flex;
   flex-wrap: wrap;
-  background-color: #fff;
-  border: 1px solid rgba(6, 97, 104, .2);
-  border-radius: 30px;
-  padding: 40px;
-  grid-gap: 5px 5px;
+  gap: 8px;
 }
 
 .tag-cloud span {
