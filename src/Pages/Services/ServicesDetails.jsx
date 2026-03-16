@@ -522,8 +522,92 @@ const ServicesDetails = () => {
           </div>
         </div>
 
-        <div className=''>
+        <div className='service-right w-full xl:w-[38%] flex flex-col gap-10'>
+          <div className='mb-8'>
+            <h4 className='widget-title'>
+              Recent Post
+            </h4>
+          </div>
 
+          <div className='recent-post bg-white p-3 lg:p-5 xl:p-10 mb-10'>
+            <div className='post1 relative flex py-5 border-b boder-dashed border-secondary/50'>
+              <div className='post-date w-12 h-12 min-w-12 text-white bg-secondary flex flex-col justify-center items-center rounded-md'>
+                <span className='text-xl font-semibold leading-none'>
+                  14
+                </span>
+
+                <span className='text-xs leading-none'>
+                  June
+                </span>
+              </div>
+
+              <div className='post-info ps-4'>
+                <div className='ctg text-yellow font-medium pb-1'>
+                  Adam Butler
+                </div>
+
+                <div className='title'>
+                  <h5 className='block text-secondary font-afacad! font-medium leading-7 text-xl hover:text-yellow transition-colors duration-300 cursor-pointer'>
+                    Resources for your first trip to overseas vacation
+                  </h5>
+                </div>
+              </div>
+            </div>
+
+            <div className='post2 relative flex py-5 border-b boder-dashed border-secondary/50'>
+              <div className='post-date w-12 h-12 min-w-12 text-white bg-secondary flex flex-col justify-center items-center rounded-md'>
+                <span className='text-xl font-semibold leading-none'>
+                  21
+                </span>
+
+                <span className='text-xs leading-none'>
+                  Sept
+                </span>
+              </div>
+
+              <div className='post-info ps-4'>
+                <div className='ctg text-yellow font-medium pb-1'>
+                  Ricardo Bell
+                </div>
+
+                <div className='title'>
+                  <h5 className='block text-secondary font-afacad! font-medium leading-7 text-xl hover:text-yellow transition-colors duration-300 cursor-pointer'>
+                    How to get acquainted with natives in a strange land
+                  </h5>
+                </div>
+              </div>
+            </div>
+
+            <div className='post3 relative flex py-5 border-b boder-dashed border-secondary/50'>
+              <div className='post-date w-12 h-12 min-w-12 text-white bg-secondary flex flex-col justify-center items-center rounded-md'>
+                <span className='text-xl font-semibold leading-none'>
+                  12
+                </span>
+
+                <span className='text-xs leading-none'>
+                  Oct
+                </span>
+              </div>
+
+              <div className='post-info ps-4'>
+                <div className='ctg text-yellow font-medium pb-1'>
+                  Martin Hicksl
+                </div>
+
+                <div className='title'>
+                  <h5 className='block text-secondary font-afacad! font-medium leading-7 text-xl hover:text-yellow transition-colors duration-300 cursor-pointer'>
+                    Step by step guide to planning your ideal holiday
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className='mb-8'>
+            <h4 className='widget-title'>
+              Top Destinations
+            </h4>
+          </div>
         </div>
       </div>
     </>
