@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+import { containerVariants, fadeInUp } from '../../Animations/variants'
 import sectionBanner from '../../assets/section-banner.jpg'
 import { useParams } from 'react-router-dom'
 import CommonBanner from '../../Components/CommonBanner/CommonBanner'
@@ -145,9 +147,18 @@ const ServicesDetails = () => {
         ]}
       />
 
-      <div className='service-container px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[10%] bg-[#effefe] gap-10 flex justify-between items-start flex-col xl:flex-row'>
-        <div className='service-left w-full xl:w-[70%] flex flex-col gap-10'>
-          <div className='gallery-images h-50 sm:h-100 lg:h-150 bg-center bg-cover bg-no-repeat'>
+      <div className='service-container px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[10%] bg-[#effefe] gap-10 flex justify-between items-start flex-col xl:flex-row overflow-hidden'>
+        <motion.div
+          className='service-left w-full xl:w-[70%] flex flex-col gap-10'
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants(0.1)}
+        >
+          <motion.div
+            className='gallery-images h-50 sm:h-100 lg:h-150 bg-center bg-cover bg-no-repeat'
+            variants={fadeInUp}
+          >
             <Swiper
               modules={[Autoplay, Pagination]}
               spaceBetween={20}
@@ -159,13 +170,20 @@ const ServicesDetails = () => {
             >
               {[service.image, ...galleryImages].map((item, index) => (
                 <SwiperSlide key={index}>
-                  <img src={item} alt={service.name} className='rounded-3xl w-full h-full object-cover object-top' />
+                  <img
+                    src={item}
+                    alt={service.name}
+                    className='rounded-3xl w-full h-full object-cover object-top'
+                  />
                 </SwiperSlide>
               ))}
             </Swiper>
-          </div>
+          </motion.div>
 
-          <div className='service-content bg-white p-5 md:p-8 rounded-3xl shadow-lg'>
+          <motion.div
+            className='service-content bg-white p-5 md:p-8 rounded-3xl shadow-lg'
+            variants={fadeInUp}
+          >
             <h3 className='text-xl sm:text-2xl md:text-4xl font-medium text-secondary pb-5'>
               Tour guide who give you proper information about every destination
             </h3>
@@ -243,57 +261,71 @@ const ServicesDetails = () => {
                 </ul>
               </div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <div className='service-right w-full xl:w-[38%] flex flex-col gap-10'>
-          <SidebarWidget title="Recent Post" className="recent-post bg-white p-3 lg:p-5 xl:p-10 mb-10">
-            {recentPosts.map((post, i) => (
-              <div key={i} className='relative flex py-5 border-b boder-dashed border-secondary/50'>
-                <div className='post-date w-12 h-12 min-w-12 text-white bg-secondary flex flex-col justify-center items-center rounded-md'>
-                  <span className='text-xl font-semibold leading-none'>{post.date}</span>
-                  <span className='text-xs leading-none'>{post.month}</span>
+        <motion.div
+          className='service-right w-full xl:w-[38%] flex flex-col gap-10'
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants(0.1)}
+        >
+          <motion.div variants={fadeInUp}>
+            <SidebarWidget title="Recent Post" className="recent-post bg-white p-3 lg:p-5 xl:p-10 mb-10">
+              {recentPosts.map((post, i) => (
+                <div key={i} className='relative flex py-5 border-b boder-dashed border-secondary/50'>
+                  <div className='post-date w-12 h-12 min-w-12 text-white bg-secondary flex flex-col justify-center items-center rounded-md'>
+                    <span className='text-xl font-semibold leading-none'>{post.date}</span>
+                    <span className='text-xs leading-none'>{post.month}</span>
+                  </div>
+                  <div className='post-info ps-4'>
+                    <div className='ctg text-yellow font-medium pb-1'>{post.author}</div>
+                    <h5 className='block text-secondary font-afacad! font-medium leading-7 text-xl hover:text-yellow transition-colors duration-300 cursor-pointer'>
+                      {post.title}
+                    </h5>
+                  </div>
                 </div>
-                <div className='post-info ps-4'>
-                  <div className='ctg text-yellow font-medium pb-1'>{post.author}</div>
-                  <h5 className='block text-secondary font-afacad! font-medium leading-7 text-xl hover:text-yellow transition-colors duration-300 cursor-pointer'>
-                    {post.title}
-                  </h5>
-                </div>
+              ))}
+            </SidebarWidget>
+          </motion.div>
+
+          <motion.div variants={fadeInUp}>
+            <SidebarWidget title="Top Destinations" className="bg-white border border-secondary/20 rounded-3xl p-3 lg:p-5 xl:p-10 mb-10">
+              <ul className='space-y-3'>
+                {topDestinations.map((dest, i) => (
+                  <li key={i} className='flex w-full justify-between items-center'>
+                    <span className='text-md font-medium text-secondary hover:text-yellow transition-colors duration-300 cursor-pointer'>{dest.name}</span>
+                    <span className='text-sm text-gray-400'>( {dest.listings < 10 ? `0${dest.listings}` : dest.listings} Listing )</span>
+                  </li>
+                ))}
+              </ul>
+            </SidebarWidget>
+          </motion.div>
+
+          <motion.div variants={fadeInUp}>
+            <SidebarWidget title="Popular Tags" className="bg-white border border-secondary/20 rounded-3xl p-3 lg:p-5 xl:p-10 mb-10">
+              <div className='tag-cloud'>
+                {tags.map((tag, i) => <span key={tag}>{tag}</span>)}
               </div>
-            ))}
-          </SidebarWidget>
+            </SidebarWidget>
+          </motion.div>
 
-          <SidebarWidget title="Top Destinations" className="bg-white border border-secondary/20 rounded-3xl p-3 lg:p-5 xl:p-10 mb-10">
-            <ul className='space-y-3'>
-              {topDestinations.map((dest, i) => (
-                <li key={i} className='flex w-full justify-between items-center'>
-                  <span className='text-md font-medium text-secondary hover:text-yellow transition-colors duration-300 cursor-pointer'>{dest.name}</span>
-                  <span className='text-sm text-gray-400'>( {dest.listings < 10 ? `0${dest.listings}` : dest.listings} Listing )</span>
-                </li>
-              ))}
-            </ul>
-          </SidebarWidget>
-
-          <SidebarWidget title="Popular Tags" className="bg-white border border-secondary/20 rounded-3xl p-3 lg:p-5 xl:p-10 mb-10">
-            <div className='tag-cloud'>
-              {tags.map((tag, i) => <span key={tag}>{tag}</span>)}
-            </div>
-          </SidebarWidget>
-
-          <SidebarWidget title="Gallery" className="bg-white border border-secondary/20 rounded-3xl p-3 lg:p-5 xl:p-10 mb-10">
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-2'>
-              {galleryImages.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt="gallery"
-                  className='w-full h-25! object-cover rounded-xl transition-transform duration-300 hover:scale-105 cursor-pointer'
-                />
-              ))}
-            </div>
-          </SidebarWidget>
-        </div>
+          <motion.div variants={fadeInUp}>
+            <SidebarWidget title="Gallery" className="bg-white border border-secondary/20 rounded-3xl p-3 lg:p-5 xl:p-10 mb-10">
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-2'>
+                {galleryImages.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img}
+                    alt="gallery"
+                    className='w-full h-25! object-cover rounded-xl transition-transform duration-300 hover:scale-105 cursor-pointer'
+                  />
+                ))}
+              </div>
+            </SidebarWidget>
+          </motion.div>
+        </motion.div>
       </div>
     </>
   )

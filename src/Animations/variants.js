@@ -15,13 +15,13 @@ export const containerVariants = (staggerChildren = 0.2, delayChildren = 0) => (
 });
 
 export const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
-      ease: [0.6, -0.05, 0.01, 0.99], // Custom cubic-bezier for premium feel
+      duration: 1.2,
+      ease: [0.22, 1, 0.36, 1], // Quintic easing for smoother slowing down
     },
   },
 };
@@ -34,8 +34,8 @@ export const fadeInUpCentered = {
     y: "-50%",
     x: "-50%",
     transition: {
-      duration: 0.8,
-      ease: [0.6, -0.05, 0.01, 0.99],
+      duration: 1.2,
+      ease: [0.22, 1, 0.36, 1],
     },
   },
 };
@@ -46,8 +46,8 @@ export const fadeInRight = {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.8,
-      ease: [0.6, -0.05, 0.01, 0.99],
+      duration: 1.2,
+      ease: [0.22, 1, 0.36, 1],
     },
   },
 };
@@ -58,8 +58,8 @@ export const fadeInLeft = {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.9,
-      ease: [0.6, -0.05, 0.01, 0.99],
+      duration: 1.2,
+      ease: [0.22, 1, 0.36, 1],
     },
   },
 };
@@ -70,8 +70,8 @@ export const scaleIn = {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.6,
-      ease: "easeOut",
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1],
     },
   },
 };
