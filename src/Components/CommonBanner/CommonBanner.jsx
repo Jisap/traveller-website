@@ -45,7 +45,7 @@ const CommonBanner = ({ title, bgImage, breadcrumbs = [] }) => {
                 variants={fadeInUp}
               >
                 <Link 
-                  to={crumb.path} 
+                  to={crumb.path || crumb.url} 
                   className="cursor-pointer text-sm lg:text-lg font-semibold text-secondary/80 hover:text-yellow transition-all duration-300 ease-in-out"
                 >
                   {crumb.label}

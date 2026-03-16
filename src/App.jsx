@@ -8,6 +8,8 @@ import ScrollToTop from './Components/ScrollToTop'
 import Footer from './Components/Footer/Footer'
 import About from './Pages/About/About'
 import Services from './Pages/Services/Services'
+import ServicesDetails from './Pages/Services/ServicesDetails'
+
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -18,6 +20,7 @@ const AnimatedRoutes = () => {
         <Route path='/' element={<Index />} />
         <Route path='/about' element={<About />} />
         <Route path='/services' element={<Services />} />
+        <Route path='/services/:id' element={<ServicesDetails />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
     </AnimatePresence>

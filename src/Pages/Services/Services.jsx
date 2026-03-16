@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import sectionbanner from "../../assets/section-banner.jpg"
 import CommonBanner from "../../Components/CommonBanner/CommonBanner"
 import services from "../../Data/Services.json"
@@ -101,50 +102,55 @@ const Services = () => {
             variants={containerVariants(0.1, 0.2)}
           >
             {uniqueServices.map((service, index) => (
-              <motion.div
-                key={service.id}
-                variants={fadeInUp}
-                className="group relative h-[350px] rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer"
-              >
-                {/* Imagen de Fondo */}
-                <div className="absolute inset-0 scale-110 group-hover:scale-100 transition-transform duration-700">
-                  <img
-                    src={service.image}
-                    alt={service.name}
-                    className="w-full h-full object-cover"
-                  />
-                  {/* Overlay Gradiente */}
-                  <div className="absolute inset-0 bg-linear-to-t from-secondary via-secondary/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
-                </div>
-
-                {/* Contenido de la Card */}
-                <div className="absolute inset-0 p-8 flex flex-col justify-end items-center text-center">
-                  <div className="mb-4 transform group-hover:-translate-y-4 transition-transform duration-500 delay-75">
-                    <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/30 group-hover:bg-yellow group-hover:border-yellow transition-all duration-500">
-                      <Icon
-                        icon={iconMapping[service.name] || "solar:star-bold"}
-                        className="text-white text-3xl group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
+              <Link to={`/services/${service.id}`} key={service.id} className="block text-inherit no-underline">
+                <motion.div
+                  variants={fadeInUp}
+                  className="group relative h-[350px] rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                >
+                  {/* Imagen de Fondo */}
+                  <div className="absolute inset-0 scale-110 group-hover:scale-100 transition-transform duration-700">
+                    <img
+                      src={service.image}
+                      alt={service.name}
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Overlay Gradiente */}
+                    <div className="absolute inset-0 bg-linear-to-t from-secondary via-secondary/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
                   </div>
 
-                  <h3 className="text-white font-bold text-xl mb-2 group-hover:text-yellow transition-colors duration-300">
-                    {service.name}
-                  </h3>
+                  {/* Contenido de la Card */}
+                  <div className="absolute inset-0 p-8 flex flex-col justify-end items-center text-center">
+                    <div className="mb-4 transform group-hover:-translate-y-4 transition-transform duration-500 delay-75">
+                      <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/30 group-hover:bg-yellow group-hover:border-yellow transition-all duration-500">
+                        <Icon
+                          icon={iconMapping[service.name] || "solar:star-bold"}
+                          className="text-white text-3xl group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                    </div>
 
-                  <div className="h-1 w-0 bg-yellow group-hover:w-16 transition-all duration-500 rounded-full" />
+                    <h3 className="text-white font-bold text-xl mb-2 group-hover:text-yellow transition-colors duration-300 flex items-center gap-2">
+                      {service.name}
+                      <Icon 
+                        icon="solar:arrow-right-up-bold" 
+                        className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-yellow text-sm" 
+                      />
+                    </h3>
 
-                  {/* Texto extra que aparece al hover (simulado para creatividad) */}
-                  <p className="text-white/0 group-hover:text-white/80 text-sm mt-4 max-h-0 group-hover:max-h-20 transition-all duration-500 overflow-hidden">
-                    Experience the best {service.name.toLowerCase()} with our expert team and premium facilities.
-                  </p>
-                </div>
+                    <div className="h-1 w-0 bg-yellow group-hover:w-16 transition-all duration-500 rounded-full" />
 
-                {/* Número decorativo */}
-                <span className="absolute top-4 right-6 text-white/10 text-6xl font-black italic group-hover:text-white/20 transition-colors duration-500">
-                  0{index + 1}
-                </span>
-              </motion.div>
+                    {/* Texto extra que aparece al hover (simulado para creatividad) */}
+                    <p className="text-white/0 group-hover:text-white/80 text-sm mt-4 max-h-0 group-hover:max-h-20 transition-all duration-500 overflow-hidden">
+                      Experience the best {service.name.toLowerCase()} with our expert team and premium facilities.
+                    </p>
+                  </div>
+
+                  {/* Número decorativo */}
+                  <span className="absolute top-4 right-6 text-white/10 text-6xl font-black italic group-hover:text-white/20 transition-colors duration-500">
+                    0{index + 1}
+                  </span>
+                </motion.div>
+              </Link>
             ))}
           </motion.div>
         </div>
