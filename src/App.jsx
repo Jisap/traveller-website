@@ -9,7 +9,8 @@ import Footer from './Components/Footer/Footer'
 import About from './Pages/About/About'
 import Services from './Pages/Services/Services'
 import ServicesDetails from './Pages/Services/ServicesDetails'
-import TestimonialsPage from './Pages/Testimonials/page'
+import TestimonialsPage from './Pages/Testimonials/TestimonialPage'
+import TourGuide from './Pages/TourGuide/TourGuide'
 
 
 
@@ -25,6 +26,7 @@ const AnimatedRoutes = () => {
         <Route path='/services/:id' element={<ServicesDetails />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/testimonials' element={<TestimonialsPage />} />
+        <Route path='/tourguide' element={<TourGuide />} />
       </Routes>
     </AnimatePresence>
   );

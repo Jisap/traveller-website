@@ -70,30 +70,13 @@ const testimonialsData = [
   }
 ];
 
+import { containerVariants, fadeInUp, fadeInRight, scaleIn } from '../../Animations/variants';
+
 const TestimonialsPage = () => {
   const breadcrumbs = [
     { label: "Home", url: "/" },
     { label: "Testimonials", url: "/testimonials" },
   ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.5 }
-    }
-  };
 
   return (
     <div className="bg-white">
@@ -112,9 +95,10 @@ const TestimonialsPage = () => {
           {/* Header & Stats Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
+              variants={fadeInRight}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6 italic">
                 Real Stories from <span className="text-yellow italic">Real People</span>
@@ -130,9 +114,9 @@ const TestimonialsPage = () => {
                     <CountUp
                       end={4.9}
                       decimals={1}
-                      duration={3.5}
-                      autoAnimate
-                      autoAnimateOnce />/5
+                      duration={2.5}
+                      enableScrollSpy
+                      scrollSpyOnce />/5
                   </span>
 
                   <div className="flex text-yellow">
@@ -148,9 +132,9 @@ const TestimonialsPage = () => {
                   <span className="text-4xl font-bold flex items-center">
                     <CountUp
                       end={15}
-                      duration={3.5}
-                      autoAnimate
-                      autoAnimateOnce />K+
+                      duration={2.5}
+                      enableScrollSpy
+                      scrollSpyOnce />K+
                   </span>
 
                   <span className="text-yellow font-semibold">Happy Travellers</span>
@@ -161,9 +145,10 @@ const TestimonialsPage = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
+              variants={scaleIn}
               className="bg-secondary p-8 rounded-[40px] text-white relative overflow-hidden group"
             >
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -183,7 +168,7 @@ const TestimonialsPage = () => {
 
           {/* Regular Grid (Equal Height) */}
           <motion.div
-            variants={containerVariants}
+            variants={containerVariants(0.1)}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -192,7 +177,7 @@ const TestimonialsPage = () => {
             {testimonialsData.map((review) => (
               <motion.div
                 key={review.id}
-                variants={itemVariants}
+                variants={fadeInUp}
                 className={`flex flex-col h-full bg-white border border-secondary/10 p-7 rounded-3xl shadow-sm hover:shadow-xl hover:border-yellow/30 transition-all duration-300 group ${review.featured ? 'ring-2 ring-yellow/20' : ''}`}
               >
                 <div className="flex items-center gap-4 mb-5">
