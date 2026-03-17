@@ -9,6 +9,8 @@ import Footer from './Components/Footer/Footer'
 import About from './Pages/About/About'
 import Services from './Pages/Services/Services'
 import ServicesDetails from './Pages/Services/ServicesDetails'
+import TestimonialsPage from './Pages/Testimonials/page'
+
 
 
 const AnimatedRoutes = () => {
@@ -22,6 +24,7 @@ const AnimatedRoutes = () => {
         <Route path='/services' element={<Services />} />
         <Route path='/services/:id' element={<ServicesDetails />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/testimonials' element={<TestimonialsPage />} />
       </Routes>
     </AnimatePresence>
   );
