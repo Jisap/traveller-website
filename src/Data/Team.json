@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Murphy",
+    "image": "/src/assets/TourGuidePage/pic1.jpg",
+    "jobtitle": "Tourist Guide",
+    "Age": 36,
+    "Education": "Bsc of Computer Science",
+    "Location": "Philadelphia U.S.A",
+    "Experiences": "5 Years",
+    "Contact": "+91 123 456 7890",
+    "Email": "Murphy@gmail.com"
+  },
+  {
+    "id": 2,
+    "name": "Murray",
+    "image": "/src/assets/TourGuidePage/pic2.jpg",
+    "jobtitle": "Tourist Guide",
+    "Age": 30,
+    "Education": "Bsc of Computer Science",
+    "Location": "Philadelphia U.S.A",
+    "Experiences": "4 Years",
+    "Contact": "+91 323 656 7679",
+    "Email": "murray@gmail.com"
+  },
+  {
+    "id": 3,
+    "name": "Alexis Cox",
+    "image": "/src/assets/TourGuidePage/pic3.jpg",
+    "jobtitle": "Tourist Guide",
+    "Age": 45,
+    "Education": "Msc of Computer Science",
+    "Location": "U.S.A",
+    "Experiences": "4 Years",
+    "Contact": "+91 321 456 0987",
+    "Email": "travllaricardo@gmail.com"
+  },
+  {
+    "id": 4,
+    "name": "Crawford",
+    "image": "/src/assets/TourGuidePage/pic4.jpg",
+    "jobtitle": "Tourist Guide",
+    "Age": 36,
+    "Education": "Msc of Computer Science",
+    "Location": "Nepal",
+    "Experiences": "4 Years",
+    "Contact": "+91 444 542 4242",
+    "Email": "crawford@gmail.com"
+  },
+  {
+    "id": 5,
+    "name": "Ethan Walker",
+    "image": "/src/assets/TourGuidePage/pic5.jpg",
+    "jobtitle": "Tourist Guide",
+    "Age": 26,
+    "Education": "BCA",
+    "Location": "Nepal",
+    "Experiences": "4 Years",
+    "Contact": "+91 555 342 1212",
+    "Email": "m.walker@gmail.com"
+  },
+  {
+    "id": 6,
+    "name": "Liam Brooks",
+    "image": "/src/assets/TourGuidePage/pic6.jpg",
+    "jobtitle": "Tourist Guide",
+    "Age": 37,
+    "Education": "Bsc of Computer Science",
+    "Location": "U.S.A",
+    "Experiences": "4 Years",
+    "Contact": "+91 654 542 3454",
+    "Email": "lamsf@gmail.com"
+  }
+]

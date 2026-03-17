@@ -11,6 +11,7 @@ import Services from './Pages/Services/Services'
 import ServicesDetails from './Pages/Services/ServicesDetails'
 import TestimonialsPage from './Pages/Testimonials/TestimonialPage'
 import TourGuide from './Pages/TourGuide/TourGuide'
+import TourGuideDetails from './Pages/TourGuide/TourGuideDetails'
 
 
 
@@ -27,6 +28,7 @@ const AnimatedRoutes = () => {
         <Route path='/contact' element={<Contact />} />
         <Route path='/testimonials' element={<TestimonialsPage />} />
         <Route path='/tourguide' element={<TourGuide />} />
+        <Route path='/tourguide/:id' element={<TourGuideDetails />} />
       </Routes>
     </AnimatePresence>
   );
