@@ -9,7 +9,32 @@
     "Location": "Philadelphia U.S.A",
     "Experiences": "5 Years",
     "Contact": "+91 123 456 7890",
-    "Email": "Murphy@gmail.com"
+    "Email": "Murphy@gmail.com",
+    "expertise": "Specialist in historical city tours and cultural storytelling. Deep knowledge of Philadelphia’s heritage and hidden landmarks.",
+    "skills": [
+      "History Expert",
+      "Storytelling",
+      "Walking Tours",
+      "Cultural Insights",
+      "Public Speaking"
+    ],
+    "certifications": [
+      {
+        "title": "India",
+        "description": "Ministry of Tourism offers licenses via IITTM and regional programs",
+        "icon": "mdi:office-building"
+      },
+      {
+        "title": "Global",
+        "description": "WFTGA (World Federation of Tourist Guide Associations) sets international standards",
+        "icon": "mdi:earth"
+      },
+      {
+        "title": "Specialized Courses",
+        "description": "Adventure guiding, museum interpretation, eco-tourism, etc.",
+        "icon": "mdi:school"
+      }
+    ]
   },
   {
     "id": 2,
@@ -21,7 +46,32 @@
     "Location": "Philadelphia U.S.A",
     "Experiences": "4 Years",
     "Contact": "+91 323 656 7679",
-    "Email": "murray@gmail.com"
+    "Email": "murray@gmail.com",
+    "expertise": "Focused on food and urban experiences, combining local gastronomy with immersive city exploration.",
+    "skills": [
+      "Food Tours",
+      "Local Expert",
+      "Urban Exploration",
+      "Communication",
+      "Multilingual"
+    ],
+    "certifications": [
+      {
+        "title": "India",
+        "description": "Ministry of Tourism offers licenses via IITTM and regional programs",
+        "icon": "mdi:office-building"
+      },
+      {
+        "title": "Global",
+        "description": "WFTGA (World Federation of Tourist Guide Associations) sets international standards",
+        "icon": "mdi:earth"
+      },
+      {
+        "title": "Specialized Courses",
+        "description": "Adventure guiding, museum interpretation, eco-tourism, etc.",
+        "icon": "mdi:school"
+      }
+    ]
   },
   {
     "id": 3,
@@ -33,7 +83,32 @@
     "Location": "U.S.A",
     "Experiences": "4 Years",
     "Contact": "+91 321 456 0987",
-    "Email": "travllaricardo@gmail.com"
+    "Email": "travllaricardo@gmail.com",
+    "expertise": "Expert in national parks and nature tours, offering deep insights into wildlife and ecosystems.",
+    "skills": [
+      "Nature Guide",
+      "Wildlife Knowledge",
+      "Photography",
+      "Safety First",
+      "Adventure Tours"
+    ],
+    "certifications": [
+      {
+        "title": "India",
+        "description": "Ministry of Tourism offers licenses via IITTM and regional programs",
+        "icon": "mdi:office-building"
+      },
+      {
+        "title": "Global",
+        "description": "WFTGA (World Federation of Tourist Guide Associations) sets international standards",
+        "icon": "mdi:earth"
+      },
+      {
+        "title": "Specialized Courses",
+        "description": "Adventure guiding, museum interpretation, eco-tourism, etc.",
+        "icon": "mdi:school"
+      }
+    ]
   },
   {
     "id": 4,
@@ -45,7 +120,32 @@
     "Location": "Nepal",
     "Experiences": "4 Years",
     "Contact": "+91 444 542 4242",
-    "Email": "crawford@gmail.com"
+    "Email": "crawford@gmail.com",
+    "expertise": "Mountain trekking specialist with extensive experience in Himalayan routes and high-altitude safety.",
+    "skills": [
+      "Trekking",
+      "Mountain Guide",
+      "First Aid",
+      "Survival Skills",
+      "Leadership"
+    ],
+    "certifications": [
+      {
+        "title": "India",
+        "description": "Ministry of Tourism offers licenses via IITTM and regional programs",
+        "icon": "mdi:office-building"
+      },
+      {
+        "title": "Global",
+        "description": "WFTGA (World Federation of Tourist Guide Associations) sets international standards",
+        "icon": "mdi:earth"
+      },
+      {
+        "title": "Specialized Courses",
+        "description": "Adventure guiding, museum interpretation, eco-tourism, etc.",
+        "icon": "mdi:school"
+      }
+    ]
   },
   {
     "id": 5,
@@ -57,7 +157,32 @@
     "Location": "Nepal",
     "Experiences": "4 Years",
     "Contact": "+91 555 342 1212",
-    "Email": "m.walker@gmail.com"
+    "Email": "m.walker@gmail.com",
+    "expertise": "Adventure enthusiast specializing in budget-friendly trekking and backpacking experiences.",
+    "skills": [
+      "Backpacking",
+      "Budget Travel",
+      "Navigation",
+      "Camping",
+      "Teamwork"
+    ],
+    "certifications": [
+      {
+        "title": "India",
+        "description": "Ministry of Tourism offers licenses via IITTM and regional programs",
+        "icon": "mdi:office-building"
+      },
+      {
+        "title": "Global",
+        "description": "WFTGA (World Federation of Tourist Guide Associations) sets international standards",
+        "icon": "mdi:earth"
+      },
+      {
+        "title": "Specialized Courses",
+        "description": "Adventure guiding, museum interpretation, eco-tourism, etc.",
+        "icon": "mdi:school"
+      }
+    ]
   },
   {
     "id": 6,
@@ -69,6 +194,31 @@
     "Location": "U.S.A",
     "Experiences": "4 Years",
     "Contact": "+91 654 542 3454",
-    "Email": "lamsf@gmail.com"
+    "Email": "lamsf@gmail.com",
+    "expertise": "Luxury tour specialist delivering premium experiences with personalized itineraries and VIP services.",
+    "skills": [
+      "Luxury Tours",
+      "Client Management",
+      "Planning",
+      "Multilingual",
+      "Exclusive Experiences"
+    ],
+    "certifications": [
+      {
+        "title": "India",
+        "description": "Ministry of Tourism offers licenses via IITTM and regional programs",
+        "icon": "mdi:office-building"
+      },
+      {
+        "title": "Global",
+        "description": "WFTGA (World Federation of Tourist Guide Associations) sets international standards",
+        "icon": "mdi:earth"
+      },
+      {
+        "title": "Specialized Courses",
+        "description": "Adventure guiding, museum interpretation, eco-tourism, etc.",
+        "icon": "mdi:school"
+      }
+    ]
   }
 ]

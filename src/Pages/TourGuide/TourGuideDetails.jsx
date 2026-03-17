@@ -46,10 +46,10 @@ const TourGuideDetails = () => {
             <section className="py-20 px-[5%] lg:px-[10%]">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                        
-                        {/* Image Sidebar */}
+
+                        {/* Image Sidebar - Sticky on Desktop */}
                         <motion.div 
-                            className="lg:col-span-4"
+                            className="lg:col-span-4 lg:sticky lg:top-32 self-start"
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
@@ -57,12 +57,13 @@ const TourGuideDetails = () => {
                         >
                             <div className="relative group">
                                 <div className="rounded-[40px] overflow-hidden border-8 border-[#f0fefe] shadow-2xl">
-                                    <img 
-                                        src={member.image} 
-                                        alt={member.name} 
+                                    <img
+                                        src={member.image}
+                                        alt={member.name}
                                         className="w-full aspect-4/5 object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                 </div>
+
                                 {/* Social Floating Bar */}
                                 <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex gap-3 bg-white p-4 rounded-2xl shadow-xl border border-secondary/5">
                                     <Link to="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-secondary text-white hover:bg-yellow transition-colors duration-300">
@@ -82,7 +83,7 @@ const TourGuideDetails = () => {
                         </motion.div>
 
                         {/* Content Area */}
-                        <motion.div 
+                        <motion.div
                             className="lg:col-span-8"
                             initial="hidden"
                             whileInView="visible"
@@ -97,12 +98,12 @@ const TourGuideDetails = () => {
                             </div>
 
                             <p className="text-lg text-secondary/70 leading-relaxed mb-10 italic">
-                                "I am dedicated to making every journey unforgettable. With years of experience exploring {member.Location}, I ensure our guests discover the true heart of every destination."
+                                "{member.expertise}"
                             </p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                                 {infoItems.map((item, index) => (
-                                    <motion.div 
+                                    <motion.div
                                         key={index}
                                         variants={scaleIn}
                                         className="flex items-center gap-4 p-5 bg-[#f0fefe] rounded-2xl border border-secondary/5 group hover:border-yellow/30 hover:bg-white transition-all duration-300 shadow-sm hover:shadow-md"
@@ -118,19 +119,39 @@ const TourGuideDetails = () => {
                                 ))}
                             </div>
 
-                            <div className="space-y-6">
-                                <h2 className="text-2xl font-bold text-secondary flex items-center gap-2">
-                                    <span className="w-8 h-1 bg-yellow inline-block rounded-full" /> Skills & Expertise
-                                </h2>
-                                <p className="text-secondary/70">
-                                    Expert knowledge of local history, flora, and fauna. Certified in first aid and mountain rescue. Fluent in English, Spanish and local dialects. Specializes in luxury tours and adventure trekking.
-                                </p>
-                                <div className="flex flex-wrap gap-3 pt-2">
-                                    {["Safety First", "Local Expert", "Photography", "Storytelling", "Multilingual"].map((skill, i) => (
-                                        <span key={i} className="px-5 py-2 bg-secondary/5 rounded-full text-secondary/60 text-sm font-medium hover:bg-secondary hover:text-white transition-colors cursor-default">
-                                            {skill}
-                                        </span>
-                                    ))}
+                            <div className="space-y-12">
+                                {/* Skills Section */}
+                                <div className="space-y-6">
+                                    <h2 className="text-2xl font-bold text-secondary flex items-center gap-2">
+                                        <span className="w-8 h-1 bg-yellow inline-block rounded-full" /> Skills & Expertise
+                                    </h2>
+                                    <div className="flex flex-wrap gap-3 pt-2">
+                                        {member.skills.map((skill, i) => (
+                                            <span key={i} className="px-5 py-2 bg-secondary/5 rounded-full text-secondary/60 text-sm font-medium hover:bg-secondary hover:text-white transition-colors cursor-default">
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Certifications Section */}
+                                <div className="space-y-6">
+                                    <h2 className="text-2xl font-bold text-secondary flex items-center gap-2">
+                                        <span className="w-8 h-1 bg-yellow inline-block rounded-full" /> Professional Certifications
+                                    </h2>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        {member.certifications.map((cert, i) => (
+                                            <div key={i} className="flex gap-4 p-4 border border-secondary/5 rounded-2xl bg-gray-50/50 hover:bg-white hover:shadow-sm transition-all">
+                                                <div className="w-10 h-10 rounded-full bg-yellow/10 flex items-center justify-center text-yellow shrink-0">
+                                                    <Icon icon={cert.icon} width="20" />
+                                                </div>
+                                                <div>
+                                                    <h4 className="font-bold text-secondary text-sm">{cert.title}</h4>
+                                                    <p className="text-xs text-secondary/60 leading-tight mt-1">{cert.description}</p>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
@@ -141,4 +162,4 @@ const TourGuideDetails = () => {
     )
 }
 
-export default TourGuideDetails
+export default TourGuideDetails
