@@ -231,6 +231,95 @@ const Pricing = () => {
           </div>
         </div>
       </div>
+
+      <div className="booking px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[10%] relative">
+        <div className="booking-content w-full flex justify-between items-center flex-wrap lg:flex-nowrap gap-5 lg:gap-10 pb-10">
+          <div className="flex flex-col">
+            <h1 className="text-secondary text-4xl md:text-6xl font-bold">
+              Easy Step <span className="text-yellow"> For Booking </span>
+            </h1>
+
+            <p className="text-secondary my-6 text-lg lg:w-lg">
+              Maybe for a travel blog, wildlife site, or web development project here are a few sample templates you can use to simulate real-time news updates
+            </p>
+          </div>
+          <Mainbtn
+            to="/about" text={"View More"}
+          />
+        </div>
+
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
+          <div className="step step-1 relative">
+            <div className="step-icon mb-5 text-center">
+              <div className="icon-black w-30 h-30 bg-[#45869d] rounded-full inline-flex justify-center items-center">
+                <div className="icon-front w-22.5 h-22.5 rounded-full bg-white inline-flex justify-center items-center shadow-2xl">
+                  <img
+                    src={step1img}
+                    alt="step1img"
+                    className="step-img step1-image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="step-content">
+              <h4 className="text-3xl font-medium text-white pb-2">
+                Choose Destination
+              </h4>
+
+              <p className="">
+                All you have to do is, first select your preferred destination and proceed
+              </p>
+
+              <div className="flex items-end justify-between">
+                <div className="media">
+                  <img src={des1} alt="des1" />
+                </div>
+
+                <span className="bld-num">
+                  01
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="step step-2 relative">
+            <div className="step-icon mb-5 text-center">
+              <div className="icon-black w-30 h-30 bg-[#ce8594] rounded-full inline-flex justify-center items-center">
+                <div className="icon-front w-22.5 h-22.5 rounded-full bg-white inline-flex justify-center items-center shadow-2xl">
+                  <img
+                    src={step2img}
+                    alt="step2img"
+                    className="step-img step1-image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="step-content">
+              <h4 className="text-3xl font-medium text-white pb-2">
+                Make payment
+              </h4>
+
+              <p className="">
+                You are important to us. We pay attention to the quality of every service we provide to you.
+              </p>
+
+              <div className="flex items-end justify-between">
+                <div className="media">
+                  <img src={des2} alt="des2" />
+                </div>
+
+                <span className="bld-num">
+                  02
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </>
   )
 }
