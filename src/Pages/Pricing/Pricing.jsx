@@ -18,7 +18,7 @@ import des2 from "../../assets/PricingPage/make-payment-1.png"
 import des3 from "../../assets/PricingPage/ready-for-travelling.png"
 import bag from "../../assets/PricingPage/bag.png"
 import tent from "../../assets/PricingPage/tent.png"
-import frming from "../../assets/PricingPage/frm-left.jpg"
+import frmimg from "../../assets/PricingPage/frm-left.jpg"
 
 
 
@@ -248,7 +248,6 @@ const Pricing = () => {
           />
         </div>
 
-
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
           <div className="step step-1 relative">
             <div className="step-icon mb-5 text-center">
@@ -320,7 +319,7 @@ const Pricing = () => {
 
           <div className="step step-3 relative">
             <div className="step-icon mb-5 text-center">
-              <div className="icon-black w-30 h-30 bg-[#45869d] rounded-full inline-flex justify-center items-center">
+              <div className="icon-black w-30 h-30 bg-[#047881] rounded-full inline-flex justify-center items-center">
                 <div className="icon-front w-22.5 h-22.5 rounded-full bg-white inline-flex justify-center items-center shadow-2xl">
                   <img
                     src={step3img}
@@ -333,11 +332,11 @@ const Pricing = () => {
 
             <div className="step-content">
               <h4 className="text-3xl font-medium text-white pb-2">
-                Reach & Get in Touch With Us!
+                Ready For Travelling
               </h4>
 
               <p className="">
-                We’d love to hear from you. Our friendly team is always here to chat
+                We have seen that you have fulfilled all the requirements, now you are ready to travel.
               </p>
 
               <div className="flex items-end justify-between">
@@ -352,8 +351,77 @@ const Pricing = () => {
             </div>
           </div>
         </div>
+
+        <div className="left-bag absolute left-0 bottom-0 md:block hidden">
+          <img src={bag} alt="leftbag" className="-z-1" />
+        </div>
+
+        <div className="left-tent absolute right-0 bottom-0 md:block hidden">
+          <img src={tent} alt="leftbag" className="-z-1" />
+        </div>
       </div>
 
+      <div className="pricing-content py-[6%] md:py-[10%] ring-offset-sky-50 flex flex-col lg:flex-row bg-yellow-light/40">
+        <div className="relative w-full lg:w-1/2 min-h-100 lg:min-h-auto overflow-hidden">
+          <img
+            src={frmimg}
+            alt="bg-img"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+
+          <div className="absolute inset-0 bg-secondary/50 flex items-end p-8 lg:p-12">
+            <h4 className="text-white text-3xl md:text-4xl font-medium font-kaushan!">
+              Hi there!
+              <span className="block text-lg md:text-xl font-medium mt-2 font-afacad">
+                What can I do for you today?
+              </span>
+            </h4>
+          </div>
+        </div>
+
+        <div className="w-full lg:w-1/2 p-6 md:p-10 flex items-center">
+          <div className="bg-yellow-light w-full p-8 md:p-10 rounded-[40px] shadow-xl">
+            <h1 className="text-secondary text-4xl md:text-6xl font-bold">
+              <span className="text-yellow">Reach </span> & Get in Touch With Us!
+            </h1>
+
+            <p className="text-secondary my-6 text-lg lg:w-lg">
+              We’d love to hear from you. Our friendly team is always here to chat
+            </p>
+
+            <form method="post" className="space-y-6">
+              <input
+                type="text"
+                placeholder="Enter Your Name"
+                className="w-full rounded-full px-6 py-4 bg-white text-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-yellow focus:outline-none"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Enter Your Email"
+                className="w-full rounded-full px-6 py-4 bg-white text-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-yellow focus:outline-none"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Enter Your Subject"
+                className="w-full rounded-full px-6 py-4 bg-white text-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-yellow focus:outline-none"
+                required
+              />
+              <textarea
+                placeholder="Enter Your Message"
+                rows="5"
+                className="w-full rounded-full px-6 py-4 bg-white text-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-yellow focus:outline-none resize-none"
+                required
+              />
+              <Mainbtn
+                to="/about"
+                text="Send Message"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
