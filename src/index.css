@@ -827,3 +827,10 @@ img {
   color: var(--color-secondary);
   margin-bottom: 0;
 }
+
+.tour-price-card {
+  padding: 30px;
+  border: 10px solid rgb(41 137 145/ .2);
+  border-radius: 110px;
+  background-color: #fff;
+}
