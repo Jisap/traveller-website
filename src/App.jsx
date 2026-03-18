@@ -14,6 +14,7 @@ import TourGuide from './Pages/TourGuide/TourGuide'
 import TourGuideDetails from './Pages/TourGuide/TourGuideDetails'
 import Faqs from './Pages/Faqs/Faqs'
 import Pricing from './Pages/Pricing/Pricing'
+import Destination from './Pages/Destination/Destination'
 
 
 
@@ -33,6 +34,7 @@ const AnimatedRoutes = () => {
         <Route path='/tourguide/:id' element={<TourGuideDetails />} />
         <Route path='/faqs' element={<Faqs />} />
         <Route path='/pricing' element={<Pricing />} />
+        <Route path='/destination' element={<Destination />} />
       </Routes>
     </AnimatePresence>
   );
