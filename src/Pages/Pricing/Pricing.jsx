@@ -317,6 +317,40 @@ const Pricing = () => {
               </div>
             </div>
           </div>
+
+          <div className="step step-3 relative">
+            <div className="step-icon mb-5 text-center">
+              <div className="icon-black w-30 h-30 bg-[#45869d] rounded-full inline-flex justify-center items-center">
+                <div className="icon-front w-22.5 h-22.5 rounded-full bg-white inline-flex justify-center items-center shadow-2xl">
+                  <img
+                    src={step3img}
+                    alt="step3img"
+                    className="step-img step1-image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="step-content">
+              <h4 className="text-3xl font-medium text-white pb-2">
+                Reach & Get in Touch With Us!
+              </h4>
+
+              <p className="">
+                We’d love to hear from you. Our friendly team is always here to chat
+              </p>
+
+              <div className="flex items-end justify-between">
+                <div className="media">
+                  <img src={des3} alt="des3" />
+                </div>
+
+                <span className="bld-num">
+                  02
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
