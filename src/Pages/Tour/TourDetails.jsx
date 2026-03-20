@@ -205,8 +205,76 @@ const TourDetails = () => {
           </div>
         </div>
 
-        <div>
+        <div className='tour-right w-full lg:w-[30%]'>
+          <div className='content bg-white p-5 md:p-10 border border-gray-200 rounded-3xl'>
+            <span className='block text-secondary text-sm font-medium pb-2'>
+              Starting from
+            </span>
 
+            <span className='text-secondary text-5xl font-semibold font-figtree'>
+              {tour.price}
+            </span>
+
+            <span className='text-secondary text-sm font-normal'>
+              / Per Person
+            </span>
+
+            <Mainbtn
+              text="Enquire Now"
+              className='block! w-fit! mt-6!'
+            />
+          </div>
+
+          <div className='content bg-white p-5 md:p-10 border border-gray-200 rounded-3xl mt-8'>
+            <div className='flex flex-col gap-6'>
+              <div className='flex items-start gap-4'>
+                <div className='w-10 h-10 rounded-full bg-[#f4fbfc] flex items-center justify-center shrink-0'>
+                  <Icon icon="lucide:clock" className='text-yellow' width="20" />
+                </div>
+                <div className='flex flex-col'>
+                  <span className='text-[10px] font-bold text-secondary/40 uppercase tracking-widest'>Duration</span>
+                  <span className='text-secondary font-bold font-figtree'>{tour.Duration}</span>
+                </div>
+              </div>
+
+              <div className='flex items-start gap-4'>
+                <div className='w-10 h-10 rounded-full bg-[#f4fbfc] flex items-center justify-center shrink-0'>
+                  <Icon icon="lucide:map-pin" className='text-yellow' width="20" />
+                </div>
+                <div className='flex flex-col'>
+                  <span className='text-[10px] font-bold text-secondary/40 uppercase tracking-widest'>Places to Visit</span>
+                  <span className='text-secondary font-bold font-figtree leading-relaxed'>{tour.Places}</span>
+                </div>
+              </div>
+            </div>
+
+            <div className='relative my-10 border-t border-gray-100 pt-8'>
+              <span className='absolute -top-4 left-1/2 -translate-x-1/2 bg-white px-4 text-xs font-bold text-secondary/40 uppercase tracking-widest'>
+                Package Includes
+              </span>
+            </div>
+
+            <div className='grid grid-cols-3 gap-4'>
+              {[
+                { icon: icon1, label: "Hotels" },
+                { icon: icon3, label: "Transfer" },
+                { icon: icon4, label: "Meal" }
+              ].map((item, idx) => (
+                <div key={idx} className='flex flex-col items-center gap-3 group'>
+                  <div className='w-16 h-16 rounded-2xl bg-[#f4fbfc] flex items-center justify-center p-3 group-hover:bg-yellow/10 transition-colors duration-300'>
+                    <img 
+                      src={item.icon} 
+                      alt={item.label} 
+                      className='w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300' 
+                    />
+                  </div>
+                  <span className='text-xs font-bold text-secondary/60 uppercase group-hover:text-yellow transition-colors duration-300'>
+                    {item.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </>

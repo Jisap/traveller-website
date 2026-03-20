@@ -891,3 +891,13 @@ img {
   margin-bottom: 0;
   ;
 }
+
+.tour-time-duration {
+  margin: 0;
+  padding: 0 0 10px 0;
+  color: var(--color-secondary);
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  list-style: none;
+}
