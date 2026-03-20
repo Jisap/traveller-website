@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { containerVariants, fadeInUp } from "../../Animations/variants";
+import { Icon } from "@iconify/react";
 
 /**
  * CommonBanner Component
@@ -27,7 +28,7 @@ const CommonBanner = ({ title, bgImage, breadcrumbs = [] }) => {
         viewport={{ once: true }}
       >
         <motion.h4 
-          className="text-3xl lg:text-5xl xl:text-7xl font-extrabold text-secondary mb-6"
+          className="text-3xl lg:text-5xl xl:text-7xl font-extrabold text-white mb-6"
           variants={fadeInUp}
         >
           {title}
@@ -38,23 +39,36 @@ const CommonBanner = ({ title, bgImage, breadcrumbs = [] }) => {
           variants={containerVariants(0.1, 0.2)}
         >
           <ul className="flex items-center flex-wrap justify-center gap-3">
-            {breadcrumbs.map((crumb, index) => (
-              <motion.li 
-                key={index} 
-                className="flex items-center gap-3"
-                variants={fadeInUp}
-              >
-                <Link 
-                  to={crumb.path || crumb.url} 
-                  className="cursor-pointer text-sm lg:text-lg font-semibold text-secondary/80 hover:text-yellow transition-all duration-300 ease-in-out"
+            {breadcrumbs.map((crumb, index) => {
+              const isLast = index === breadcrumbs.length - 1;
+              return (
+                <motion.li 
+                  key={index} 
+                  className="flex items-center gap-2"
+                  variants={fadeInUp}
                 >
-                  {crumb.label}
-                </Link>
-                {index < breadcrumbs.length - 1 && (
-                  <span className="text-secondary/50 font-bold">/</span>
-                )}
-              </motion.li>
-            ))}
+                  {isLast ? (
+                    <span className="text-sm lg:text-lg font-bold text-yellow drop-shadow-sm">
+                      {crumb.label}
+                    </span>
+                  ) : (
+                    <Link 
+                      to={crumb.path || crumb.url} 
+                      className="cursor-pointer text-sm lg:text-lg font-semibold text-white/90 hover:text-yellow transition-all duration-300 ease-in-out underline-offset-4 hover:underline decoration-yellow/30"
+                    >
+                      {crumb.label}
+                    </Link>
+                  )}
+                  
+                  {!isLast && (
+                    <Icon 
+                      icon="lucide:chevron-right" 
+                      className="text-white/60 w-4 h-4 lg:w-5 lg:h-5" 
+                    />
+                  )}
+                </motion.li>
+              );
+            })}
           </ul>
         </motion.nav>
       </motion.div>

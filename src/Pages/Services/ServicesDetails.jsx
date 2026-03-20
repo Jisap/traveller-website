@@ -143,7 +143,7 @@ const ServicesDetails = () => {
         breadcrumbs={[
           { label: 'Home', url: '/' },
           { label: 'Services', url: '/services' },
-          { label: 'Service Details', url: `/services/${id}` },
+          { label: service ? service.name : 'Service Details', url: `/services/${id}` },
         ]}
       />
 
