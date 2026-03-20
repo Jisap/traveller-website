@@ -1,25 +1,34 @@
+import { Link } from "react-router-dom"
 import { Icon } from "@iconify/react"
 import { motion } from "framer-motion"
 import { fadeInUp } from "../../Animations/variants"
 import Mainbtn from "../Buttons/Mainbtn"
+
 
 const PopularTourCard = ({ tour }) => {
   return (
     <>
       <motion.div
         variants={fadeInUp}
-        className="tour-card transition-all duration-300 cursor-pointer"
+        className="tour-card transition-all duration-300 group overflow-hidden bg-white rounded-3xl"
       >
-        <div className="popular-tour-image flex-shrink-0">
-          <img src={tour.image} alt="popular-tour-image" className="w-full h-full object-cover block" />
-        </div>
+        <Link to={`/tours/${tour.id}`}>
+          <div className="popular-tour-image overflow-hidden block">
+            <img 
+              src={tour.image} 
+              alt={tour.title} 
+              className="w-full h-full object-cover block group-hover:scale-110 transition-transform duration-500" 
+            />
+          </div>
+        </Link>
 
-        <div className="popular-tour-content flex-grow">
-          {/* Group title and info to allow alignment */}
+        <div className="popular-tour-content p-6">
           <div className="flex flex-col grow">
-            <h4 className="text-lg text-secondary font-medium pb-3 hover:text-yellow transition-colors duration-300">
-              {tour.title}
-            </h4>
+            <Link to={`/tours/${tour.id}`}>
+              <h4 className="text-xl text-secondary font-bold pb-3 hover:text-yellow transition-colors duration-300 font-afacad">
+                {tour.title}
+              </h4>
+            </Link>
 
             {/* mt-auto ensures this row is pushed down if the title is short */}
             <ul className="flex justify-between items-center gap-1 pb-5 mt-auto">
