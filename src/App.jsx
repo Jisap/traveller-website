@@ -20,6 +20,7 @@ import TourDetails from './Pages/Tour/TourDetails'
 import Blogs from './Pages/Blogs/Blogs'
 import BlogDetails from './Pages/Blogs/BlogDetails'
 import Contact from './Pages/Contact/Contact'
+import Page404 from './Pages/Page404/Page404'
 
 
 
@@ -45,6 +46,8 @@ const AnimatedRoutes = () => {
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/blogs/:id' element={<BlogDetails />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/pagenotfound' element={<Page404 />} />
+        <Route path='*' element={<Page404 />} />
       </Routes>
     </AnimatePresence>
   );
