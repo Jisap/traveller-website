@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const BlogCard = ({ blog }) => {
   return (
     <>
-      <div className='blog-item relative group overflow-hidden rounded-xl shadow-lg bg-white transition-all duration-300 hover:shadow-2xl'>
-        <div className='blog-img w-full relative'>
+      <Link to={`/blogs/${blog.id}`} className='blog-item block relative group overflow-hidden rounded-xl shadow-lg bg-white transition-all duration-300 hover:shadow-2xl'>
+        <div className='blog-img w-full relative h-[300px]'>
           <img
             src={blog.image}
             alt={blog.title}
@@ -16,18 +17,17 @@ const BlogCard = ({ blog }) => {
             <span className=''>Mar</span>
           </div>
 
-          <div className='blog-content absolute bottom-4 left-4 z-10'>
-            <span className='bg-yellow text-sm px-2 rounded-sm text-white'>
+          <div className='blog-content absolute bottom-0 left-0 w-full p-6 z-10'>
+            <span className='bg-yellow text-sm px-2 rounded-sm text-white inline-block mb-1'>
               By {blog.author}
             </span>
 
-            <h3 className='text-white text-2xl md:text-3xl font-medium pt-2 hover:text-yellow transition-colors duration-300'>
+            <h3 className='text-white text-2xl md:text-3xl font-medium hover:text-yellow transition-colors duration-300'>
               {blog.title}
             </h3>
           </div>
         </div>
-
-      </div>
+      </Link>
     </>
   )
 }

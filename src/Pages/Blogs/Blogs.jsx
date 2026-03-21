@@ -6,6 +6,7 @@ import BlogCard from "../../Components/BlogCard/BlogCard";
 import CommonBanner from '../../Components/CommonBanner/CommonBanner';
 import blogData from '../../Data/Blog.json'
 import { Icon } from "@iconify/react"
+import { Link } from "react-router-dom"
 
 const breadcrumbs = [
   { label: "Home", url: "/" },
@@ -84,7 +85,7 @@ const Blogs = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <div className="relative group overflow-hidden rounded-3xl shadow-xl h-[500px] w-full cursor-pointer">
+            <Link to={`/blogs/${featuredBlog.id}`} className="relative group block overflow-hidden rounded-3xl shadow-xl h-[500px] w-full cursor-pointer">
               <img
                 src={featuredBlog.image}
                 alt={featuredBlog.title}
@@ -105,7 +106,7 @@ const Blogs = () => {
                 <span className='text-4xl font-bold'>{featuredBlog.date}</span>
                 <span className='font-medium'>Mar</span>
               </div>
-            </div>
+            </Link>
           </motion.div>
         )}
       </section>
