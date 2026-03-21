@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react";
 import sectionbanner from "../../assets/section-banner.jpg"
 import Mainbtn from "../../Components/Buttons/Mainbtn";
 import CommonBanner from '../../Components/CommonBanner/CommonBanner';
@@ -28,14 +29,14 @@ const Contact = () => {
             }}
           ></iframe>
 
-          <div className="w-full flex justify-between items-center flex-col lg:flex-row gap-10 pt-10">
-            <div className="bg-yellow-light w-full p-8 md:p-10 rounded-[40px] shadow-xl">
+          <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 pt-10">
+            <div className="bg-yellow-light w-full p-8 md:p-10 rounded-[40px] shadow-xl lg:flex-1">
               <h1 className="text-secondary text-3xl md:text-4xl xl:text-5xl font-bold pb-3">
                 <span className="text-yellow">Reach</span> & Get in Touch With Us!
               </h1>
 
               <p className="text-gray-500 pb-8">
-                We'd love to hear frp, you. Our friendly team is always here to chat
+                We'd love to hear from you. Our friendly team is always here to chat and help you with your plans.
               </p>
 
               <form method="post" className="space-y-6">
@@ -61,7 +62,6 @@ const Contact = () => {
                 />
 
                 <textarea
-                  type="text"
                   rows="5"
                   placeholder="Enter Your Message"
                   className="w-full rounded-[30px] px-6 py-4 bg-white text-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-yellow focus:outline-none transition duration-300"
@@ -71,6 +71,73 @@ const Contact = () => {
                 <Mainbtn text="Send Message" className="w-full" />
               </form>
             </div>
+
+
+            <div className="flex flex-col space-y-8 lg:w-[40%] shrink-0">
+              <div className="flex flex-col w-full">
+                <h4 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
+                  Get in Touch
+                </h4>
+                <p className="text-gray-500 max-w-sm">
+                  We'd love to hear from you! Our friendly team is always here to chat and help you with your travel plans.
+                </p>
+              </div>
+
+              <div className="space-y-8">
+                {[
+                  {
+                    icon: "line-md:phone-call",
+                    title: "Contact Us",
+                    content: "+91 1234567890",
+                    outerBg: "bg-secondary",
+                    innerIconColor: "text-secondary"
+                  },
+                  {
+                    icon: "oui:email",
+                    title: "Send Us a Mail",
+                    content: "traveller@gmail.com",
+                    outerBg: "bg-rose-400",
+                    innerIconColor: "text-rose-400"
+                  },
+                  {
+                    icon: "lsicon:house-outline",
+                    title: "Our Address",
+                    content: "123 Main St, Vadodara, Gujarat",
+                    outerBg: "bg-teal-700",
+                    innerIconColor: "text-teal-700"
+                  }
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-6 group transition-all duration-300 hover:translate-x-2">
+                    <div className={`w-20 h-20 ${item.outerBg} rounded-full flex items-center justify-center shrink-0 shadow-lg transition-transform duration-300 group-hover:scale-105`}>
+                      <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center">
+                        <Icon
+                          icon={item.icon}
+                          width="32"
+                          height="32"
+                          className={`${item.innerIconColor}`}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col">
+                      <p className="text-gray-400 text-sm font-medium uppercase tracking-wider">
+                        {item.title}
+                      </p>
+                      <p className="text-secondary text-2xl font-bold leading-tight">
+                        {item.content}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="pt-8 w-full">
+                <h4 className="text-4xl md:text-5xl font-kaushan! text-gray-800 leading-tight">
+                  Let's <span className="text-yellow">Talk</span> About You
+                </h4>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
