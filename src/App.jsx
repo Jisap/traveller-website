@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './Components/Navbar/Navbar'
 import Index from './Components/Index/Index'
-import Contact from './Components/Contact/Contact'
 import ScrollToTop from './Components/ScrollToTop'
 import Footer from './Components/Footer/Footer'
 import About from './Pages/About/About'
@@ -20,6 +19,7 @@ import Tour from './Pages/Tour/Tour'
 import TourDetails from './Pages/Tour/TourDetails'
 import Blogs from './Pages/Blogs/Blogs'
 import BlogDetails from './Pages/Blogs/BlogDetails'
+import Contact from './Pages/Contact/Contact'
 
 
 
@@ -33,7 +33,6 @@ const AnimatedRoutes = () => {
         <Route path='/about' element={<About />} />
         <Route path='/services' element={<Services />} />
         <Route path='/services/:id' element={<ServicesDetails />} />
-        <Route path='/contact' element={<Contact />} />
         <Route path='/testimonials' element={<TestimonialsPage />} />
         <Route path='/tourguide' element={<TourGuide />} />
         <Route path='/tourguide/:id' element={<TourGuideDetails />} />
@@ -45,6 +44,7 @@ const AnimatedRoutes = () => {
         <Route path='/tours/:id' element={<TourDetails />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/blogs/:id' element={<BlogDetails />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
     </AnimatePresence>
   );
