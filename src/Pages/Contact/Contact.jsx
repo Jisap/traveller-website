@@ -20,14 +20,12 @@ const Contact = () => {
         bgImage={sectionbanner}
       />
 
-      <motion.div 
-        className="px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[8%] bg-[#e6f1f3]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-      >
+      <div className="px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[8%] bg-[#e6f1f3]">
         <div className="bg-white p-5 md:p-10 rounded-3xl w-full overflow-hidden shadow-sm">
           <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
             variants={fadeInUp}
             className="w-full"
           >
@@ -43,12 +41,12 @@ const Contact = () => {
             ></iframe>
           </motion.div>
 
-          <motion.div 
-            className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 pt-10"
-            variants={containerVariants(0.3, 0.4)}
-          >
+          <div className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 pt-10">
             <motion.div 
-              className="bg-yellow-light w-full p-8 md:p-10 rounded-[40px] shadow-xl lg:flex-1"
+              className="bg-yellow-light w-full p-8 md:p-10 rounded-[40px] shadow-xl lg:flex-1 h-fit"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
               variants={fadeInRight}
             >
               <h1 className="text-secondary text-3xl md:text-4xl xl:text-5xl font-bold pb-3">
@@ -95,15 +93,24 @@ const Contact = () => {
 
             <motion.div 
               className="flex flex-col space-y-8 lg:w-[40%] shrink-0"
-              variants={fadeInLeft}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={containerVariants(0.2, 0)}
             >
               <div className="flex flex-col w-full">
-                <h4 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
+                <motion.h4 
+                  variants={fadeInUp}
+                  className="text-4xl md:text-5xl font-bold text-secondary mb-4"
+                >
                   Get in Touch
-                </h4>
-                <p className="text-gray-500 max-w-sm">
+                </motion.h4>
+                <motion.p 
+                  variants={fadeInUp}
+                  className="text-gray-500 max-w-sm"
+                >
                   We'd love to hear from you! Our friendly team is always here to chat and help you with your travel plans.
-                </p>
+                </motion.p>
               </div>
 
               <div className="space-y-4">
@@ -133,7 +140,7 @@ const Contact = () => {
                   <motion.div 
                     key={index} 
                     className="flex items-center gap-6 group transition-all duration-300 hover:translate-x-2"
-                    variants={fadeInLeft}
+                    variants={fadeInUp}
                   >
                     <div className={`w-20 h-20 ${item.outerBg} rounded-full flex items-center justify-center shrink-0 shadow-lg transition-transform duration-300 group-hover:scale-105`}>
                       <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center">
@@ -168,9 +175,9 @@ const Contact = () => {
               </div>
             </motion.div>
 
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
+      </div>
     </>
   )
 }
