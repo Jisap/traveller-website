@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Murphy",
-    "image": "/src/assets/TourGuidePage/pic1.jpg",
+    "image": "/assets/TourGuidePage/pic1.jpg",
     "jobtitle": "Tourist Guide",
     "Age": 36,
     "Education": "Bsc of Computer Science",
@@ -39,7 +39,7 @@
   {
     "id": 2,
     "name": "Murray",
-    "image": "/src/assets/TourGuidePage/pic2.jpg",
+    "image": "/assets/TourGuidePage/pic2.jpg",
     "jobtitle": "Tourist Guide",
     "Age": 30,
     "Education": "Bsc of Computer Science",
@@ -76,7 +76,7 @@
   {
     "id": 3,
     "name": "Alexis Cox",
-    "image": "/src/assets/TourGuidePage/pic3.jpg",
+    "image": "/assets/TourGuidePage/pic3.jpg",
     "jobtitle": "Tourist Guide",
     "Age": 45,
     "Education": "Msc of Computer Science",
@@ -113,7 +113,7 @@
   {
     "id": 4,
     "name": "Crawford",
-    "image": "/src/assets/TourGuidePage/pic4.jpg",
+    "image": "/assets/TourGuidePage/pic4.jpg",
     "jobtitle": "Tourist Guide",
     "Age": 36,
     "Education": "Msc of Computer Science",
@@ -150,7 +150,7 @@
   {
     "id": 5,
     "name": "Ethan Walker",
-    "image": "/src/assets/TourGuidePage/pic5.jpg",
+    "image": "/assets/TourGuidePage/pic5.jpg",
     "jobtitle": "Tourist Guide",
     "Age": 26,
     "Education": "BCA",
@@ -187,7 +187,7 @@
   {
     "id": 6,
     "name": "Liam Brooks",
-    "image": "/src/assets/TourGuidePage/pic6.jpg",
+    "image": "/assets/TourGuidePage/pic6.jpg",
     "jobtitle": "Tourist Guide",
     "Age": 37,
     "Education": "Bsc of Computer Science",

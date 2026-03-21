@@ -7,7 +7,7 @@
     "price": "$90",
     "Duration": "4 Days &5 Nights",
     "Places": "1N Bangkok Old City | 2N Downtown Bangkok | 1N Riverside Bangkok",
-    "image": "/src/assets/PopularToursPage/tour-01.jpg",
+    "image": "/assets/PopularToursPage/tour-01.jpg",
     "DaysDescription": {
       "day1": {
         "title": "Arrival & City Orientation",
@@ -60,7 +60,7 @@
     "price": "$60",
     "Duration": " 6 Days &5 Nights",
     "Places": "2N Phuket | 2N Krabi | 2N Phi Phi | Island Hopping | Water Sports",
-    "image": "/src/assets/PopularToursPage/tour-02.jpg",
+    "image": "/assets/PopularToursPage/tour-02.jpg",
     "DaysDescription": {
       "day1": {
         "title": "Arrival in Phuket",
@@ -125,7 +125,7 @@
     "price": "$52",
     "Duration": "7 Days &6 Nights",
     "Places": "2N SF | 3N LA | 1N San Diego | Highways | Beaches | City Highlights",
-    "image": "/src/assets/PopularToursPage/tour-03.jpg",
+    "image": "/assets/PopularToursPage/tour-03.jpg",
     "DaysDescription": {
       "day1": {
         "title": "Arrival in Los Angeles",
@@ -200,7 +200,7 @@
     "price": "$59",
     "Duration": "5 Days &4 Nights",
     "Places": "2 Parks | Universal Studios | Disneyland | Family Fun",
-    "image": "/src/assets/PopularToursPage/tour-04.jpg",
+    "image": "/assets/PopularToursPage/tour-04.jpg",
     "DaysDescription": {
       "day1": {
         "title": "Arrival in Los Angeles",
@@ -257,7 +257,7 @@
     "price": "$52",
     "Duration": "5 Days &4 Nights",
     "Places": "3N Overwater Villa | Speedboat Transfer | Water Sports | Private Island Luxury",
-    "image": "/src/assets/PopularToursPage/tour-05.jpg",
+    "image": "/assets/PopularToursPage/tour-05.jpg",
     "DaysDescription": {
       "day1": {
         "title": "Arrival in Maldives",
@@ -304,7 +304,7 @@
     "price": "$89",
     "Duration": "5 Days &4 Nights",
     "Places": "2N Beach Villa | 2N Water Villa | Candlelight Dinner | Sunset Cruise",
-    "image": "/src/assets/PopularToursPage/tour-06.jpg",
+    "image": "/assets/PopularToursPage/tour-06.jpg",
     "DaysDescription": {
       "day1": {
         "title": "Arrival in Maldives",

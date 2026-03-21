@@ -3,42 +3,42 @@
     "id": 1,
     "title": "Paris",
     "listing": 28,
-    "image": "/src/assets/Index/TopDestination/destination1.jpg"
+    "image": "/assets/Index/TopDestination/destination1.jpg"
   },
   {
     "id": 2,
     "title": "Kashmir",
     "listing": 32,
-    "image": "/src/assets/Index/TopDestination/destination2.jpg"
+    "image": "/assets/Index/TopDestination/destination2.jpg"
   },
   {
     "id": 3,
     "title": "Thailand",
     "listing": 20,
-    "image": "/src/assets/Index/TopDestination/destination3.jpg"
+    "image": "/assets/Index/TopDestination/destination3.jpg"
   },
   {
     "id": 4,
     "title": "Maldives",
     "listing": 20,
-    "image": "/src/assets/Index/TopDestination/destination4.jpg"
+    "image": "/assets/Index/TopDestination/destination4.jpg"
   },
   {
     "id": 5,
     "title": "Indonesia",
     "listing": 80,
-    "image": "/src/assets/Index/TopDestination/destination5.jpg"
+    "image": "/assets/Index/TopDestination/destination5.jpg"
   },
   {
     "id": 6,
     "title": "Bali",
     "listing": 20,
-    "image": "/src/assets/Index/TopDestination/destination6.jpg"
+    "image": "/assets/Index/TopDestination/destination6.jpg"
   },
   {
     "id": 7,
     "title": "Mauritius",
     "listing": 20,
-    "image": "/src/assets/Index/TopDestination/destination7.jpg"
+    "image": "/assets/Index/TopDestination/destination7.jpg"
   }
 ]
