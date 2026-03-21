@@ -19,6 +19,7 @@ import DestinationDetails from './Pages/Destination/DestinationDetails'
 import Tour from './Pages/Tour/Tour'
 import TourDetails from './Pages/Tour/TourDetails'
 import Blogs from './Pages/Blogs/Blogs'
+import BlogDetails from './Pages/Blogs/BlogDetails'
 
 
 
@@ -43,6 +44,7 @@ const AnimatedRoutes = () => {
         <Route path='/tours' element={<Tour />} />
         <Route path='/tours/:id' element={<TourDetails />} />
         <Route path='/blogs' element={<Blogs />} />
+        <Route path='/blogs/:id' element={<BlogDetails />} />
       </Routes>
     </AnimatePresence>
   );

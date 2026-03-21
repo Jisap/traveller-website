@@ -4,62 +4,154 @@
     "title": "Cómo elegir el tour guiado perfecto para tu primer viaje",
     "author": "Laura Martínez",
     "image": "/src/assets/Index/Blogs/blog-img01.jpg",
-    "date": "1"
+    "date": "1",
+    "category": "Travel Tips",
+    "readTime": "5 min",
+    "excerpt": "Elegir tu primer tour guiado puede marcar la diferencia entre un buen viaje y una experiencia inolvidable.",
+    "tags": [
+      "tour guiado",
+      "primer viaje",
+      "consejos"
+    ],
+    "content": "Elegir el tour guiado adecuado puede parecer complicado al principio. Existen múltiples factores a tener en cuenta, como el tipo de experiencia que buscas, el idioma del guía, el tamaño del grupo y el presupuesto. Para principiantes, lo más recomendable es optar por tours con grupos reducidos y guías con buenas valoraciones. También es importante revisar el itinerario con detalle y asegurarse de que incluye los puntos de interés principales. No olvides comprobar opiniones de otros viajeros y verificar si el tour incluye extras como entradas o transporte. Con una buena elección, tu primer viaje será mucho más enriquecedor.",
+    "comments": [
+      {
+        "id": 1,
+        "user": "Pedro Gómez",
+        "comment": "Muy útil para mi próximo viaje, gracias!",
+        "date": "2026-01-10"
+      }
+    ]
   },
   {
     "id": 2,
     "title": "5 ventajas de explorar una ciudad con un guía local",
     "author": "Carlos Rivera",
     "image": "/src/assets/Index/Blogs/blog-img02.jpg",
-    "date": "2"
+    "date": "2",
+    "category": "Experiences",
+    "readTime": "4 min",
+    "excerpt": "Descubre por qué contar con un guía local puede transformar completamente tu experiencia de viaje.",
+    "tags": [
+      "guía local",
+      "viajes",
+      "experiencias"
+    ],
+    "content": "Explorar una ciudad con un guía local te permite acceder a una perspectiva única. No solo conocerás los monumentos más importantes, sino también historias y curiosidades que no aparecen en las guías tradicionales. Además, los guías locales suelen recomendar restaurantes auténticos, rincones escondidos y actividades fuera del circuito turístico. Otra gran ventaja es la optimización del tiempo, ya que evitarás largas colas y desplazamientos innecesarios. Sin duda, es una inversión que mejora la calidad del viaje.",
+    "comments": []
   },
   {
     "id": 3,
     "title": "Los tours históricos más interesantes de Europa",
     "author": "Ana López",
     "image": "/src/assets/Index/Blogs/blog-img03.jpg",
-    "date": "3"
+    "date": "3",
+    "category": "History",
+    "readTime": "6 min",
+    "excerpt": "Europa está llena de historia, y estos tours te permitirán descubrirla de una forma única.",
+    "tags": [
+      "Europa",
+      "historia",
+      "tours"
+    ],
+    "content": "Europa ofrece algunos de los tours históricos más fascinantes del mundo. Desde recorridos por antiguas ciudades medievales hasta visitas guiadas en campos de batalla históricos, hay opciones para todos los gustos. Ciudades como Roma, París o Berlín destacan por su riqueza cultural e histórica. Muchos tours incluyen recreaciones, visitas a museos y relatos detallados que te transportan a otra época. Si eres amante de la historia, estos tours son imprescindibles.",
+    "comments": []
   },
   {
     "id": 4,
     "title": "Qué esperar de un tour gastronómico en una nueva ciudad",
     "author": "Miguel Torres",
     "image": "/src/assets/Index/Blogs/blog-img04.jpg",
-    "date": "4"
+    "date": "4",
+    "category": "Food & Travel",
+    "readTime": "5 min",
+    "excerpt": "Los tours gastronómicos son una forma deliciosa de conocer una ciudad.",
+    "tags": [
+      "gastronomía",
+      "food tours",
+      "viajes"
+    ],
+    "content": "Un tour gastronómico es mucho más que probar comida. Es una experiencia cultural que te permite conocer la identidad culinaria de un destino. Durante el recorrido, podrás degustar platos típicos, visitar mercados locales y aprender sobre la historia de cada receta. Además, los guías suelen compartir recomendaciones exclusivas para seguir explorando la gastronomía por tu cuenta. Es ideal para viajeros curiosos y amantes de la comida.",
+    "comments": []
   },
   {
     "id": 5,
     "title": "Consejos para aprovechar al máximo un walking tour",
     "author": "Sofía Delgado",
     "image": "/src/assets/Index/Blogs/blog-img05.jpg",
-    "date": "5"
+    "date": "5",
+    "category": "Tips",
+    "readTime": "3 min",
+    "excerpt": "Un walking tour puede ser una de las mejores formas de conocer una ciudad si sabes cómo sacarle partido.",
+    "tags": [
+      "walking tour",
+      "consejos"
+    ],
+    "content": "Para aprovechar al máximo un walking tour, es importante ir preparado. Lleva calzado cómodo, agua y protección solar si es necesario. Llega con antelación para no perderte la introducción del guía y presta atención a las recomendaciones. Participar activamente y hacer preguntas enriquecerá la experiencia. También es recomendable llevar algo de efectivo para propinas, especialmente en tours gratuitos.",
+    "comments": []
   },
   {
     "id": 6,
     "title": "Cómo los guías locales transforman la experiencia de viajar",
     "author": "Daniel Ortega",
     "image": "/src/assets/Index/Blogs/blog-img06.jpg",
-    "date": "6"
+    "date": "6",
+    "category": "Experiences",
+    "readTime": "4 min",
+    "excerpt": "Los guías locales aportan un valor único que va más allá de la información básica.",
+    "tags": [
+      "guías",
+      "experiencia"
+    ],
+    "content": "Los guías locales no solo informan, sino que conectan a los viajeros con el destino. Su conocimiento profundo y su pasión hacen que cada recorrido sea único. Gracias a ellos, puedes descubrir historias personales, tradiciones y detalles que de otro modo pasarían desapercibidos. Esta conexión emocional convierte un viaje común en una experiencia memorable.",
+    "comments": []
   },
   {
     "id": 7,
     "title": "Tours culturales imprescindibles en las grandes capitales",
     "author": "Marina Castillo",
     "image": "/src/assets/Index/Blogs/blog-img07.jpg",
-    "date": "7"
+    "date": "7",
+    "category": "Culture",
+    "readTime": "5 min",
+    "excerpt": "Las grandes capitales del mundo ofrecen tours culturales únicos.",
+    "tags": [
+      "cultura",
+      "capitales"
+    ],
+    "content": "Las capitales del mundo son epicentros culturales. Desde visitas a museos emblemáticos hasta recorridos por barrios históricos, los tours culturales permiten comprender mejor la identidad de cada ciudad. Estos tours suelen incluir acceso a lugares icónicos y explicaciones detalladas que enriquecen la experiencia del viajero.",
+    "comments": []
   },
   {
     "id": 8,
     "title": "Rutas guiadas por la naturaleza para viajeros aventureros",
     "author": "Javier Navarro",
     "image": "/src/assets/Index/Blogs/blog-img08.jpg",
-    "date": "8"
+    "date": "8",
+    "category": "Adventure",
+    "readTime": "6 min",
+    "excerpt": "Para los amantes de la naturaleza, las rutas guiadas son una opción perfecta.",
+    "tags": [
+      "naturaleza",
+      "aventura"
+    ],
+    "content": "Las rutas guiadas por la naturaleza ofrecen una experiencia única para los viajeros más aventureros. Desde senderismo en montañas hasta recorridos por parques naturales, estas actividades permiten disfrutar del entorno de forma segura. Los guías expertos aportan conocimientos sobre flora, fauna y geografía, haciendo el recorrido más interesante y educativo.",
+    "comments": []
   },
   {
     "id": 9,
     "title": "Cómo encontrar los mejores guías turísticos cuando viajas",
     "author": "Elena Ramos",
     "image": "/src/assets/Index/Blogs/blog-img09.jpg",
-    "date": "9"
+    "date": "9",
+    "category": "Tips",
+    "readTime": "4 min",
+    "excerpt": "Encontrar un buen guía puede marcar la diferencia en tu viaje.",
+    "tags": [
+      "guías",
+      "viajes"
+    ],
+    "content": "Encontrar el mejor guía turístico requiere investigación previa. Plataformas online, opiniones de otros viajeros y recomendaciones son clave. Busca guías certificados y con experiencia en el destino. También es importante verificar el idioma, el estilo del tour y el tipo de grupo. Un buen guía hará que tu experiencia sea mucho más completa y personalizada.",
+    "comments": []
   }
 ]
